@@ -1,0 +1,47 @@
+.page-header
+{
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.page-header a
+{
+    text-decoration: none;
+    color: var(--text);
+}
+
+.page-header-icon
+{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 0.5rem;
+    border-color: var(--text);
+    background-color: var(--off-background);
+}
+
+.page-header-icon:hover
+{
+    cursor: pointer;
+}
+
+.page-header-icon svg
+{
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--text);
+    user-select: none;
+    -webkit-user-select: none;
+}

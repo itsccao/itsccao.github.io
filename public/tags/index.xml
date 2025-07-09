@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on takai24</title>
+    <title>Tags on </title>
     <link>https://takai24.github.io/tags/</link>
-    <description>Recent content in Tags on takai24</description>
+    <description>Recent content in Tags on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://takai24.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Website</title>
-      <link>https://takai24.github.io/tags/website/</link>
-      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://takai24.github.io/tags/website/</guid>
+      <title>Template</title>
+      <link>https://takai24.github.io/tags/template/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://takai24.github.io/tags/template/</guid>
       <description></description>
     </item>
     <item>
-      <title>Life</title>
-      <link>https://takai24.github.io/tags/life/</link>
-      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://takai24.github.io/tags/life/</guid>
+      <title>Test</title>
+      <link>https://takai24.github.io/tags/test/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://takai24.github.io/tags/test/</guid>
       <description></description>
     </item>
   </channel>

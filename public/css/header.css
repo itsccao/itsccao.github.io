@@ -1,69 +1,47 @@
 .page-header
 {
-    padding-bottom: 5px;
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     display: flex;
-    flex-direction: column;
-    border-radius: 15px 15px 0px 0px;
-    background-color: var(--bg);
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.page-header-top
+.page-header a
 {
-    position: relative;
-    top: 5px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.page-header-icon
+{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
-
-.page-header-favicon
-{
-    position: relative;
-    left: 5px;
-    pointer-events: none;
-}
-
-.page-header-favicon img
-{
-    width: 32px;
-}
-
-.page-header-title
-{
-    position: relative;
-    display: flex;
     justify-content: center;
-    cursor: default;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 0.5rem;
+    border-color: var(--text);
+    background-color: var(--off-background);
 }
 
-.page-header-x
+.page-header-icon:hover
 {
-    position: relative;
-    right: 15px;
     cursor: pointer;
 }
 
-.page-header-container
+.page-header-icon svg
 {
-    position: relative;
-    right: 15px;
-    padding-left: 25px;
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    column-gap: 25px;
-    row-gap: 5px;
-}
-
-.page-header-link a
-{
-    text-decoration: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--text);
+    user-select: none;
+    -webkit-user-select: none;
 }
