@@ -3,9 +3,21 @@
 > [!IMPORTANT]
 > This project is licensed under the [GNU General Public License v3.0](./LICENSE).
 
+## 📸 Preview
+
+### 1. Index
+![Preview](./themes/july/static/assets/preview.png)
+
+### 2. 404
+![404](./themes/july/static/assets/preview-404.png)
+
+### 3. Note
+![Note](./themes/july/static/assets/preview-note.png)
+
 ## 🔔 Notice
 + This theme is called **July**, based on the time of year I made it.
 + Based on what OS you are using, the emoji may be rendered differently.
++ Other themes are stored in the `themes` folder.
 
 ## 🖼️ Assets
 | Name | Source |

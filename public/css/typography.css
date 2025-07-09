@@ -66,6 +66,7 @@ samp
 {
     background: var(--code-background) !important;
     color: var(--text);
+    overflow: auto;
 }
 
 pre

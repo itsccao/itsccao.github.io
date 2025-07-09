@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>https://takai24.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://takai24.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</title>
-      <link>https://takai24.github.io/note/example/</link>
+      <link>http://localhost:1313/note/example/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://takai24.github.io/note/example/</guid>
+      <guid>http://localhost:1313/note/example/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Credits to &lt;a href=&#34;https://github.com/joeroe/risotto/tree/main/exampleSite/content/post&#34;&gt;joeroe/risotto&lt;/a&gt;.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;&#xA;&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;&#xA;&lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;&#xA;&lt;h2 id=&#34;h2&#34;&gt;H2&lt;/h2&gt;&#xA;&lt;h3 id=&#34;h3&#34;&gt;H3&lt;/h3&gt;&#xA;&lt;h4 id=&#34;h4&#34;&gt;H4&lt;/h4&gt;&#xA;&lt;h5 id=&#34;h5&#34;&gt;H5&lt;/h5&gt;&#xA;&lt;h6 id=&#34;h6&#34;&gt;H6&lt;/h6&gt;&#xA;&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h2&gt;&#xA;&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p&gt;</description>
     </item>
   </channel>
