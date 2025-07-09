@@ -22,5 +22,12 @@
       <guid>http://localhost:1313/tags/test/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Website</title>
+      <link>http://localhost:1313/tags/website/</link>
+      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/website/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

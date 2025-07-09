@@ -35,6 +35,7 @@
 .page-header-icon:hover
 {
     cursor: pointer;
+    background-color: var(--hover-svg);
 }
 
 .page-header-icon svg
@@ -44,4 +45,31 @@
     color: var(--text);
     user-select: none;
     -webkit-user-select: none;
+}
+
+.page-header-menu
+{
+    position: relative;
+    display: inline-block;
+}
+
+.page-header-menu-container
+{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    background-color: var(--background);
+}
+
+.page-header-menu:hover .page-header-menu-container
+{
+    display: block;
+}
+
+.page-header-menu-item
+{
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }

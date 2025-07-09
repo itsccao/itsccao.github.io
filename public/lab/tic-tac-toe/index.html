@@ -45,8 +45,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32px.png">
 <link rel="apple-touch-icon" sizes="192x192" href="http://localhost:1313/favicon/favicon-192px.png">
 
-<link rel="stylesheet" href="http://localhost:1313/css/july.css"><link rel="stylesheet" href="/css/404.css">
-    </head>
+<link rel="stylesheet" href="http://localhost:1313/css/july.css"></head>
 
     <body>
         <div class="page">
@@ -69,11 +68,94 @@
 </div></div>
 
             <div class="page-body">
-                <div class="page-404-container">
-                    <p class="page-404-title"> 404 </p>
-                    <p> You may have reached this page by a mistake. </p>
-                    <p> Click <a href="/">here</a> to return to the homepage. </p>
-                </div>
+    <h1> Tic Tac Toe </h1>
+    <p> A standard 3x3 Tic-Tac-Toe. </p>
+    <hr>
+    </br>
+
+<div id="ttt-board">
+    <div class="ttt-board-split">
+        <div class="ttt-square" id="0"> </div>
+        <div class="ttt-square" id="1"> </div>
+        <div class="ttt-square" id="2"> </div>
+    </div>
+    <div class="ttt-board-split">
+        <div class="ttt-square" id="3"> </div>
+        <div class="ttt-square" id="4"> </div>
+        <div class="ttt-square" id="5"> </div>
+    </div>
+    <div class="ttt-board-split">
+        <div class="ttt-square" id="6"> </div>
+        <div class="ttt-square" id="7"> </div>
+        <div class="ttt-square" id="8"> </div>
+    </div>
+</div>
+
+<p> Result: <text id="ttt-display-result"> </text> </p>
+
+<button id="ttt-restart" onclick="restartGame()"> Restart </button>
+
+<style>
+    .ttt-square
+    {
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--off-background);
+        border-style: solid;
+        border-radius: 1rem;
+        border-width: 0.125rem;
+        border-color: var(--link);
+        color: var(--text);
+        font-family: cursive;
+        font-size: 3rem;
+    }
+
+    .ttt-square:hover
+    {
+        cursor: pointer;
+    }
+
+    #ttt-board
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vh;
+    }
+
+    .ttt-board-split
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5vh;
+    }
+
+    #ttt-restart
+    {
+        width: 5rem;
+        height: 2.5rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        background-color: var(--off-background);
+        border-style: none;
+        border-radius: 0.25rem;
+        color: var(--text);
+    }
+
+    #ttt-restart:hover
+    {
+        border-style: solid;
+        border-width: 0.125rem;
+        border-color: var(--text);
+        cursor: pointer;
+    }
+</style>
+
+<script src="/js/tic-tac-toe.js"> </script>
+
+
             </div>
 
             <div class="page-footer">
