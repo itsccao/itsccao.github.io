@@ -23,10 +23,3 @@ document.addEventListener("DOMContentLoaded", function ()
         });
     });
 });
-
-let isOpen = 0;
-document.getElementById("page-header-menu-icon").addEventListener("click", function () {
-    const menuContainer = document.getElementById("page-header-menu-container");
-    isOpen = 1 - isOpen;
-    menuContainer.style.display = isOpen ? "block" : "none";
-});

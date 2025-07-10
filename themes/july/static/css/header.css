@@ -66,6 +66,11 @@
     display: block;
 }
 
+.page-header-menu-icon:checked + label + .page-header-menu-container
+{
+    display: block;
+}
+
 .page-header-menu-item
 {
     margin-left: 0rem;
