@@ -35,7 +35,7 @@
     height: 22.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 1.5rem;
+    padding-top: 0rem;
     padding-bottom: 1.5rem;
     background-color: var(--off-background);
     border-radius: 0 1rem 1rem 0;
@@ -51,6 +51,14 @@
 {
     width: 2.5rem;
     height: 2.5rem;
+}
+
+.index-content-2 a:hover svg
+{
+    color: var(--link);
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
 @media (max-width: 50rem)

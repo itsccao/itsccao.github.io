@@ -3,23 +3,38 @@
 > [!IMPORTANT]
 > This project is licensed under the [GNU General Public License v3.0](./LICENSE).
 
-## 📸 Preview
-
-### 1. Index
-![Preview](./themes/july/static/assets/preview.png)
-
-### 2. 404
-![404](./themes/july/static/assets/preview-404.png)
-
-### 3. Note
-![Note](./themes/july/static/assets/preview-note.png)
-
 ## 🔔 Notice
 + This theme is called **July**, based on the time of year I made it.
 + Based on what OS you are using, the emoji may be rendered differently.
 + Other themes are stored in the `themes` folder.
 
-## 🖼️ Assets
+## 📸 Preview
+<h3>
+<details>
+    <summary> 1. Index </summary>
+    <img src="./themes/july/static/assets/index.png" alt="Index">
+</details>
+<br/>
+
+<details>
+    <summary> 2. 404 </summary>
+    <img src="./themes/july/static/assets/preview-404.png" alt="404">
+</details>
+<br/>
+
+<details>
+    <summary> 3. Note </summary>
+    <img src="./themes/july/static/assets/preview-note.png" alt="Note">
+</details>
+<br/>
+
+<details>
+    <summary> 4. Lab </summary>
+    <img src="./themes/july/static/assets/preview-lab.png" alt="Lab">
+</details>
+</h3>
+
+## 📦 Assets
 | Name | Source |
 |------|--------|
 | SVGs | [tabler.io/icons](https://tabler.io/icons/) |

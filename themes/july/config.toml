@@ -8,7 +8,7 @@ author = "takai24"
 description = "hi."
 source = "https://github.com/takai24"
 baseURL = "https://takai24.github.io"
-imageURL = "/assets/preview.png"
+imageURL = "/assets/index.png"
 
 [params.Theme]
 themeColor = "#000000"
