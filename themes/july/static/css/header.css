@@ -71,6 +71,11 @@
     display: block;
 }
 
+.page-header-menu-icon:not(:checked) + label + .page-header-menu-container
+{
+    display: none;
+}
+
 .page-header-menu-item
 {
     margin-left: 0rem;
