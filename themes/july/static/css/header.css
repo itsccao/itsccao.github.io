@@ -61,17 +61,17 @@
     background-color: var(--background);
 }
 
-.page-header-menu:hover .page-header-menu-container
+.page-header-menu-checkbox
+{
+    display: none;
+}
+
+.page-header-menu-checkbox:checked + label + .page-header-menu-container
 {
     display: block;
 }
 
-.page-header-menu-icon:checked + label + .page-header-menu-container
-{
-    display: block;
-}
-
-.page-header-menu-icon:not(:checked) + label + .page-header-menu-container
+.page-header-menu-checkbox:not(:checked) + label + .page-header-menu-container
 {
     display: none;
 }
