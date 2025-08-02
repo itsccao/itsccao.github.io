@@ -53,6 +53,11 @@
     height: 2.5rem;
 }
 
+.index-content-1 a
+{
+    color: var(--link);
+}
+
 .index-content-2 a:hover svg
 {
     color: var(--link);

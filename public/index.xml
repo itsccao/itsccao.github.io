@@ -36,5 +36,12 @@
       <guid>http://localhost:1313/lab/versions/</guid>
       <description>&lt;h2 id=&#34;60-current-version&#34;&gt;6.0 (current version):&lt;/h2&gt;&#xA;&lt;p&gt;Release date: July 2025.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A theme not based on any other theme, I made it from scratch.&lt;/li&gt;&#xA;&lt;li&gt;I named it &lt;strong&gt;July&lt;/strong&gt; based on the month I made it.&lt;/li&gt;&#xA;&lt;li&gt;The goal of this theme is to be a simple &amp;amp; minimal theme with a modern look.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;50&#34;&gt;5.0:&lt;/h2&gt;&#xA;&lt;p&gt;Release date: April 2025.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A theme based on &lt;a href=&#34;https://themes.gohugo.io/themes/risotto/&#34;&gt;rissoto theme&lt;/a&gt;&amp;rsquo;s typography but with a different layout. I named it &lt;strong&gt;Sylvie&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;I made it look like a program window, which I think is very cool.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;40&#34;&gt;4.0:&lt;/h2&gt;&#xA;&lt;p&gt;Release date: August 2023.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Discord</title>
+      <link>http://localhost:1313/discord/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/discord/</guid>
+      <description>&lt;a href=&#34;https://discord.com/users/800173074166710282&#34;&gt;&#xD;&#xA;    &lt;img class=&#34;discord-lanyard&#34; src=&#34;https://lanyard.cnrad.dev/api/800173074166710282?idleMessage=eepy&amp;showDisplayName=true&amp;hideActivity=true&#34;&gt;&lt;/a&gt;&#xD;&#xA;&#xD;&#xA;&lt;style&gt;&#xD;&#xA;    .discord-lanyard&#xD;&#xA;    {&#xD;&#xA;        width: 100%;&#xD;&#xA;        height: 100%;&#xD;&#xA;    }&#xD;&#xA;&lt;/style&gt;</description>
+    </item>
   </channel>
 </rss>
