@@ -4,8 +4,14 @@ const rssUrl = `https://api.allorigins.win/raw?url=${fitRss}`;
 const feedLocal = "fitLocal";
 const feedLocalTime = "fitLocalTime";
 const feedPosts = 10;
+const feedIsFirstRun = "feedIsFirstRun";
 
 const feedBoard = document.getElementById("hcmus-fit-new-post");
+
+if (localStorage.getItem(feedIsFirstRun) == null)
+{
+    localStorage.setItem(feedIsFirstRun, "true");
+}
 
 async function fetchRecentPosts()
 {
@@ -149,9 +155,10 @@ feedRenderPosts(storedPosts);
 
 const feedCurrentTime = new Date().toISOString();
 const feedLastTime = localStorage.getItem(feedLocalTime);
-if (feedCurrentTime - feedLastTime > 1000 * 60 * 60 * 24)
+if (feedCurrentTime - feedLastTime > 1000 * 60 * 60 * 24 || localStorage.getItem(feedIsFirstRun) == "true")
 {
     feedDoTheJob();
+    localStorage.setItem(feedIsFirstRun, "false");
 }
 else
 {
