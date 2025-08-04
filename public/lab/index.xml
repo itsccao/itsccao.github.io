@@ -6,8 +6,15 @@
     <description>Recent content in Lab on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/lab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HCMUS FIT Notice</title>
+      <link>http://localhost:1313/lab/hcmus-fit-notice/</link>
+      <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/lab/hcmus-fit-notice/</guid>
+      <description>&lt;p&gt; Click &lt;a href=&#34;javascript:feedDoTheJob()&#34;&gt;here&lt;/a&gt; to force refresh. &lt;/p&gt;&#xD;&#xA;&lt;p&gt; Number of new posts: &lt;b&gt;&lt;text id=&#34;hcmus-fit-new-post&#34; class=&#34;highlight&#34;&gt;0&lt;/text&gt;&lt;/b&gt;. &lt;/p&gt;&#xD;&#xA;&lt;div class=&#34;page-list-container&#34;&gt; &lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;http://localhost:1313/js/hcmus-fit-notice.js&#34;&gt; &lt;/script&gt;</description>
+    </item>
     <item>
       <title>Weather Forecast</title>
       <link>http://localhost:1313/lab/weather-forecast/</link>
@@ -21,13 +28,6 @@
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/lab/tic-tac-toe/</guid>
       <description>&lt;/br&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;ttt-board&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;ttt-board-split&#34;&gt;&#xD;&#xA;        &lt;div class=&#34;ttt-square&#34; id=&#34;0&#34;&gt; &lt;/div&gt;&#xD;&#xA;        &lt;div class=&#34;ttt-square&#34; id=&#34;1&#34;&gt; &lt;/div&gt;&#xD;&#xA;        &lt;div class=&#34;ttt-square&#34; id=&#34;2&#34;&gt; &lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div class=&#34;ttt-board-split&#34;&gt;&#xD;&#xA;        &lt;div class=&#34;ttt-square&#34; id=&#34;3&#34;&gt; &lt;/div&gt;&#xD;&#xA;        &lt;div class=&#34;ttt-square&#34; id=&#34;4&#34;&gt; &lt;/div&gt;&#xD;&#xA;        &lt;div class=&#34;ttt-square&#34; id=&#34;5&#34;&gt; &lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div class=&#34;ttt-board-split&#34;&gt;&#xD;&#xA;        &lt;div class=&#34;ttt-square&#34; id=&#34;6&#34;&gt; &lt;/div&gt;&#xD;&#xA;        &lt;div class=&#34;ttt-square&#34; id=&#34;7&#34;&gt; &lt;/div&gt;&#xD;&#xA;        &lt;div class=&#34;ttt-square&#34; id=&#34;8&#34;&gt; &lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;p&gt; Result: &lt;text id=&#34;ttt-display-result&#34;&gt; &lt;/text&gt; &lt;/p&gt;&#xD;&#xA;&#xD;&#xA;&lt;button id=&#34;ttt-restart&#34; onclick=&#34;restartGame()&#34;&gt; Restart &lt;/button&gt;&#xD;&#xA;&#xD;&#xA;&lt;style&gt;&#xD;&#xA;    .ttt-square&#xD;&#xA;    {&#xD;&#xA;        width: 5rem;&#xD;&#xA;        height: 5rem;&#xD;&#xA;        display: flex;&#xD;&#xA;        align-items: center;&#xD;&#xA;        justify-content: center;&#xD;&#xA;        background-color: var(--off-background);&#xD;&#xA;        border-style: solid;&#xD;&#xA;        border-radius: 1rem;&#xD;&#xA;        border-width: 0.125rem;&#xD;&#xA;        border-color: var(--link);&#xD;&#xA;        color: var(--text);&#xD;&#xA;        font-family: cursive;&#xD;&#xA;        font-size: 3rem;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    .ttt-square:hover&#xD;&#xA;    {&#xD;&#xA;        cursor: pointer;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    #ttt-board&#xD;&#xA;    {&#xD;&#xA;        display: flex;&#xD;&#xA;        flex-direction: column;&#xD;&#xA;        gap: 1.5vh;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    .ttt-board-split&#xD;&#xA;    {&#xD;&#xA;        display: flex;&#xD;&#xA;        flex-direction: row;&#xD;&#xA;        gap: 1.5vh;&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    #ttt-restart&#xD;&#xA;    {&#xD;&#xA;        width: 5rem;&#xD;&#xA;        height: 2.5rem;&#xD;&#xA;        padding-top: 0.6rem;&#xD;&#xA;        padding-bottom: 0.6rem;&#xD;&#xA;        background-color: var(--off-background);&#xD;&#xA;        border-style: none;&#xD;&#xA;        border-radius: 0.25rem;&#xD;&#xA;        color: var(--text);&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    #ttt-restart:hover&#xD;&#xA;    {&#xD;&#xA;        border-style: solid;&#xD;&#xA;        border-width: 0.125rem;&#xD;&#xA;        border-color: var(--text);&#xD;&#xA;        cursor: pointer;&#xD;&#xA;    }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&#xD;&#xA;&lt;script src=&#34;http://localhost:1313/js/tic-tac-toe.js&#34;&gt; &lt;/script&gt;</description>
-    </item>
-    <item>
-      <title>Versions</title>
-      <link>http://localhost:1313/lab/versions/</link>
-      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/lab/versions/</guid>
-      <description>&lt;h2 id=&#34;60-current-version&#34;&gt;6.0 (current version):&lt;/h2&gt;&#xA;&lt;p&gt;Release date: July 2025.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A theme not based on any other theme, I made it from scratch.&lt;/li&gt;&#xA;&lt;li&gt;I named it &lt;strong&gt;July&lt;/strong&gt; based on the month I made it.&lt;/li&gt;&#xA;&lt;li&gt;The goal of this theme is to be a simple &amp;amp; minimal theme with a modern look.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;50&#34;&gt;5.0:&lt;/h2&gt;&#xA;&lt;p&gt;Release date: April 2025.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A theme based on &lt;a href=&#34;https://themes.gohugo.io/themes/risotto/&#34;&gt;rissoto theme&lt;/a&gt;&amp;rsquo;s typography but with a different layout. I named it &lt;strong&gt;Sylvie&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;I made it look like a program window, which I think is very cool.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;40&#34;&gt;4.0:&lt;/h2&gt;&#xA;&lt;p&gt;Release date: August 2023.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

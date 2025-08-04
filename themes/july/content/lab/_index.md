@@ -2,6 +2,6 @@
 title = "Lab"
 +++
 
-> This is a collection of my JavaScript experiments.
+> A collection of my JavaScript experiments.
 
-> ⚠️ Needs JavaScript enabled to work.
+> Older versions of this website [here](/versions).
