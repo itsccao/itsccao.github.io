@@ -118,8 +118,8 @@ getSubmit.addEventListener("click", () => {
 
                     let result = `<h3> ${locationName} </h3>`;
                     result += "<ol>";
-                    result += `<li >Weather: ${getWeatherCode(weatherCode)} </li>`;
-                    result += `<li> Current temperature: ${currentTemperature}°C </li>`;
+                    result += `<li> Weather: <b>${getWeatherCode(weatherCode)}</b> </li>`;
+                    result += `<li> Current temperature: <text class="highlight">${currentTemperature}${unitMaxTemperature}</text>  </li>`;
                     result += `<li> Max temperature: ${maxTemperature}${unitMaxTemperature} </li>`;
                     result += `<li> Min temperature: ${minTemperature}${unitMinTemperature} </li>`;
                     result += `<li> Rain: ${rainSum}${unitRainSum} </li>`;

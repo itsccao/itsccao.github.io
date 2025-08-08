@@ -7,6 +7,8 @@ const feedPosts = 10;
 const feedIsFirstRun = "feedIsFirstRun";
 
 const feedBoard = document.getElementById("hcmus-fit-new-post");
+const feedStatus = document.getElementById("hcmus-fit-status");
+const feedRefresh = document.getElementById("hcmus-fit-refresh");
 
 if (localStorage.getItem(feedIsFirstRun) == null)
 {
@@ -130,6 +132,7 @@ function feedRenderPosts(posts)
 async function feedDoTheJob()
 {
     console.log("Doing The Job");
+    feedStatus.innerText = "Loading...";
     const storedPosts = feedGetLocal();
     feedRenderPosts(storedPosts);
 
@@ -138,6 +141,7 @@ async function feedDoTheJob()
 
     if (newPosts.length > 0)
     {
+        feedStatus.innerText = "Found new posts.";
         const updatedPosts = [...newPosts, ...storedPosts];
         if (updatedPosts.length > feedPosts)
         {
@@ -147,7 +151,11 @@ async function feedDoTheJob()
         feedSaveLocal(updatedPosts);
         feedRenderPosts(updatedPosts);
         feedBoard.innerText = newPosts.length;
+        feedStatus.innerText = "Done";
     }
+    else feedStatus.innerText = "No new posts.";
+
+    console.log("Done");
 }
 
 const storedPosts = feedGetLocal();
@@ -164,3 +172,5 @@ else
 {
     console.log("Not doing the job");
 }
+
+feedRefresh.addEventListener("click", feedDoTheJob);

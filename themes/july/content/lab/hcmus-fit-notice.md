@@ -7,7 +7,10 @@ tags = [
 ]
 +++
 
-<p> Click <a href="javascript:feedDoTheJob()">here</a> to force refresh. </p>
+<p> API used: <a href="https://allorigins.win/">allorigins.win</a> </p>
+
+<p> Click <a id="hcmus-fit-refresh" href="#">here</a> to refresh. </p>
+<p> Status: <text id="hcmus-fit-status" class="highlight">Not doing anything.</text> </p>
 <p> Number of new posts: <b><text id="hcmus-fit-new-post" class="highlight">0</text></b>. </p>
 
 <div class="page-list-container"> </div>
