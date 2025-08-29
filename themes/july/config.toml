@@ -3,7 +3,7 @@ defaultContentLanguage = "en"
 sectionPagesMenu = "main"
 
 [params.About]
-title = "Nino"
+title = "Ducc"
 author = "takai24"
 description = "hi."
 source = "https://github.com/takai24"
