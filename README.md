@@ -25,13 +25,12 @@ My personal website  :D
 ## Notice
 + Best experience on wide screen devices.
 + Based on what OS you are using, the emoji may be rendered differently.
-+ Other themes are stored in the `themes` folder.
++ Themes are stored at the [`themes`](./themes) folder.
 
 ## Build
-+ This page is licensed under the [GNU General Public License v3.0](./LICENSE).
-+ Domain registered at: [is-a.dev](https://is-a.dev).
-+ Static site generator: [Hugo](https://gohugo.io).
-+ Theme: [July](https://github.com/takai24/takai24.github.io/tree/main/themes/july).
++ Domain registered at [is-a.dev](https://is-a.dev)
++ Static site generator: [Hugo](https://gohugo.io)
++ Theme: [July](https://github.com/takai24/takai24.github.io/tree/main/themes/july)
 
 > [!IMPORTANT]
 > This project is licensed under the [GNU General Public License v3.0](./LICENSE).
