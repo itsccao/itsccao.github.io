@@ -1,9 +1,8 @@
 # takai24.github.io
 
-> [!IMPORTANT]
-> This project is licensed under the [GNU General Public License v3.0](./LICENSE).
+My personal website  :D
 
-## 📸 Preview
+## Preview
 <h3>
 <details>
     <summary> Index </summary>
@@ -16,23 +15,23 @@
 </details>
 </h3>
 
-## 📦 Assets
+## Assets
 | Name | Source |
 |------|--------|
 | SVGs | [tabler.io/icons](https://tabler.io/icons/) |
 | Font | [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) |
-| Favicon | [かわち](https://www.pixiv.net/en/users/1326778) (pixiv). |
-| Nino Nakano | I couldn't find the original source. |
+| Animated Card | The girl is known as Nino Nakano but I couldn't find the original source. |
 
-## 🔔 Notice
-+ Best experience on wide screen.
+## Notice
++ Best experience on wide screen devices.
 + Based on what OS you are using, the emoji may be rendered differently.
 + Other themes are stored in the `themes` folder.
 
-## 🛠️ Infrastructure
+## Build
 + This page is licensed under the [GNU General Public License v3.0](./LICENSE).
 + Domain registered at: [is-a.dev](https://is-a.dev).
 + Static site generator: [Hugo](https://gohugo.io).
 + Theme: [July](https://github.com/takai24/takai24.github.io/tree/main/themes/july).
 
-> Made by ***takai24*** with ❤️.
+> [!IMPORTANT]
+> This project is licensed under the [GNU General Public License v3.0](./LICENSE).
