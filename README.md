@@ -1,6 +1,6 @@
 # takai24.github.io
 
-My personal website  :D
+My personal website :D
 
 ## Preview
 <h3>
@@ -20,7 +20,7 @@ My personal website  :D
 |------|--------|
 | SVGs | [tabler.io/icons](https://tabler.io/icons/) |
 | Font | [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) |
-| Animated Card | The girl is known as Nino Nakano but I couldn't find the original source. |
+| Animated Card | The girl is known as Nino Nakano but I couldn't find the original. |
 
 ## Notice
 + Best experience on wide screen devices.
