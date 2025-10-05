@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Versions on </title>
+    <link>http://localhost:1313/tags/versions/</link>
+    <description>Recent content in Versions on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/versions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Versions</title>
+      <link>http://localhost:1313/versions/</link>
+      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/versions/</guid>
+      <description>&lt;h2 id=&#34;60-current-version&#34;&gt;6.0 (current version):&lt;/h2&gt;&#xA;&lt;p&gt;Release date: July 2025&lt;text class=&#34;versions-date&#34;&gt;&lt;/text&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A theme not based on any other theme, I made it from scratch.&lt;/li&gt;&#xA;&lt;li&gt;I named it &lt;strong&gt;July&lt;/strong&gt; based on the month I made it.&lt;/li&gt;&#xA;&lt;li&gt;The goal of this theme is to be a simple &amp;amp; minimal theme with a modern look.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;50&#34;&gt;5.0:&lt;/h2&gt;&#xA;&lt;p&gt;Release date: April 2025&lt;text class=&#34;versions-date&#34;&gt;&lt;/text&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A theme based on &lt;a href=&#34;https://themes.gohugo.io/themes/risotto/&#34;&gt;rissoto theme&lt;/a&gt;&amp;rsquo;s typography but with a different layout. I named it &lt;strong&gt;Sylvie&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;The idea is to make it looks like a program window, with the close button working.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;40&#34;&gt;4.0:&lt;/h2&gt;&#xA;&lt;p&gt;Release date: August 2023&lt;text class=&#34;versions-date&#34;&gt;&lt;/text&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

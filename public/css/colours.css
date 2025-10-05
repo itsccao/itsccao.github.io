@@ -1,0 +1,16 @@
+:root
+{
+	--background: var(--base00);
+	--off-background: var(--base01);
+	--text: var(--base05);
+	--link: var(--base0B);
+	--link-hover: var(--base0D);
+	--blockquote: var(--base0C);
+	--code-background: var(--base02);
+	--highlight: var(--base0D);
+	--hover-svg: var(--base03);
+}
+
+.link { color: var(--link); }
+.text { color: var(--text); }
+.highlight { color: var(--highlight); }
