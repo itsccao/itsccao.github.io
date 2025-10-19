@@ -1,13 +1,13 @@
 +++
 title = "Weather Forecast"
-description = "Get the weather forecast for your location today."
+description = "Check today's weather forecast."
 date = "2025-03-25"
 tags = [
     "javascript"
 ]
 +++
 
-API used: [open-meteo.com](https://open-meteo.com/)
+<p> Free open-source weather API: <a href="https://open-meteo.com/" target="_blank">Open Meteo</a> </p>
 
 <h2> Enter your location: </h2>
 
@@ -33,19 +33,21 @@ API used: [open-meteo.com](https://open-meteo.com/)
 
     #weather-input
     {
-        max-width: 20rem;
-        height: 2.5rem;
+        max-width: 30rem;
+        height: 3rem;
         padding-top: 0.6rem;
         padding-bottom: 0.6rem;
         background-color: var(--off-background);
         border-radius: 0.25rem;
         border-color: var(--text);
         color: var(--text);
+        font-size: 1.1rem;
         resize: none;
     }
 
     #weather-input::placeholder
     {
+        padding-left: 0.5rem;
         color: var(--text);
     }
 
@@ -58,6 +60,7 @@ API used: [open-meteo.com](https://open-meteo.com/)
         background-color: var(--off-background);
         border-style: none;
         border-radius: 0.25rem;
+        font-size: 1.1rem;
         color: var(--text);
     }
 
@@ -67,10 +70,6 @@ API used: [open-meteo.com](https://open-meteo.com/)
         border-style: solid;
         border-width: 0.125rem;
         border-color: var(--text);
-    }
-
-    #weather-submit:hover
-    {
         cursor: pointer;
     }
 </style>

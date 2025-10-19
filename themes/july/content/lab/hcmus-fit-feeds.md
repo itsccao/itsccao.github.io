@@ -1,13 +1,13 @@
 +++
-title = "HCMUS FIT Notice"
-description = "A notice for HCMUS FIT."
+title = "fit@hcmus feeds"
+description = "fit@hcmus new feeds checker."
 date = "2025-08-03"
 tags = [
     "javascript"
 ]
 +++
 
-<p> API used: <a href="https://allorigins.win/">allorigins.win</a> </p>
+<p> Bypass Same-origin policy problems <a href="https://allorigins.win/">allorigins.win</a> </p>
 
 <p> Click <a id="hcmus-fit-refresh" href="#">here</a> to refresh. </p>
 <p> Status: <text id="hcmus-fit-status" class="highlight">Not doing anything.</text> </p>
@@ -15,4 +15,4 @@ tags = [
 
 <div class="page-list-container"> </div>
 
-<script src="/js/hcmus-fit-notice.js"> </script>
+<script src="/js/hcmus-fit-feeds.js"> </script>

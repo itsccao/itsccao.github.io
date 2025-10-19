@@ -80,72 +80,18 @@
 <script src="/js/header.js"> </script></div>
 
             <div class="page-body">
-    <h1> Weather Forecast </h1>
-    <p> Check today&rsquo;s weather forecast. </p>
+    <h1> fit@hcmus feeds </h1>
+    <p> fit@hcmus new feeds checker. </p>
     <noscript>
         <p> ⚠️ JavaScript is required to run this page. </p>
     </noscript>
     <hr>
-    <p> Free open-source weather API: <a href="https://open-meteo.com/" target="_blank">Open Meteo</a> </p>
-<h2> Enter your location: </h2>
-</br>
-<div id="weather-container">
-    <textarea id="weather-input" placeholder="Your city/country..." autofocus></textarea>
-    <button id="weather-submit"> Submit </button>
-</div>
-<div id="weather-error"> </div>
-<h2> Location(s) searched: </h2>
-<div id="weather-result"> </div>
-<style>
-    #weather-container
-    {
-        display: flex;
-        gap: 1rem;
-    }
-
-    #weather-input
-    {
-        max-width: 30rem;
-        height: 3rem;
-        padding-top: 0.6rem;
-        padding-bottom: 0.6rem;
-        background-color: var(--off-background);
-        border-radius: 0.25rem;
-        border-color: var(--text);
-        color: var(--text);
-        font-size: 1.1rem;
-        resize: none;
-    }
-
-    #weather-input::placeholder
-    {
-        padding-left: 0.5rem;
-        color: var(--text);
-    }
-
-    #weather-submit
-    {
-        width: 5rem;
-        padding-top: 0.6rem;
-        padding-bottom: 0.6rem;
-        display: inline-block;
-        background-color: var(--off-background);
-        border-style: none;
-        border-radius: 0.25rem;
-        font-size: 1.1rem;
-        color: var(--text);
-    }
-
-    #weather-submit:hover
-    {
-        background-color: var(--hover-svg);
-        border-style: solid;
-        border-width: 0.125rem;
-        border-color: var(--text);
-        cursor: pointer;
-    }
-</style>
-<script src="/js/weather-forecast.js"> </script>
+    <p> Bypass Same-origin policy problems <a href="https://allorigins.win/">allorigins.win</a> </p>
+<p> Click <a id="hcmus-fit-refresh" href="#">here</a> to refresh. </p>
+<p> Status: <text id="hcmus-fit-status" class="highlight">Not doing anything.</text> </p>
+<p> Number of new posts: <b><text id="hcmus-fit-new-post" class="highlight">0</text></b>. </p>
+<div class="page-list-container"> </div>
+<script src="/js/hcmus-fit-feeds.js"> </script>
 
             </div>
 

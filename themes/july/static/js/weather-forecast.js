@@ -75,8 +75,8 @@ getSubmit.addEventListener("click", () => {
             if (response.status === 200) return response.json();
             else
             {
-                document.getElementById("weather-error").innerText = "Mysterious error, I will fix this as soon as possible!";
-                throw new Error("Mysterious error, I will fix this as soon as possible!");
+                document.getElementById("weather-error").innerText = "Error while fetching location data.";
+                throw new Error("Error while fetching location data.");
             }
         })
         .then((data) => {
@@ -118,14 +118,14 @@ getSubmit.addEventListener("click", () => {
 
                     let result = `<h3> ${locationName} </h3>`;
                     result += "<ol>";
-                    result += `<li> Weather: <b>${getWeatherCode(weatherCode)}</b> </li>`;
+                    result += `<li> Weather: <b><text class="link">${getWeatherCode(weatherCode)}</text></b> </li>`;
                     result += `<li> Current temperature: <text class="highlight">${currentTemperature}${unitMaxTemperature}</text>  </li>`;
-                    result += `<li> Max temperature: ${maxTemperature}${unitMaxTemperature} </li>`;
+                    result += `<li> Max temperature: <text class="link">${maxTemperature}${unitMaxTemperature}</text> </li>`;
                     result += `<li> Min temperature: ${minTemperature}${unitMinTemperature} </li>`;
-                    result += `<li> Rain: ${rainSum}${unitRainSum} </li>`;
-                    result += `<li> Max wind speed: ${maxWindSpeed} ${unitMaxWindSpeed} </li>`;
+                    result += `<li> Rain: <text class="link">${rainSum}${unitRainSum}</text> </li>`;
+                    result += `<li> Max wind speed: <text class="link">${maxWindSpeed} ${unitMaxWindSpeed}</text> </li>`;
                     result += `<li> Min wind speed: ${minWindSpeed} ${unitMinWindSpeed} </li>`;
-                    result += `<li> Wind direction: ${getWindDirection(windDirection)} </li>`;
+                    result += `<li> Wind direction: <text class="link">${getWindDirection(windDirection)}</text> </li>`;
                     result += "</ol> <hr>";
 
                     getResult.innerHTML += result;
