@@ -18,7 +18,9 @@ tags = [
 <br/>
 <div id="qr-code-output"> </div>
 <br/>
-<button id="qr-code-download"> Download </button>
+<div id="qr-code-download-container">
+    <button id="qr-code-download"> Download </button>
+</div>
 
 <style>
     #qr-code-input
@@ -42,17 +44,26 @@ tags = [
         padding-left: 0.5rem;
         color: var(--text);
     }
-
     #qr-code-output
     {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         max-width: 100%;
     }
 
     #qr-code-output canvas
     {
-        max-width: 100%;
+        max-width: 75%;
         height: auto;
+    }
+
+    #qr-code-download-container
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #qr-code-download
