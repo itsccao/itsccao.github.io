@@ -8,7 +8,7 @@
 	--blockquote: var(--base0C);
 	--code-background: var(--base02);
 	--highlight: var(--base0D);
-	--hover-svg: var(--base03);
+	--hover-svg: var(--base02);
 }
 
 .link { color: var(--link); }

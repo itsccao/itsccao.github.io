@@ -51,6 +51,10 @@
 {
     width: 2.5rem;
     height: 2.5rem;
+
+    transition:
+        color 0.2s ease,
+        transform 0.25s ease;
 }
 
 .index-content-1 a
@@ -62,8 +66,6 @@
 {
     color: var(--link);
     transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out;
 }
 
 @media (max-width: 50rem)
@@ -79,6 +81,7 @@
         width: 50vw;
         height: 50vw;
         border-radius: 50%;
+        content:  url("/assets/nino-by-frame.png");
     }
 
     .index-content
