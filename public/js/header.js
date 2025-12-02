@@ -35,3 +35,10 @@ themeToogle.addEventListener("click", () => {
         localStorage.setItem("pageTheme", "mocha");
     }
 });
+
+fetch('https://visitor-badge.laobi.icu/badge?page_id=takai24.is-a.dev',
+{
+    mode: "no-cors"
+})
+.then(() => console.log("Views +1."))
+.catch(err => console.error("Error: ", err));

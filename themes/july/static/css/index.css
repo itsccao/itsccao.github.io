@@ -81,7 +81,7 @@
         width: 50vw;
         height: 50vw;
         border-radius: 50%;
-        content:  url("/assets/nino-by-frame.png");
+        content:  url("/assets/nino-by-frame.webp");
     }
 
     .index-content

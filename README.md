@@ -32,5 +32,7 @@ My personal website :D
 + Static site generator: [Hugo](https://gohugo.io)
 + Theme: [July](https://github.com/takai24/takai24.github.io/tree/main/themes/july)
 
+![](https://visitor-badge.laobi.icu/badge?page_id=takai24.is-a.dev&left_text=Views)
+
 > [!IMPORTANT]
 > This project is licensed under the [GNU General Public License v3.0](./LICENSE).
