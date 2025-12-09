@@ -36,9 +36,14 @@ themeToogle.addEventListener("click", () => {
     }
 });
 
-fetch('https://visitor-badge.laobi.icu/badge?page_id=takai24.is-a.dev',
+function visitorCounter()
 {
-    mode: "no-cors"
-})
-.then(() => console.log("Views +1."))
-.catch(err => console.error("Error: ", err));
+    fetch('https://visitor-badge.laobi.icu/badge?page_id=takai24.is-a.dev',
+    {
+        mode: "no-cors"
+    })
+    .then(() => console.log("+1 Visitor"))
+    .catch(err => console.error("Error: ", err));
+}
+
+visitorCounter();

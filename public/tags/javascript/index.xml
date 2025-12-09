@@ -6,8 +6,15 @@
     <description>Recent content in Javascript on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Xem ngày Âm Lịch</title>
+      <link>http://localhost:1313/lab/xem-ngay-am-lich/</link>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/lab/xem-ngay-am-lich/</guid>
+      <description>&lt;p&gt; Cách tính ngày Âm Lịch được lấy từ: &lt;a href=&#34;https://www.xemamlich.uhm.vn/calrules.html&#34; target=&#34;_blank&#34;&gt;www.xemamlich.uhm.vn/calrules.html&lt;/a&gt; &lt;/p&gt;&#xD;&#xA;&lt;p&gt;&lt;label for=&#34;am-lich&#34;&gt; Chọn ngày: &lt;/label&gt;&#xA;&lt;input type=&#34;date&#34; id=&#34;am-lich-input&#34; name=&#34;am-lich&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt; Ngày Âm Lịch: &lt;span id=&#34;am-lich-result&#34; class=&#34;link&#34;&gt; &lt;/span&gt; &lt;/p&gt;&#xD;&#xA;&lt;p&gt; Ngày: &lt;span id=&#34;am-lich-ngay&#34; class=&#34;highlight&#34;&gt; &lt;/span&gt; &lt;/p&gt;&#xD;&#xA;&lt;p&gt; Tháng: &lt;span id=&#34;am-lich-thang&#34;&gt; &lt;/span&gt; &lt;/p&gt;&#xD;&#xA;&lt;p&gt; Năm: &lt;span id=&#34;am-lich-nam&#34;&gt; &lt;/span&gt; &lt;/p&gt;&#xD;&#xA;&lt;script type=&#34;module&#34; src=&#34;http://localhost:1313/js/am-lich.js&#34;&gt; &lt;/script&gt;</description>
+    </item>
     <item>
       <title>QR Code Generator</title>
       <link>http://localhost:1313/lab/qr-code-generator/</link>

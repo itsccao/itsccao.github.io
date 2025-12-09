@@ -78,33 +78,20 @@
 <script src="/js/header.js"> </script></div>
 
             <div class="page-body">
-    <h1> Javascript </h1>
-    
-
-    <br/>
-    <div class="page-list-container">
-        
-        <div class="page-list">
-            <a class="page-list-link" href="http://localhost:1313/lab/xem-ngay-am-lich/"> Xem ngày Âm Lịch </a>
-        </div>
-        
-        <div class="page-list">
-            <a class="page-list-link" href="http://localhost:1313/lab/qr-code-generator/"> QR Code Generator </a>
-        </div>
-        
-        <div class="page-list">
-            <a class="page-list-link" href="http://localhost:1313/lab/hcmus-fit-feeds/"> fit@hcmus feeds </a>
-        </div>
-        
-        <div class="page-list">
-            <a class="page-list-link" href="http://localhost:1313/lab/weather-forecast/"> Weather Forecast </a>
-        </div>
-        
-        <div class="page-list">
-            <a class="page-list-link" href="http://localhost:1313/lab/tic-tac-toe/"> Tic Tac Toe </a>
-        </div>
-        
-    </div>
+    <h1> Xem ngày Âm Lịch </h1>
+    <p> Xem ngày Âm Lịch và ngày theo 12 con Giáp. </p>
+    <noscript>
+        <p> ⚠️ JavaScript is required to run this page. </p>
+    </noscript>
+    <hr>
+    <p> Cách tính ngày Âm Lịch được lấy từ: <a href="https://www.xemamlich.uhm.vn/calrules.html" target="_blank">www.xemamlich.uhm.vn/calrules.html</a> </p>
+<p><label for="am-lich"> Chọn ngày: </label>
+<input type="date" id="am-lich-input" name="am-lich"></p>
+<p> Ngày Âm Lịch: <span id="am-lich-result" class="link"> </span> </p>
+<p> Ngày: <span id="am-lich-ngay" class="highlight"> </span> </p>
+<p> Tháng: <span id="am-lich-thang"> </span> </p>
+<p> Năm: <span id="am-lich-nam"> </span> </p>
+<script type="module" src="/js/am-lich.js"> </script>
 
             </div>
 
