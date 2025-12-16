@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="{{- site.Language.Lang -}}">
+    <head>
+        {{- partial "head.html" . -}}
+        <link rel="stylesheet" href="/css/404.css">
+    </head>
+
+    <body>
+        <div class="page">
+            <div class="page-header">
+                {{- partial "header.html" . -}}
+            </div>
+
+            <div class="page-body">
+                <div class="page-404-container">
+                    <p class="page-404-title"> 404 </p>
+                    <p> You may have reached this page by a mistake. </p>
+                    <p> Click <a href="/">here</a> to return to the homepage. </p>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <span> This page is <a href="https://github.com/takai24/takai24.github.io">open-source</a>. Made with ❤️ </span>
+            </div>
+        </div>
+    </body>
+</html>
