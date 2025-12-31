@@ -5,7 +5,7 @@ sectionPagesMenu = "main"
 [params.About]
 title = "Ducc"
 author = "takai24"
-description = "Hi, I'm Ducc. I'm a college student & a sleepy coder."
+description = "Hi, I'm Ducc."
 source = "https://github.com/takai24"
 baseURL = "https://takai24.github.io"
 imageURL = "/assets/index.png"

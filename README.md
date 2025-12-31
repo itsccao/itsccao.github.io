@@ -20,7 +20,9 @@ My personal website :D
 |------|--------|
 | SVGs | [tabler.io/icons](https://tabler.io/icons/) |
 | Font | [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) |
-| Animated Card | The girl is known as Nino Nakano but I couldn't find the original. |
+| Animated Card | [tenor](https://tenor.com/view/anime-frieren-elf-girl-cute-gif-7075791933789789357) |
+| Favicon | Art by [CORE on pixiv](https://www.pixiv.net/en/artworks/113872056) |
+| 404.html | [donlon/cloudflare-error-page](https://github.com/donlon/cloudflare-error-page) |
 
 ## Notice
 + Best experience on wide screen devices.

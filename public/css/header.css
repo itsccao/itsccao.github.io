@@ -146,6 +146,7 @@
 .page-header-menu-input:not(:checked) + .page-header-menu-container
 {
     display: flex;
+    pointer-events: none;
 }
 
 .page-header-menu-input:not(:checked) + .page-header-menu-container .page-header-menu-item
