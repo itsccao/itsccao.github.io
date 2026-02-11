@@ -9,7 +9,7 @@ tags = [
 
 ## My GitHub Wrapped 2024
 
-[![GitHub Wrapped 2024](/media/git-wrapped-takai24-2024.png)](https://git-wrapped.com/profiles/takai24)
+[![GitHub Wrapped 2024](/media/git-wrapped-itsccao-2024.png)](https://git-wrapped.com/profiles/itsccao)
 
 ## How I feel
 + This year GitHub Warpped looks more minimal than last year's website. I like the new design.

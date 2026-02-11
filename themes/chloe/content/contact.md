@@ -7,8 +7,8 @@ title = "Contact"
 > ⚠️ **Other accounts with this username are not mine, except for those I have listed below.**
 
 ## Primary
-+ GitHub: [takai24](https://github.com/takai24)
-+ Email: [takai24@proton.me](mailto:takai24@proton.me)
++ GitHub: [itsccao](https://github.com/itsccao)
++ Email: [itsccao@proton.me](mailto:itsccao@proton.me)
 
 ## Coding Platforms
 + [LeetCode](https://leetcode.com/u/ccaoishere/)

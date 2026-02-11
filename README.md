@@ -1,4 +1,4 @@
-# takai24.github.io
+# itsccao.github.io
 
 My personal website :D
 
@@ -30,11 +30,10 @@ My personal website :D
 + Themes are stored at the [`themes`](./themes) folder.
 
 ## Build
-+ Domain registered at [is-a.dev](https://is-a.dev)
 + Static site generator: [Hugo](https://gohugo.io)
-+ Theme: [July](https://github.com/takai24/takai24.github.io/tree/main/themes/july)
++ Theme: [July](https://github.com/itsccao/itsccao.github.io/tree/main/themes/july)
 
-![](https://visitor-badge.laobi.icu/badge?page_id=takai24.is-a.dev&left_text=Visitors)
+![](https://visitor-badge.laobi.icu/badge?page_id=itsccao.github.io&left_text=Visitors)
 
 > [!IMPORTANT]
 > This project is licensed under the [GNU General Public License v3.0](./LICENSE).

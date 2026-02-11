@@ -38,7 +38,7 @@ themeToogle.addEventListener("click", () => {
 
 function visitorCounter()
 {
-    fetch('https://visitor-badge.laobi.icu/badge?page_id=takai24.is-a.dev',
+    fetch('https://visitor-badge.laobi.icu/badge?page_id=itsccao.github.io',
     {
         mode: "no-cors"
     })

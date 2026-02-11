@@ -3,11 +3,11 @@ defaultContentLanguage = "en"
 sectionPagesMenu = "main"
 
 [params.About]
-title = "takai24"
-author = "takai24"
+title = "itsccao"
+author = "itsccao"
 description = "hi."
-source = "https://github.com/takai24"
-baseURL = "https://takai24.github.io"
+source = "https://github.com/itsccao"
+baseURL = "https://itsccao.github.io"
 imageURL = "/assets/preview.png"
 
 [params.Theme]

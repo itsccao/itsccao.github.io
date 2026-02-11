@@ -44,8 +44,8 @@ function indexZ_welcomeTextAnimation()
 indexZ_welcomeTextAnimation();
 
 // Commit information
-const AUTHOR = "takai24";
-const REPOSITORY = "takai24.github.io"
+const AUTHOR = "itsccao";
+const REPOSITORY = "itsccao.github.io"
 const indexZ_commit = document.getElementById("indexZ-commit");
 
 if (!localStorage.getItem("latestCommitDate"))

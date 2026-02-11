@@ -3,7 +3,7 @@ from cloudflare_error_page import render as render_cf_error_page
 
 # This function renders an error page based on the input parameters
 error_page = render_cf_error_page({
-    "html_title": "takai24.is-a.dev | 404: Page Not Found",
+    "html_title": "itsccao.github.io | 404: Page Not Found",
     "title": "Page Not Found",
     "error_code": "404",
     "more_information":
@@ -27,7 +27,7 @@ error_page = render_cf_error_page({
     },
     "host_status": {
         "status": "ok",
-        "location": "takai24.is-a.dev",
+        "location": "itsccao.github.io",
         "name": "",
         "status_text": "Almost Working"
     },
