@@ -1,0 +1,16 @@
+:root
+{
+	--background: #F9F9F9;
+	--off-background: #DFE2E0;
+	--text: #211F26;
+	--link: #3E9B4F;
+	--link-hover: #65BA74;
+	--blockquote: #3A5BC7;
+	--code-background: #E6E9E8;
+	--highlight: #FFC53D;
+	--hover-svg: #CDCED6;
+}
+
+.link { color: var(--link); }
+.text { color: var(--text); }
+.highlight { color: var(--highlight); }

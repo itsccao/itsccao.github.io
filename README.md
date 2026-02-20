@@ -9,7 +9,6 @@ My personal website :D
 | Font | [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) |
 | Animated Card | [tenor](https://tenor.com/view/anime-frieren-elf-girl-cute-gif-7075791933789789357) |
 | Favicon | [Seseren (pixiv)](https://www.pixiv.net/en/artworks/141349528) |
-| 404.html | [donlon/cloudflare-error-page](https://github.com/donlon/cloudflare-error-page) |
 
 ## Notice
 + Best experience on wide screen devices.

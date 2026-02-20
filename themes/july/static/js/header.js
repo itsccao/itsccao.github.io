@@ -1,6 +1,9 @@
+const themeNameDark = "july-dark";
+const themeNameWhite = "july-light";
+
 if (!localStorage.getItem("pageTheme"))
 {
-    localStorage.setItem("pageTheme", "mocha");
+    localStorage.setItem("pageTheme", themeNameDark);
 }
 
 function themeLoad()
@@ -16,7 +19,7 @@ themeLoad();
 
 const themeToogle = document.getElementById("page-header-theme-toogle");
 themeToogle.style.display = "flex";
-if (localStorage.getItem("pageTheme") === "mocha")
+if (localStorage.getItem("pageTheme") === themeNameDark)
 {
     themeToogle.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="32" height="32">
         <rect width="256" height="256" fill="none"/>
@@ -40,12 +43,12 @@ else
 }
 
 themeToogle.addEventListener("click", () => {
-    if (localStorage.getItem("pageTheme") === "mocha")
+    if (localStorage.getItem("pageTheme") === themeNameDark)
     {
-        localStorage.setItem("pageTheme", "atelier-cave-light");
+        localStorage.setItem("pageTheme", themeNameWhite);
     }
     else
     {
-        localStorage.setItem("pageTheme", "mocha");
+        localStorage.setItem("pageTheme", themeNameDark);
     }
 });
