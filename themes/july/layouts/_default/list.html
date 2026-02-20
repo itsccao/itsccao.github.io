@@ -1,0 +1,27 @@
+{{ define "main" }}
+    <h1> {{ .Title | markdownify }} </h1>
+    {{ .Content }}
+
+    <div class="page-list-container">
+        {{ range .Pages }}
+        <div class="page-list">
+            <text>
+                <a class="page-list-link" href="{{ .Permalink }}"> {{ .Title | markdownify }} </a>
+            </text>
+            <br/>
+            <text> {{ .Date.Format "Jan 2, 2006" }} </text>
+            <br/>
+            <text> {{ .Description }} </text>
+            <br/>
+            <div class="page-list-tag-container">
+                {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
+                    {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
+                    $taxonomy $tag) -}}
+                    <a class="page-list-tag" href="{{ .Permalink }}">{{ $tag | urlize }}</a>
+                    {{- end -}} {{- end -}}
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+{{ end }}

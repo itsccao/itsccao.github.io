@@ -1,0 +1,14 @@
+# Configuration
+defaultContentLanguage = "en"
+sectionPagesMenu = "main"
+
+[params.About]
+title = "Ducc"
+author = "itsccao"
+description = "probably doing something random."
+source = "https://github.com/itsccao"
+baseURL = "https://itsccao.github.io"
+imageURL = "/assets/index.png"
+
+[params.Theme]
+themeColor = "#000000"

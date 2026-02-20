@@ -1,0 +1,170 @@
+.page-header
+{
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.page-header a
+{
+    text-decoration: none;
+    color: var(--text);
+}
+
+.page-header-icon
+{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 0.5rem;
+    border-color: var(--text);
+    background-color: var(--off-background);
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.2s ease;
+}
+
+.page-header-icon svg
+{
+    max-width: 1.25rem;
+    max-height: 1.25rem;
+    color: var(--text);
+    user-select: none;
+    -webkit-user-select: none;
+
+    transition: color 0.25s ease;
+}
+
+.page-header-icon:hover
+{
+    cursor: pointer;
+    background-color: var(--hover-svg);
+    
+    transform: scale(1.1);
+}
+
+.page-header-menu-toogle
+{
+    position: relative;
+}
+
+.page-header-menu > .page-header-menu-input
+{
+    display: none;
+}
+
+.page-header-menu .page-header-menu-container
+{
+    position: absolute;
+    flex-direction: column;
+    display: none;
+}
+
+/* Shows buttons when hover
+.page-header-menu:hover .page-header-menu-container
+{
+    display: flex;
+}
+*/
+
+.page-header-menu-item
+{
+    position: relative;
+    margin-top: 0.75rem;
+    opacity: 0;
+}
+
+.page-header-menu-item:hover
+{
+    transform: scale(1.1) !important;
+}
+
+@keyframes menuItemFade
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(-10px) scale(1);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.page-header-menu-input:checked + .page-header-menu-container
+{
+    display: flex;
+}
+
+.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item
+{
+    animation: menuItemFade 0.4s ease forwards;
+}
+
+.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item:nth-child(1)
+{
+    animation-delay: 0.1s;
+}
+
+.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item:nth-child(2)
+{
+    animation-delay: 0.25s;
+}
+
+.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item:nth-child(3)
+{
+    animation-delay: 0.4s;
+}
+
+@keyframes menuItemHide
+{
+    from
+    {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to
+    {
+        opacity: 0;
+        transform: translateY(-10px) scale(1);
+    }
+}
+
+.page-header-menu-input:not(:checked) + .page-header-menu-container
+{
+    display: flex;
+    pointer-events: none;
+}
+
+.page-header-menu-input:not(:checked) + .page-header-menu-container .page-header-menu-item
+{
+    animation: menuItemHide 0.4s ease backwards;
+}
+
+.page-header-menu-input:not(:checked) + .page-header-menu-container .page-header-menu-item:nth-child(1)
+{
+    animation-delay: 0.1s;
+}
+
+.page-header-menu-input:not(:checked) + .page-header-menu-container .page-header-menu-item:nth-child(2)
+{
+    animation-delay: 0.25s;
+}
+
+.page-header-menu-input:not(:checked) + .page-header-menu-container .page-header-menu-item:nth-child(3)
+{
+    animation-delay: 0.4s;
+}
