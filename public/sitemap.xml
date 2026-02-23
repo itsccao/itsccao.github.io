@@ -41,12 +41,8 @@
     <loc>http://localhost:1313/lab/tic-tac-toe/</loc>
     <lastmod>2024-07-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/versions/</loc>
-    <lastmod>2023-10-21T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/versions/</loc>
-    <lastmod>2023-10-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

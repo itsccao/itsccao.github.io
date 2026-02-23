@@ -102,7 +102,7 @@ function feedCreatePost(post)
 
     const linkText = document.createElement("text");
     const link = document.createElement("a");
-    link.className = "page-list-link";
+    link.className = "page-list-title";
     link.href = post.link;
     link.textContent = post.title;
     linkText.appendChild(link);

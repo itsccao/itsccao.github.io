@@ -1,8 +1,8 @@
 {{ define "main" }}
     <h1> {{ .Title | markdownify }} </h1>
+    <p> {{ .Date.Format "Jan 2, 2006" }} </p>
     <p> {{ .Description | markdownify }} </p>
     <div class="page-list-tag-container">
-        <text> Tags: </text>
         {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
             {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
             $taxonomy $tag) -}}

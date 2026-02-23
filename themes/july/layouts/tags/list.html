@@ -2,12 +2,9 @@
     <h1> {{ .Title | markdownify }} </h1>
     {{ .Content }}
 
-    <br/>
-    <div class="page-list-container">
+    <ul>
         {{ range .Pages }}
-        <div class="page-list">
-            <a class="page-list-link" href="{{ .Permalink }}"> {{ .Title | markdownify }} </a>
-        </div>
+            <li> <p> <a class="page-list-title" href="{{ .Permalink }}"> {{ .Title | markdownify }} </a> </p> </li>
         {{ end }}
-    </div>
+    </ul>
 {{ end }}

@@ -29,12 +29,5 @@
       <guid>http://localhost:1313/tags/test/</guid>
       <description></description>
     </item>
-    <item>
-      <title>Versions</title>
-      <link>http://localhost:1313/tags/versions/</link>
-      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/versions/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>

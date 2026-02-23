@@ -2,6 +2,6 @@
 title = "Lab"
 +++
 
-> A collection of my JavaScript experiments.
+A collection of my JavaScript experiments.
 
-> Older versions of this website [here](/versions).
+Take a look at this website's history [here](/versions).

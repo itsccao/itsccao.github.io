@@ -30,7 +30,7 @@
       <description>&lt;p&gt; Bypass Same-origin policy problems &lt;a href=&#34;https://allorigins.win/&#34;&gt;allorigins.win&lt;/a&gt; &lt;/p&gt;&#xD;&#xA;&lt;p&gt; Click &lt;a id=&#34;hcmus-fit-refresh&#34; href=&#34;#&#34;&gt;here&lt;/a&gt; to refresh. &lt;/p&gt;&#xD;&#xA;&lt;p&gt; Status: &lt;text id=&#34;hcmus-fit-status&#34; class=&#34;highlight&#34;&gt;Not doing anything.&lt;/text&gt; &lt;/p&gt;&#xD;&#xA;&lt;p&gt; Number of new posts: &lt;b&gt;&lt;text id=&#34;hcmus-fit-new-post&#34; class=&#34;highlight&#34;&gt;0&lt;/text&gt;&lt;/b&gt;. &lt;/p&gt;&#xD;&#xA;&lt;div class=&#34;page-list-container&#34;&gt; &lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;http://localhost:1313/js/hcmus-fit-feeds.js&#34;&gt; &lt;/script&gt;</description>
     </item>
     <item>
-      <title>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</title>
+      <title>Example</title>
       <link>http://localhost:1313/note/example/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/note/example/</guid>
@@ -53,9 +53,9 @@
     <item>
       <title>Versions</title>
       <link>http://localhost:1313/versions/</link>
-      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/versions/</guid>
-      <description>&lt;h2 id=&#34;60-current-version&#34;&gt;6.0 (current version):&lt;/h2&gt;&#xA;&lt;p&gt;Release date: July 2025&lt;text class=&#34;versions-date&#34;&gt;&lt;/text&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A theme not based on any other theme, I made it from scratch.&lt;/li&gt;&#xA;&lt;li&gt;I named it &lt;strong&gt;July&lt;/strong&gt; based on the month I made it.&lt;/li&gt;&#xA;&lt;li&gt;The goal of this theme is to be a simple &amp;amp; minimal theme with a modern look.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;50&#34;&gt;5.0:&lt;/h2&gt;&#xA;&lt;p&gt;Release date: April 2025&lt;text class=&#34;versions-date&#34;&gt;&lt;/text&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A theme based on &lt;a href=&#34;https://themes.gohugo.io/themes/risotto/&#34;&gt;rissoto theme&lt;/a&gt;&amp;rsquo;s typography but with a different layout. I named it &lt;strong&gt;Sylvie&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;The idea is to make it looks like a program window, with the close button working.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;40&#34;&gt;4.0:&lt;/h2&gt;&#xA;&lt;p&gt;Release date: August 2023&lt;text class=&#34;versions-date&#34;&gt;&lt;/text&gt;.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;6xx---july-current-version&#34;&gt;6.x.x - July (current version):&lt;/h2&gt;&#xA;&lt;p&gt;Release date: July 2025&lt;text class=&#34;versions-date&#34;&gt;&lt;/text&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I named it &lt;strong&gt;July&lt;/strong&gt; based on the month I made it.&lt;/li&gt;&#xA;&lt;li&gt;The goal of this theme is to be as simple as possible.&lt;/li&gt;&#xA;&lt;li&gt;And yes, I still use some part of &lt;a href=&#34;https://themes.gohugo.io/themes/risotto/&#34;&gt;rissoto theme&lt;/a&gt;&amp;rsquo;s typography.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;5xx---sylvie&#34;&gt;5.x.x - Sylvie:&lt;/h2&gt;&#xA;&lt;p&gt;Release date: April 2025&lt;text class=&#34;versions-date&#34;&gt;&lt;/text&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The idea is to make it looks like a program window, with the close button working (sort of).&lt;/li&gt;&#xA;&lt;li&gt;For typography, I used &lt;a href=&#34;https://themes.gohugo.io/themes/risotto/&#34;&gt;rissoto theme&lt;/a&gt;&amp;rsquo;s typography.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;4xx---chloe&#34;&gt;4.x.x - Chloe:&lt;/h2&gt;&#xA;&lt;p&gt;Release date: August 2023&lt;text class=&#34;versions-date&#34;&gt;&lt;/text&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

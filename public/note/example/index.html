@@ -33,9 +33,13 @@
 
 
 
-
-<title> Ducc </title>
-
+<title>
+    Ducc
+    
+        &#124;
+        Example 
+    
+</title>
 
 
 <link rel="canonical" href="https://itsccao.github.io">
@@ -99,10 +103,10 @@
 <script src="/js/header.js"> </script></div>
 
             <div class="page-body">
-    <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+    <h1> Example </h1>
+    <p> Jul 8, 2025 </p>
     <p> An example on how markdown is rendered. </p>
     <div class="page-list-tag-container">
-        <text> Tags: </text>
          
              <a class="page-list-tag" href="http://localhost:1313/tags/template/">template</a> <a class="page-list-tag" href="http://localhost:1313/tags/test/">test</a>
     </div>
@@ -135,6 +139,7 @@
 </blockquote>
 <h2 id="tables">Tables</h2>
 <p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.</p>
+<div class="table-wrapper">
 <table>
   <thead>
       <tr>
@@ -153,7 +158,9 @@
       </tr>
   </tbody>
 </table>
+</div>
 <h4 id="inline-markdown-within-tables">Inline Markdown within tables</h4>
+<div class="table-wrapper">
 <table>
   <thead>
       <tr>
@@ -170,6 +177,7 @@
       </tr>
   </tbody>
 </table>
+</div>
 <h2 id="code-blocks">Code Blocks</h2>
 <h4 id="code-block-with-backticks">Code block with backticks</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
@@ -253,8 +261,16 @@
             </div>
 
             <div class="page-footer">
-                <span> This page is <a href="https://github.com/itsccao/itsccao.github.io">open-source</a>. Made with ❤️ </span>
-            </div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="32" height="32">
+    <rect width="256" height="256" fill="none"/>
+        <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+        <path d="M160,152a40,40,0,1,1,0-48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+</svg>
+<text id="page-footer-current-year"> 2022&ndash;2026 </text>
+<a href="https://github.com/itsccao">itsccao</a>
+
+<script src="/js/footer.js"> </script>
+</div>
         </div>
     </body>
 </html>

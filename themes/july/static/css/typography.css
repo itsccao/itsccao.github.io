@@ -1,9 +1,9 @@
 /* Headings */
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6
 {
     margin: 1.5rem 0 0 0;
@@ -33,6 +33,26 @@ h5+h6
     margin-bottom: 0;
 }
 
+h1 + .highlight,
+h2 + .highlight,
+h3 + .highlight,
+h4 + .highlight,
+h5 + .highlight,
+h6 + .highlight
+{
+    margin-top: 0.75rem;
+}
+
+h1 + pre,
+h2 + pre,
+h3 + pre,
+h4 + pre,
+h5 + pre,
+h6 + pre
+{
+    margin-top: 0.75rem;
+}
+
 /* Links */
 a:link, a:visited
 {
@@ -42,6 +62,7 @@ a:link, a:visited
 a:hover, a:active, a.active
 {
     color: var(--link-hover);
+    text-shadow: 0 0 6px var(--link-hover);
 }
 
 /* Blockquotes */
@@ -60,12 +81,12 @@ blockquote
 
 /* Code */
 pre,
-code, 
+code,
 kbd,
 samp
 {
+    border-radius: 0.25rem;
     background: var(--code-background) !important;
-    color: var(--text);
     overflow: auto;
 }
 
@@ -97,4 +118,46 @@ mark
 img
 {
     max-width: 100%;
+}
+
+/* Tables */
+.table-wrapper
+{
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+th, td
+{
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: color-mix(in srgb, var(--text) 15%, transparent); 
+}
+
+th
+{
+    font-weight: 750;
+    background-color: var(--code-background);
+}
+
+tbody tr:nth-child(even)
+{
+    background-color: color-mix(in srgb, var(--text) 3%, transparent);
+}
+
+tbody tr:hover
+{
+    background-color: color-mix(in srgb, var(--text) 8%, transparent);
+    transition: background-color 0.2s ease;
 }

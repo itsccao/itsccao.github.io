@@ -1,7 +1,9 @@
-@import "colours.css";
-@import "header.css";
 @import "layout.css";
+@import "header.css";
+@import "footer.css";
 @import "typography.css";
+@import "list.css";
+@import "colours.css";
 
 *
 {

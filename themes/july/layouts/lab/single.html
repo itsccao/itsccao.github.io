@@ -1,9 +1,0 @@
-{{ define "main" }}
-    <h1> {{ .Title | markdownify }} </h1>
-    <p> {{ .Description | markdownify }} </p>
-    <noscript>
-        <p> ⚠️ JavaScript is required to run this page. </p>
-    </noscript>
-    <hr>
-    {{ .Content }}
-{{ end }}

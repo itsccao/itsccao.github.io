@@ -1,5 +1,5 @@
 +++
-title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+title = "Example"
 description = "An example on how markdown is rendered."
 date = "2025-07-08"
 tags = [
@@ -46,17 +46,22 @@ The blockquote element represents content that is quoted from another source, op
 ## Tables
 
 Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
+<div class="table-wrapper">
 
    Name | Age
 --------|------
     Bob | 27
   Alice | 23
+</div>
 
 #### Inline Markdown within tables
+
+<div class="table-wrapper">
 
 | Italics   | Bold     | Code   |
 | --------  | -------- | ------ |
 | *italics* | **bold** | `code` |
+</div>
 
 ## Code Blocks
 

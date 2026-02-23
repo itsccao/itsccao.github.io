@@ -4,11 +4,14 @@
 	--off-background: #18191B;
 	--text: #E8E2D9;
 	--link: #3DD68C;
-	--link-hover: #30A46C;
-	--blockquote: #F76B15;
+	--link-hover: #9EB1FF;
+	--blockquote: #FF977D;
 	--code-background: #2E3135;
-	--highlight: #FFD60A;
+	--highlight: #F5E147;
 	--hover-svg: #222221;
+	--box-shadow-hover: rgba(255, 255, 255, 0.2);
+	--link-hover-soft: color-mix(in srgb, var(--link-hover) 22%, var(--off-background));
+    --link-hover-softer: color-mix(in srgb, var(--link-hover) 12%, var(--off-background));
 }
 
 .link { color: var(--link); }
