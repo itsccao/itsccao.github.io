@@ -59,6 +59,17 @@ function getWindDirection(degree)
     return "Unknown";
 }
 
+function getRainfallName(rainfallMM)
+{
+    if (rainfallMM === 0) return "No rain";
+    if (rainfallMM < 1) return "Drizzle";
+    if (rainfallMM < 5) return "Light rain";
+    if (rainfallMM < 10) return "Moderate rain";
+    if (rainfallMM < 25) return "Heavy rain";
+    if (rainfallMM < 50) return "Very heavy rain";
+    return "Violent rain";
+}
+
 getSubmit.addEventListener("click", () => {
     document.getElementById("weather-error").innerText = "";
     let locationInput = getInput.value;
@@ -118,14 +129,14 @@ getSubmit.addEventListener("click", () => {
 
                     let result = `<h3> ${locationName} </h3>`;
                     result += "<ol>";
-                    result += `<li> Weather: <b><text class="link">${getWeatherCode(weatherCode)}</text></b> </li>`;
-                    result += `<li> Current temperature: <text class="highlight">${currentTemperature}${unitMaxTemperature}</text>  </li>`;
-                    result += `<li> Max temperature: <text class="link">${maxTemperature}${unitMaxTemperature}</text> </li>`;
+                    result += `<li> Weather: <b><text class="link">${getWeatherCode(weatherCode)}</b> </li>`;
+                    result += `<li> Current temperature: ${currentTemperature}${unitMaxTemperature} </li>`;
+                    result += `<li> Max temperature: ${maxTemperature}${unitMaxTemperature} </li>`;
                     result += `<li> Min temperature: ${minTemperature}${unitMinTemperature} </li>`;
-                    result += `<li> Rain: <text class="link">${rainSum}${unitRainSum}</text> </li>`;
-                    result += `<li> Max wind speed: <text class="link">${maxWindSpeed} ${unitMaxWindSpeed}</text> </li>`;
+                    result += `<li> Wind direction: ${getWindDirection(windDirection)} </li>`;
+                    result += `<li> Max wind speed: ${maxWindSpeed} ${unitMaxWindSpeed} </li>`;
                     result += `<li> Min wind speed: ${minWindSpeed} ${unitMinWindSpeed} </li>`;
-                    result += `<li> Wind direction: <text class="link">${getWindDirection(windDirection)}</text> </li>`;
+                    result += `<li> Rain: ${getRainfallName(rainSum)} (${rainSum}${unitRainSum}) </li>`;
                     result += "</ol> <hr>";
 
                     getResult.innerHTML += result;

@@ -7,9 +7,9 @@ tags = [
 ]
 +++
 
-<p> Free open-source weather API: <a href="https://open-meteo.com/" target="_blank">Open Meteo</a> </p>
+<p> Free open-source weather API used: <a href="https://open-meteo.com/" target="_blank">Open Meteo</a> </p>
 
-<h2> Enter your location: </h2>
+<h2> Enter location: </h2>
 
 </br>
 
@@ -18,7 +18,7 @@ tags = [
     <button id="weather-submit"> Submit </button>
 </div>
 
-<div id="weather-error"> </div>
+<p id="weather-error"> </p>
 
 <h2> Location(s) searched: </h2>
 
@@ -33,7 +33,7 @@ tags = [
 
     #weather-input
     {
-        max-width: 30rem;
+        max-width: 40rem;
         height: 3rem;
         padding-top: 0.6rem;
         padding-bottom: 0.6rem;

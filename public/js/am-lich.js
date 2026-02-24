@@ -215,6 +215,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const [year, month, day] = value.split('-').map(Number);
         if (Number.isNaN(year) || Number.isNaN(month) || Number.isNaN(day)) return;
 
+        const inputDate = new Date(year, month - 1, day);
+        const formatter = new Intl.DateTimeFormat("vi-VN", { weekday: "long" });
+        document.getElementById("am-lich-thu").textContent = formatter.format(inputDate);
+
         const lunar = converter.convertSolar2Lunar(day, month, year);
         
         lunar.year += 1;

@@ -100,7 +100,7 @@ function feedCreatePost(post)
     const container = document.createElement("div");
     container.className = "page-list";
 
-    const linkText = document.createElement("text");
+    const linkText = document.createElement("p");
     const link = document.createElement("a");
     link.className = "page-list-title";
     link.href = post.link;
@@ -111,7 +111,6 @@ function feedCreatePost(post)
     dateText.textContent = post.pubDate;
 
     container.appendChild(linkText);
-    container.appendChild(document.createElement("br"));
     container.appendChild(dateText);
 
     return container;
