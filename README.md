@@ -7,8 +7,8 @@ My personal website :D
 |------|--------|
 | SVGs | [phosphoricons.com](https://phosphoricons.com/) |
 | Font | [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) |
-| Animated Card | [tenor](https://tenor.com/view/anime-frieren-elf-girl-cute-gif-7075791933789789357) |
-| Favicon | [Seseren (pixiv)](https://www.pixiv.net/en/artworks/141349528) |
+| Animated Card | [tenor](https://tenor.com/view/arknights-arknights-endfield-endfield-zhuang-zhuang-fangyi-gif-11209153234230017995) |
+| Favicon | [Seseren (pixiv)](https://www.pixiv.net/en/artworks/143747121) |
 
 ## Notice
 + Best experience on wide screen devices.
