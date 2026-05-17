@@ -1,4 +1,5 @@
-/* BASE16 COLOR SCHEME
+/* BASE16 COLOR SCHEME */
+
 :root
 {
 	--background: var(--base00);
@@ -9,10 +10,9 @@
 	--blockquote: var(--base0C);
 	--code-background: var(--base02);
 	--highlight: var(--base0D);
-	--hover-svg: var(--base02);
+	--list-hover-soft: color-mix(in srgb, var(--link-hover) 22%, var(--off-background));
 }
 
 .link { color: var(--link); }
 .text { color: var(--text); }
 .highlight { color: var(--highlight); }
-*/

@@ -1,5 +1,5 @@
-const themeNameDark = "july-dark";
-const themeNameWhite = "july-light";
+const themeNameDark = "mocha";
+const themeNameWhite = "atelier-cave-light";
 
 if (!localStorage.getItem("pageTheme"))
 {

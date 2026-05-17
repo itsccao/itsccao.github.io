@@ -27,23 +27,23 @@ tags = [
     {
         width: 100%;
         max-width: 100%;
-        height: max-content;
         min-height: 4rem;
-        padding-top: 0.6rem;
-        padding-bottom: 0.6rem;
+        padding: 0.8rem;
         background-color: var(--off-background);
-        border-radius: 0.25rem;
-        border-color: var(--text);
+        border: 2px solid var(--box-shadow-hover);
+        border-radius: 0.5rem;
         color: var(--text);
         font-size: 1.1rem;
-        resize: none;
+        resize: vertical;
+        transition: border-color 0.2s ease;
     }
 
-    #qr-code-input::placeholder
+    #qr-code-input:focus
     {
-        padding-left: 0.5rem;
-        color: var(--text);
+        outline: none;
+        border-color: var(--link-hover);
     }
+
     #qr-code-output
     {
         display: flex;
@@ -68,20 +68,23 @@ tags = [
 
     #qr-code-download
     {
-        width: 5rem;
-        padding-top: 0.6rem;
-        padding-bottom: 0.6rem;
-        display: inline-block;
-        background-color: var(--link);
-        border-style: none;
-        border-radius: 0.25rem;
-        color: var(--background);
+        padding: 0.75rem 1.5rem;
+        background-color: var(--off-background);
+        border: 2px solid var(--box-shadow-hover);
+        border-radius: 0.5rem;
+        color: var(--text);
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
         display: none;
     }
 
     #qr-code-download:hover
     {
         cursor: pointer;
+        border-color: var(--link-hover);
+        color: var(--link-hover);
+        transform: translateY(-2px);
     }
 </style>
 

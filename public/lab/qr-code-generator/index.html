@@ -9,22 +9,22 @@
 
 
 
-<meta name="title" content="Ducc">
+<meta name="title" content="itsccao">
 <meta name="author" content="itsccao">
 <meta name="description" content="probably doing something random.">
 
-<meta itemprop="name" content="Ducc">
+<meta itemprop="name" content="itsccao">
 <meta itemprop="description" content="probably doing something random.">
 <meta itemprop="image" content="/assets/index.png">
 
-<meta name="twitter:title" content="Ducc">
+<meta name="twitter:title" content="itsccao">
 <meta name="twitter:creator" content="itsccao">
 <meta name="twitter:description" content="probably doing something random.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/assets/index.png">
 <meta name="twitter:url" content="https://itsccao.github.io">
 
-<meta property="og:title" content="Ducc">
+<meta property="og:title" content="itsccao">
 <meta property="og:type" content="website">
 <meta property="og:description" content="probably doing something random.">
 <meta property="og:image" content="http://localhost:1313/assets/index.png">
@@ -34,7 +34,7 @@
 
 
 <title>
-    Ducc
+    itsccao
     
         &#124;
         QR Code Generator 
@@ -128,23 +128,23 @@
     {
         width: 100%;
         max-width: 100%;
-        height: max-content;
         min-height: 4rem;
-        padding-top: 0.6rem;
-        padding-bottom: 0.6rem;
+        padding: 0.8rem;
         background-color: var(--off-background);
-        border-radius: 0.25rem;
-        border-color: var(--text);
+        border: 2px solid var(--box-shadow-hover);
+        border-radius: 0.5rem;
         color: var(--text);
         font-size: 1.1rem;
-        resize: none;
+        resize: vertical;
+        transition: border-color 0.2s ease;
     }
 
-    #qr-code-input::placeholder
+    #qr-code-input:focus
     {
-        padding-left: 0.5rem;
-        color: var(--text);
+        outline: none;
+        border-color: var(--link-hover);
     }
+
     #qr-code-output
     {
         display: flex;
@@ -169,20 +169,23 @@
 
     #qr-code-download
     {
-        width: 5rem;
-        padding-top: 0.6rem;
-        padding-bottom: 0.6rem;
-        display: inline-block;
-        background-color: var(--link);
-        border-style: none;
-        border-radius: 0.25rem;
-        color: var(--background);
+        padding: 0.75rem 1.5rem;
+        background-color: var(--off-background);
+        border: 2px solid var(--box-shadow-hover);
+        border-radius: 0.5rem;
+        color: var(--text);
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
         display: none;
     }
 
     #qr-code-download:hover
     {
         cursor: pointer;
+        border-color: var(--link-hover);
+        color: var(--link-hover);
+        transform: translateY(-2px);
     }
 </style>
 <script src="/js/qr-code-generator.js"> </script>

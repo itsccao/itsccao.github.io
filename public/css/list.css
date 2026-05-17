@@ -10,19 +10,14 @@
     padding: 0rem 1rem 1.2rem 1rem;
     background-color: var(--off-background);
     border-radius: 0.5rem;
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
-    box-shadow:
-        0 1px 1px rgba(0,0,0,0.04),
-        0 2px 4px rgba(0,0,0,0.06),
-        0 8px 18px -12px rgba(0,0,0,0.35);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .page-list:hover
 {
     transform: translateY(-4px);
-    box-shadow:
-        0 12px 28px -8px var(--link-hover-soft),
-        0 6px 12px -6px var(--link-hover-softer);
+    box-shadow: 0 0 20px var(--list-hover-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .page-list-title
@@ -30,7 +25,6 @@
     font-weight: 750;
     font-size: 24px;
     text-decoration: none;
-    color: var(--text) !important;
 }
 
 .page-list-tag-container

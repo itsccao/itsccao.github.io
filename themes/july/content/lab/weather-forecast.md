@@ -7,15 +7,13 @@ tags = [
 ]
 +++
 
-<p> Free open-source weather API used: <a href="https://open-meteo.com/" target="_blank">Open Meteo</a> </p>
+<p class="api-credit"> Weather data: <a href="https://open-meteo.com/" target="_blank">Open-Meteo API</a>. </p>
 
 <h2> Enter location: </h2>
 
-</br>
-
 <div id="weather-container">
-    <textarea id="weather-input" placeholder="Your city/country..." autofocus></textarea>
-    <button id="weather-submit"> Submit </button>
+    <input type="text" id="weather-input" placeholder="Your location..." autofocus>
+    <button id="weather-submit"> Search </button>
 </div>
 
 <p id="weather-error"> </p>
@@ -25,52 +23,132 @@ tags = [
 <div id="weather-result"> </div>
 
 <style>
+    .api-credit {
+        font-style: italic;
+        opacity: 0.8;
+        margin-bottom: 2rem;
+    }
+
     #weather-container
     {
         display: flex;
-        gap: 1rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        width: 100%;
+        max-width: 30rem;
+    }
+
+    h2
+    {
+        margin-bottom: 1.25rem;
     }
 
     #weather-input
     {
-        max-width: 40rem;
-        height: 3rem;
-        padding-top: 0.6rem;
-        padding-bottom: 0.6rem;
+        flex: 1 1 200px;
+        box-sizing: border-box;
+        padding: 0.8rem 1rem;
         background-color: var(--off-background);
-        border-radius: 0.25rem;
-        border-color: var(--text);
+        border: 2px solid var(--box-shadow-hover);
+        border-radius: 0.5rem;
         color: var(--text);
         font-size: 1.1rem;
-        resize: none;
+        transition: border-color 0.2s ease;
     }
 
-    #weather-input::placeholder
+    #weather-input:focus
     {
-        padding-left: 0.5rem;
-        color: var(--text);
+        outline: none;
+        border-color: var(--link-hover);
     }
 
     #weather-submit
     {
-        width: 5rem;
-        padding-top: 0.6rem;
-        padding-bottom: 0.6rem;
-        display: inline-block;
+        box-sizing: border-box;
+        padding: 0.8rem 1.5rem;
         background-color: var(--off-background);
-        border-style: none;
-        border-radius: 0.25rem;
-        font-size: 1.1rem;
+        border: 2px solid var(--box-shadow-hover);
+        border-radius: 0.5rem;
         color: var(--text);
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
     }
 
     #weather-submit:hover
     {
-        background-color: var(--hover-svg);
-        border-style: solid;
-        border-width: 0.125rem;
-        border-color: var(--text);
         cursor: pointer;
+        border-color: var(--link-hover);
+        color: var(--link-hover);
+        transform: translateY(-2px);
+    }
+
+    .weather-card {
+        background-color: var(--off-background);
+        border: 2px solid var(--box-shadow-hover);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    
+    .weather-card:hover {
+        border-color: var(--link-hover);
+        transform: translateY(-2px);
+    }
+
+    .weather-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        border-bottom: 2px solid var(--box-shadow-hover);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .weather-header h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        color: var(--link-hover);
+    }
+
+    .weather-code {
+        font-weight: 600;
+        color: var(--text);
+        font-size: 0.95rem;
+    }
+
+    .weather-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .weather-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .weather-item .label {
+        font-size: 0.75rem;
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.25rem;
+    }
+
+    .weather-item .value {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text);
+    }
+
+    .weather-item .sub-label {
+        font-size: 0.85rem;
+        opacity: 0.8;
+        margin-top: 0.25rem;
     }
 </style>
 

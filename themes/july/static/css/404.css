@@ -1,10 +1,48 @@
 .page-404-container
 {
 	text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    min-height: 50vh;
 }
 
 .page-404-title
 {
-	font-size: 5rem;
+	font-size: 8rem;
 	font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    color: var(--link-hover);
+    text-shadow: 0 0 40px var(--list-hover-soft);
+}
+
+.page-404-desc
+{
+    font-size: 1.25rem;
+    color: var(--text);
+    margin: 0;
+}
+
+.page-404-btn
+{
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--off-background);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: 0.1rem solid var(--text);
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.page-404-btn:hover
+{
+    cursor: pointer;
+    border-color: var(--link-hover);
+    color: var(--link-hover);
+    transform: scale(1.05);
 }

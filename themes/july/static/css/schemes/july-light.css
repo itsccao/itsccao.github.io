@@ -8,10 +8,8 @@
 	--blockquote: #3A5BC7;
 	--code-background: #E6E9E8;
 	--highlight: #FFC53D;
-	--hover-svg: #CDCED6;
 	--box-shadow-hover: rgba(0, 0, 0, 0.2);
-	--link-hover-soft: color-mix(in srgb, var(--link-hover) 22%, var(--off-background));
-    --link-hover-softer: color-mix(in srgb, var(--link-hover) 12%, var(--off-background));
+	--list-hover-soft: color-mix(in srgb, var(--link-hover) 22%, var(--off-background));
 }
 
 .link { color: var(--link); }

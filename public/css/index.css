@@ -39,6 +39,7 @@
     display: block;
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 
 .index-card::before
@@ -79,13 +80,22 @@
     background-color: var(--off-background);
     border-radius: 0 1rem 1rem 0;
     box-shadow: 0 0 0 var(--box-shadow-hover);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /*transition: box-shadow 0.3s ease, transform 0.3s ease;*/
 }
 
+/*
 .index-content:hover
 {
     box-shadow: 12px 14px 24px -10px color-mix(in srgb, var(--link-hover) 30%, transparent);
     transform: translateY(-2px);
+}
+*/
+
+.index-p
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 @media (max-width: 50rem)
@@ -108,8 +118,13 @@
     {
         width: 90%;
         height: max-content;
-        padding-top: 1.25rem;
+        padding-top: 1rem;
         padding-bottom: 1.25rem;
         border-radius: 1rem;
+    }
+
+    .index-content h1
+    {
+        margin-top: 0.5rem;
     }
 }

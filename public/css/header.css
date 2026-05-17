@@ -50,9 +50,13 @@
 .page-header-icon:hover
 {
     cursor: pointer;
-    background-color: var(--hover-svg);
-    
+    border-color: var(--link-hover);
     transform: scale(1.1);
+}
+
+.page-header-icon:hover svg
+{
+    color: var(--link-hover);
 }
 
 .page-header-menu-toogle

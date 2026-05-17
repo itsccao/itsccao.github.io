@@ -3,7 +3,7 @@ defaultContentLanguage = "en"
 sectionPagesMenu = "main"
 
 [params.About]
-title = "Ducc"
+title = "itsccao"
 author = "itsccao"
 description = "probably doing something random."
 source = "https://github.com/itsccao"

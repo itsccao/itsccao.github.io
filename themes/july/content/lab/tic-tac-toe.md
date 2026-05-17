@@ -34,58 +34,62 @@ tags = [
 <style>
     .ttt-square
     {
-        width: 5rem;
-        height: 5rem;
+        width: 5.5rem;
+        height: 5.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: var(--off-background);
-        border-style: solid;
+        border: 2px solid var(--box-shadow-hover);
         border-radius: 1rem;
-        border-width: 0.125rem;
-        border-color: var(--link);
         color: var(--text);
-        font-family: cursive;
+        font-family: monospace;
         font-size: 3rem;
+        font-weight: bold;
+        transition: transform 0.1s ease, border-color 0.2s ease, background-color 0.2s ease;
     }
 
     .ttt-square:hover
     {
         cursor: pointer;
+        border-color: var(--link-hover);
+        transform: scale(1.05);
     }
 
     #ttt-board
     {
         display: flex;
         flex-direction: column;
-        gap: 1.5vh;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
     }
 
     .ttt-board-split
     {
         display: flex;
         flex-direction: row;
-        gap: 1.5vh;
+        gap: 0.5rem;
     }
 
     #ttt-restart
     {
-        width: 5rem;
-        height: 2.5rem;
-        padding-top: 0.6rem;
-        padding-bottom: 0.6rem;
+        padding: 0.75rem 1.5rem;
         background-color: var(--off-background);
-        border-style: none;
-        border-radius: 0.25rem;
+        border: 2px solid var(--box-shadow-hover);
+        border-radius: 0.5rem;
         color: var(--text);
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        margin-top: 1rem;
     }
 
     #ttt-restart:hover
     {
-        border-style: solid;
-        border-width: 0.125rem;
-        border-color: var(--text);
         cursor: pointer;
+        border-color: var(--link-hover);
+        color: var(--link-hover);
+        transform: translateY(-2px);
     }
 </style>
 

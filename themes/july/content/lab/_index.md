@@ -2,6 +2,6 @@
 title = "Lab"
 +++
 
-A collection of my JavaScript experiments.
+A collection of my JavaScript experiments and interactive projects.
 
-Take a look at this website's history [here](/versions).
+Want to see how this website has evolved over time? Check out the [version history](/versions).

@@ -1,22 +1,23 @@
 # itsccao.github.io
 
-My personal website :D
+A clean, minimalist developer portfolio. Meticulously hand-crafted with a custom theme.
 
-## Assets
-| Name | Source |
-|------|--------|
-| SVGs | [phosphoricons.com](https://phosphoricons.com/) |
-| Font | [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) |
-| Animated Card | [tenor](https://tenor.com/view/arknights-arknights-endfield-endfield-zhuang-zhuang-fangyi-gif-11209153234230017995) |
-| Favicon | [Seseren (pixiv)](https://www.pixiv.net/en/artworks/143747121) |
+## Build & Technologies
 
-## Notice
-+ Best experience on wide screen devices.
-+ Based on what OS you are using, the emoji may be rendered differently.
+- **Static Site Generator**: [Hugo](https://gohugo.io)
+- **Theme**: Custom hand-crafted theme **July**
+- **Hosting**: GitHub Pages
 
-## Build
-+ Static site generator: [Hugo](https://gohugo.io)
-+ Hand-crafted theme: **July**.
+### Assets Credit
+
+| Asset Type | Source |
+| :--- | :--- |
+| **Font** | [Outfit](https://fonts.google.com/specimen/Outfit?preview.script=Latn) |
+| **Icons** | [Phosphor Icons](https://phosphoricons.com/) |
+| **Animated Card** | [Tenor (Arknights Endfield)](https://tenor.com/view/arknights-arknights-endfield-endfield-zhuang-zhuang-fangyi-gif-11209153234230017995) |
+| **Favicon** | [Seseren (pixiv)](https://www.pixiv.net/en/artworks/143747121) |
+
+---
 
 > [!NOTE]
 > This project is licensed under the [GNU General Public License v3.0](./LICENSE).

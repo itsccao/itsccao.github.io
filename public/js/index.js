@@ -3,6 +3,16 @@ document.addEventListener("DOMContentLoaded", function ()
     const cards = document.querySelectorAll(".index-card");
 
     cards.forEach((card) => {
+        let transitionTimeout;
+
+        card.addEventListener("mouseenter", function () {
+            clearTimeout(transitionTimeout);
+            card.style.transition = "transform 0.15s ease-out";
+            transitionTimeout = setTimeout(() => {
+                card.style.transition = "none";
+            }, 150);
+        });
+
         card.addEventListener("mousemove", function (e) {
             const rect = card.getBoundingClientRect();
 
@@ -20,11 +30,13 @@ document.addEventListener("DOMContentLoaded", function ()
             card.classList.add("glow");
 
             card.style.transform =
-                `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.06)`;
+                `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.25)`;
         });
 
         card.addEventListener("mouseleave", function () {
+            clearTimeout(transitionTimeout);
             card.classList.remove("glow");
+            card.style.transition = "transform 0.5s ease-out";
             card.style.transform =
             "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
         });

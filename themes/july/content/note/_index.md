@@ -2,6 +2,6 @@
 title = "Note"
 +++
 
-Similar with blog but I prefer to call it "**note**".
+A space for my thoughts and writings. It's like a blog, but I prefer to call them **notes**.
 
-[View All Tags](/tags)
+Looking for a specific topic? [Browse all tags](/tags).
