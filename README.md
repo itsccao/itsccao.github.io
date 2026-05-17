@@ -12,10 +12,9 @@ A clean, minimalist developer portfolio. Meticulously hand-crafted with a custom
 
 | Asset Type | Source |
 | :--- | :--- |
-| **Font** | [Outfit](https://fonts.google.com/specimen/Outfit?preview.script=Latn) |
+| **Font** | [Outfit](https://fonts.google.com/specimen/Outfit) |
 | **Icons** | [Phosphor Icons](https://phosphoricons.com/) |
-| **Animated Card** | [Tenor (Arknights Endfield)](https://tenor.com/view/arknights-arknights-endfield-endfield-zhuang-zhuang-fangyi-gif-11209153234230017995) |
-| **Favicon** | [Seseren (pixiv)](https://www.pixiv.net/en/artworks/143747121) |
+| **Card & Favicon** | [doremy (pixiv)](https://www.pixiv.net/en/artworks/144871632) |
 
 ---
 
