@@ -1,6 +1,9 @@
 {{ define "main" }}
     <h1> {{ .Title | markdownify }} </h1>
+
     {{ .Content }}
+
+    <p> Looking for a specific topic? <a href="/tags">Browse all tags</a> </p>
 
     <div class="page-list-container">
         {{ range .Pages }}
