@@ -124,11 +124,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        overflow-y: auto;
         padding-top: 1.5rem;
-        padding-bottom: 4rem;
+        padding-bottom: 2rem;
         min-height: 100vh;
         box-sizing: border-box;
+    }
+
+    .index .page-footer
+    {
+        position: relative;
     }
 
     .index-card
