@@ -28,12 +28,12 @@ Release date: August 2023<text class="versions-date"></text>.
 Release date: 2022<text class="versions-date"></text>.
 - Heavily inspired by the UI of an [osu!](https://osu.ppy.sh/) skin I used to play with (though the exact name escapes me now).
 - A fun, highly stylized experiment in theme building.
-- [Take a look back in time](../../.old/2.0/index.html)
+- [Take a look back in time](../../versions/v2/index.html)
 
 ## 1.0
 Release date: 2022<text class="versions-date"></text>.
 - Where it all started. This was the very first version of my website, built right when I was taking my first steps into front-end development.
 - It's simple, but it holds a lot of nostalgia for me.
-- [Experience the original](../../.old/1.0/index.html)
+- [Experience the original](../../versions/v1/index.html)
 
 <script src="/js/versions.js"> </script>

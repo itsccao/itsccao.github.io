@@ -12,9 +12,9 @@ A clean, minimalist developer portfolio. Meticulously hand-crafted with a custom
 
 | Asset Type | Source |
 | :--- | :--- |
-| **Font** | [Outfit](https://fonts.google.com/specimen/Outfit) |
-| **Icons** | [Phosphor Icons](https://phosphoricons.com/) |
-| **Card & Favicon** | [doremy (pixiv)](https://www.pixiv.net/en/artworks/144871632) |
+| **Font** | [Inter](https://rsms.me/inter/) |
+| **SVG** | [Reicon](https://reicon.dev/) |
+| **Card & Favicon** | [fztt (pixiv)](https://www.pixiv.net/en/users/14751529/) |
 
 ---
 
