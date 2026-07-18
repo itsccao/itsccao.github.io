@@ -155,9 +155,4 @@
     {
         margin-top: 0.5rem;
     }
-
-    .page-header + .page-body
-    {
-        position: relative;
-    }
 }
