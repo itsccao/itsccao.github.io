@@ -1,7 +1,7 @@
 +++
 title = "Example"
 description = "An example on how markdown is rendered."
-date = "2025-07-08"
+date = ""
 tags = [
     "template",
     "test"
