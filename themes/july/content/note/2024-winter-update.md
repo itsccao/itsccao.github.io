@@ -3,7 +3,7 @@ title = "A little update about me (Winter 2024)"
 date = "2024-11-17"
 description = "TLDR: Got into my dream university, math is freaking hard, find a girlfriend (optional)."
 tags = [
-    "life"
+    "life", "eng"
 ]
 +++
 

@@ -3,8 +3,7 @@ title = "Example"
 description = "An example on how markdown is rendered."
 date = ""
 tags = [
-    "template",
-    "test"
+  "eng"
 ]
 +++
 

@@ -1,7 +1,9 @@
-const themeNameDark = "mocha";
-const themeNameWhite = "atelier-cave-light";
+const themeNameDark = "catppuccin-mocha";
+const themeNameLight = "catppuccin-latte";
 
-if (!localStorage.getItem("pageTheme"))
+const theme = localStorage.getItem("pageTheme");
+
+if (!theme || (theme !== themeNameDark && theme !== themeNameLight))
 {
     localStorage.setItem("pageTheme", themeNameDark);
 }
@@ -41,7 +43,7 @@ else
 themeToogle.addEventListener("click", () => {
     if (localStorage.getItem("pageTheme") === themeNameDark)
     {
-        localStorage.setItem("pageTheme", themeNameWhite);
+        localStorage.setItem("pageTheme", themeNameLight);
     }
     else
     {
