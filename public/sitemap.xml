@@ -38,6 +38,9 @@
     <loc>http://localhost:1313/note/2024-winter-update/</loc>
     <lastmod>2024-11-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/eng/</loc>
+    <lastmod>2024-11-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/life/</loc>
     <lastmod>2024-11-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -50,10 +53,6 @@
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/note/example/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/template/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/test/</loc>
   </url><url>
     <loc>http://localhost:1313/versions/</loc>
   </url>
