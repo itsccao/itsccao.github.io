@@ -9,7 +9,7 @@
         {{ range .Pages }}
         <div class="page-list">
             <p> <a class="page-list-title" href="{{ .Permalink }}"> {{ .Title | markdownify }} </a> </p>
-            <p> {{ .Date.Format "2 January, 2006" }} </p>
+            {{ if not .Date.IsZero }}<p> {{ .Date.Format "Jan 2, 2006" }} </p>{{ end }}
             <p> {{ .Description }} </p>
             <div class="page-list-tag-container">
                 {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
