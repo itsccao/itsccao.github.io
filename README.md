@@ -1,11 +1,11 @@
 # itsccao.github.io
 
-A clean, minimalist developer portfolio. Meticulously hand-crafted with a custom theme.
+Personal portfolio, technical notes, and creative experiments.
 
 ## Build & Technologies
 
 - **Static Site Generator**: [Hugo](https://gohugo.io)
-- **Theme**: Custom hand-crafted theme **July**
+- **Theme**: July
 - **Hosting**: GitHub Pages
 
 ### Assets Credit
@@ -14,7 +14,7 @@ A clean, minimalist developer portfolio. Meticulously hand-crafted with a custom
 | :--- | :--- |
 | **Font** | [Inter](https://rsms.me/inter/) |
 | **SVG** | [Reicon](https://reicon.dev/) |
-| **Card & Favicon** | [fztt (pixiv)](https://www.pixiv.net/en/users/14751529/) |
+| **Card & Favicon** | [Arsum (pixiv)](https://www.pixiv.net/en/artworks/147591259) |
 
 ---
 

@@ -1,33 +1,133 @@
+html.index-html
+{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
+    -ms-overflow-style: none;  /* IE & Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+html.index-html::-webkit-scrollbar,
+body.index-body-wrapper::-webkit-scrollbar
+{
+    display: none;             /* Chrome, Safari, Opera */
+    width: 0;
+    height: 0;
+}
+
+body.index-body-wrapper
+{
+    margin: 0;
+    background-color: var(--background);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .index
 {
     margin: 0;
+    width: 100%;
+    position: relative;
 }
 
-.index-body
+.index .page-header
 {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    margin: 2rem;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.index .page-header-home,
+.index .page-header-menu-toogle,
+.index .page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item
+{
+    pointer-events: auto;
+}
+
+.index .page-footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
-    z-index: -1;
+    z-index: 1;
+}
+
+/* =========================================================
+   Slide Presentation Layout (CSS Scroll Snap)
+   ========================================================= */
+
+.index-slide
+{
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    padding: 5rem 1.5rem 5.5rem 1.5rem;
+    background-color: var(--background);
+    isolation: isolate;
+}
+
+/* =========================================================
+   Slide 1: Intro / Profile
+   ========================================================= */
+
+.index-body
+{
+    position: relative;
+    width: 100%;
+    max-width: 32rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
     perspective: 1200px;
+}
+
+.index-avatar-wrapper
+{
+    position: relative;
+    width: 17.25rem;
+    height: 17.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
 }
 
 .index-card
 {
-    position: relative;
-    z-index: 2;
-    width: 20rem;
-    height: 31.75rem;
-    border-radius: 1rem;
+    position: absolute;
+    z-index: 10;
+    width: 17.25rem;
+    height: 17.25rem;
+    border-radius: 50%;
     display: block;
     transform-style: preserve-3d;
-    will-change: transform;
+    will-change: transform, width, height, border-radius;
+    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                border-radius 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.45s ease,
+                border-color 0.35s ease,
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 2.5px solid color-mix(in srgb, var(--link-hover) 35%, transparent);
+    box-shadow: 0 8px 24px -6px color-mix(in srgb, var(--link-hover) 25%, transparent);
+    cursor: pointer;
+    background-color: var(--off-background);
 }
 
 .index-card img
@@ -35,11 +135,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 1rem;
+    object-position: center 20%;
+    border-radius: inherit;
     display: block;
     position: relative;
     z-index: 1;
     cursor: pointer;
+    user-select: none;
 }
 
 .index-card::before
@@ -47,12 +149,12 @@
     content: "";
     position: absolute;
     inset: -22px;
-    border-radius: calc(1rem + 22px);
+    border-radius: inherit;
     pointer-events: none;
 
     background: radial-gradient(
         260px circle at var(--glow-x, 50%) var(--glow-y, 50%),
-        color-mix(in srgb, var(--link-hover) 60%, transparent) 0%,
+        color-mix(in srgb, var(--link-hover) 65%, transparent) 0%,
         color-mix(in srgb, var(--link-hover) 25%, transparent) 25%,
         transparent 70%
     );
@@ -67,92 +169,659 @@
     opacity: 1;
 }
 
+.index-card:hover
+{
+    width: 23rem;
+    height: 37.5rem;
+    max-width: 90vw;
+    max-height: 82vh;
+    border-radius: 1.25rem;
+    z-index: 50;
+    border-color: color-mix(in srgb, var(--link-hover) 65%, transparent);
+    box-shadow: 0 24px 60px -12px color-mix(in srgb, var(--link-hover) 40%, transparent),
+                0 0 0 1px color-mix(in srgb, var(--link-hover) 25%, transparent);
+}
+
 .index-content
 {
     position: relative;
     z-index: 1;
-    width: 27.5rem;
-    height: 27.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0rem;
-    padding-bottom: 1.5rem;
+    width: 100%;
+    max-width: 28rem;
+    padding: 1.6rem 2.2rem;
     background-color: var(--off-background);
-    border-radius: 0 1rem 1rem 0;
-    box-shadow: 0 0 0 var(--box-shadow-hover);
-    /*transition: box-shadow 0.3s ease, transform 0.3s ease;*/
+    border-radius: 1rem;
+    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    box-shadow: 0 6px 20px -8px rgba(0, 0, 0, 0.15);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/*
 .index-content:hover
 {
-    box-shadow: 12px 14px 24px -10px color-mix(in srgb, var(--link-hover) 30%, transparent);
-    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--link-hover) 35%, transparent);
+    box-shadow: 0 8px 25px -8px color-mix(in srgb, var(--link-hover) 20%, transparent);
 }
-*/
+
+.index-content h1
+{
+    margin: 0 0 0.15rem 0;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.25;
+}
+
+.index-content a
+{
+    transition: color 0.18s ease, text-shadow 0.18s ease;
+}
 
 .index-p
 {
     display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .index-p > svg
 {
     flex-shrink: 0;
-    margin-top: 0.15rem;
 }
 
-.index-hr
+
+/* =========================================================
+   Slide Common Elements
+   ========================================================= */
+
+.index-slide-content
 {
     width: 100%;
-    height: 2px;
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
-    border-style: solid;
-    border-radius: 1px;
+    max-width: 52rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.index-slide-header
+{
+    text-align: left;
+}
+
+.index-slide-tag
+{
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--link-hover);
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+}
+
+.index-slide-title
+{
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 700;
     color: var(--text);
 }
 
+.index-slide-desc
+{
+    margin: 0.35rem 0 0 0;
+    color: var(--text);
+    opacity: 0.75;
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   Slide 2: Skills Grid
+   ========================================================= */
+
+.index-skill-grid
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem;
+    width: 100%;
+}
+
+.index-skill-card
+{
+    background-color: var(--off-background);
+    border-radius: 1rem;
+    padding: 1.25rem 1.4rem;
+    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    box-sizing: border-box;
+}
+
+.index-skill-card:hover
+{
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--link-hover) 45%, transparent);
+    box-shadow: 0 10px 28px -10px color-mix(in srgb, var(--link-hover) 22%, transparent);
+}
+
+.index-skill-header
+{
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--link-hover);
+}
+
+.index-skill-header svg
+{
+    width: 1.35rem;
+    height: 1.35rem;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.index-skill-card:hover .index-skill-header svg
+{
+    transform: scale(1.08);
+}
+
+.index-skill-header h3
+{
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.35rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.index-skill-badges
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.index-skill-badge
+{
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.82rem;
+    padding: 0.32rem 0.7rem;
+    border-radius: 0.5rem;
+    background-color: var(--background);
+    border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+    color: var(--text);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.2s ease,
+                background-color 0.2s ease,
+                color 0.2s ease,
+                box-shadow 0.2s ease;
+    user-select: none;
+    cursor: default;
+}
+
+.index-skill-badge.primary
+{
+    border-color: color-mix(in srgb, var(--link-hover) 40%, transparent);
+    background-color: color-mix(in srgb, var(--link-hover) 10%, var(--background));
+    font-weight: 500;
+}
+
+.index-skill-badge:hover
+{
+    border-color: var(--link-hover);
+    color: var(--link-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--link-hover) 15%, transparent);
+}
+
+/* =========================================================
+   Slide 3: Featured Projects
+   ========================================================= */
+
+.index-project-grid
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem;
+    width: 100%;
+}
+
+.index-project-card
+{
+    background-color: var(--off-background);
+    border-radius: 1rem;
+    padding: 1.3rem 1.35rem;
+    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.index-project-card:hover
+{
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--link-hover) 45%, transparent);
+    box-shadow: 0 10px 28px -10px color-mix(in srgb, var(--link-hover) 22%, transparent);
+}
+
+.index-project-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.index-project-title-group h3
+{
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.35rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.index-project-link
+{
+    color: var(--text);
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.35rem;
+    height: 1.35rem;
+    transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.index-project-link svg
+{
+    width: 1.35rem;
+    height: 1.35rem;
+}
+
+.index-project-link:hover
+{
+    opacity: 1;
+    color: var(--link-hover);
+    transform: scale(1.15);
+}
+
+.index-project-desc
+{
+    margin: 0 0 1rem 0;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    opacity: 0.82;
+    flex: 1;
+}
+
+.index-project-tags
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: auto;
+}
+
+.index-project-tag
+{
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.78rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.45rem;
+    background-color: var(--background);
+    border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+    color: var(--text);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.2s ease,
+                background-color 0.2s ease,
+                color 0.2s ease,
+                box-shadow 0.2s ease;
+    user-select: none;
+    cursor: default;
+}
+
+.index-project-tag:hover
+{
+    border-color: var(--link-hover);
+    color: var(--link-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--link-hover) 15%, transparent);
+}
+
+/* =========================================================
+   Slide 4: Contact, Guestbook & Archive
+   ========================================================= */
+
+.index-contact-grid
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+    width: 100%;
+}
+
+.index-contact-card
+{
+    background-color: var(--off-background);
+    border-radius: 1rem;
+    padding: 1.35rem 1.4rem;
+    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.index-contact-card:hover
+{
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--link-hover) 45%, transparent);
+    box-shadow: 0 10px 28px -10px color-mix(in srgb, var(--link-hover) 22%, transparent);
+}
+
+.index-contact-header
+{
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.6rem;
+}
+
+.index-contact-icon
+{
+    color: var(--link-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    border-radius: 0.6rem;
+    background-color: var(--background);
+    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    flex-shrink: 0;
+}
+
+.index-contact-header h3
+{
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.index-contact-desc
+{
+    margin: 0 0 1rem 0;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    opacity: 0.82;
+    flex: 1;
+}
+
+.index-contact-links
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-top: auto;
+}
+
+.index-contact-link
+{
+    display: inline-block;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.index-contact-link:hover
+{
+    opacity: 0.8;
+}
+
+/* =========================================================
+   Scroll Down Button
+   ========================================================= */
+
+.index-scroll-btn
+{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text);
+    opacity: 0.5;
+    transition: opacity 0.2s ease,
+                transform 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease,
+                background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--off-background) 50%, transparent);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+    animation: bounceSoft 2.4s infinite ease-in-out;
+    text-decoration: none;
+    z-index: 5;
+}
+
+.index-scroll-btn:hover
+{
+    opacity: 1;
+    color: var(--link-hover);
+    border-color: color-mix(in srgb, var(--link-hover) 50%, transparent);
+    background-color: var(--off-background);
+    animation: none;
+    transform: translateX(-50%) translateY(3px);
+}
+
+@keyframes bounceSoft
+{
+    0%, 100%
+    {
+        transform: translateX(-50%) translateY(0);
+    }
+    50%
+    {
+        transform: translateX(-50%) translateY(6px);
+    }
+}
+
+/* =========================================================
+   Slide Navigation Dots
+   ========================================================= */
+
+.index-slide-nav
+{
+    position: fixed;
+    right: 1.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    z-index: 90;
+    padding: 0.55rem 0.38rem;
+    border-radius: 1rem;
+    background-color: color-mix(in srgb, var(--off-background) 60%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+}
+
+.index-slide-nav-dot
+{
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1.5px solid color-mix(in srgb, var(--text) 45%, transparent);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+    display: block;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.index-slide-nav-dot.active,
+.index-slide-nav-dot:hover,
+.index-slide-nav-dot:focus-visible
+{
+    transform: scale(1.35);
+    background-color: var(--link-hover);
+    border-color: var(--link-hover);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--link-hover) 65%, transparent);
+}
+
+/* =========================================================
+   Responsive Design for Tablets & Mobile
+   ========================================================= */
+
 @media (max-width: 50rem)
 {
+    .index .page-header
+    {
+        margin: 1.25rem 1.25rem;
+    }
+
+    .index-slide
+    {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding-top: 6.5rem;
+        padding-bottom: 5.5rem;
+        justify-content: flex-start;
+    }
+
+    .index-slide.index-slide-intro
+    {
+        justify-content: center;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
     .index-body
     {
         position: static;
-        gap: 2.5rem;
+        gap: 1.35rem;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding-top: 1.5rem;
-        padding-bottom: 2rem;
-        min-height: 100vh;
-        box-sizing: border-box;
     }
 
-    .index .page-footer
+    .index-slide-intro .index-body
     {
-        position: relative;
+        justify-content: center;
+        margin: auto 0;
+    }
+
+    .index-avatar-wrapper
+    {
+        width: clamp(11.25rem, 52vw, 14.5rem);
+        height: clamp(11.25rem, 52vw, 14.5rem);
     }
 
     .index-card
     {
-        width: 50vw;
-        height: 50vw;
-        content: url("/assets/profile-picture-mobile.webp");
+        position: relative;
+        width: clamp(11.25rem, 52vw, 14.5rem);
+        height: clamp(11.25rem, 52vw, 14.5rem);
+        border-radius: 50%;
+        border-width: 3px;
+        box-shadow: 0 10px 28px -6px color-mix(in srgb, var(--link-hover) 32%, transparent);
+    }
+
+    .index-card:hover
+    {
+        width: clamp(11.25rem, 52vw, 14.5rem);
+        height: clamp(11.25rem, 52vw, 14.5rem);
+        border-radius: 50%;
+        box-shadow: 0 10px 28px -6px color-mix(in srgb, var(--link-hover) 32%, transparent);
     }
 
     .index-content
     {
-        width: 90%;
-        height: max-content;
-        padding-top: 1rem;
-        padding-bottom: 1.25rem;
+        width: 100%;
+        max-width: 23rem;
+        height: auto;
+        padding: 1.35rem 1.5rem;
         border-radius: 1rem;
     }
 
     .index-content h1
     {
-        margin-top: 0.5rem;
+        margin-top: 0;
+        font-size: 1.7rem;
+    }
+
+    .index-skill-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .index-project-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .index-contact-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .index-slide.index-slide-contact
+    {
+        padding-bottom: 1.25rem;
+    }
+
+    .index-slide-nav
+    {
+        display: none;
+    }
+
+    .index .page-footer
+    {
+        position: relative;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1rem;
     }
 }

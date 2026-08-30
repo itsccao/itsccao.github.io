@@ -49,8 +49,21 @@
 <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon/favicon-32px.png" | absURL }}">
 <link rel="apple-touch-icon" sizes="192x192" href="{{ "/favicon/favicon-192px.png" | absURL }}">
 
+<script>
+    (function() {
+        var saved = localStorage.getItem("pageTheme");
+        var theme = (saved === "catppuccin-latte" || saved === "catppuccin-mocha") ? saved : "catppuccin-mocha";
+        var link = document.createElement("link");
+        link.id = "page-theme-link";
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.href = "{{ "css/schemes/" | absURL }}" + theme + ".css";
+        document.head.appendChild(link);
+    })();
+</script>
+
 <link rel="stylesheet" href="{{ "css/july.css" | absURL }}">
 
 <noscript>
-    <link rel="stylesheet" href="/css/schemes/july-dark.css">
+    <link rel="stylesheet" href="{{ "css/schemes/catppuccin-mocha.css" | absURL }}">
 </noscript>

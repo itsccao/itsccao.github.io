@@ -49,15 +49,28 @@
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon/favicon-32px.png">
 <link rel="apple-touch-icon" sizes="192x192" href="http://localhost:1313/favicon/favicon-192px.png">
 
+<script>
+    (function() {
+        var saved = localStorage.getItem("pageTheme");
+        var theme = (saved === "catppuccin-latte" || saved === "catppuccin-mocha") ? saved : "catppuccin-mocha";
+        var link = document.createElement("link");
+        link.id = "page-theme-link";
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.href = "http:\/\/localhost:1313\/css\/schemes\/" + theme + ".css";
+        document.head.appendChild(link);
+    })();
+</script>
+
 <link rel="stylesheet" href="http://localhost:1313/css/july.css">
 
 <noscript>
-    <link rel="stylesheet" href="/css/schemes/july-dark.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/schemes/catppuccin-mocha.css">
 </noscript></head>
 
     <body>
         <div class="page">
-            <div class="page-header"><a href="/" class="page-header-icon page-header-home" data-tooltip="Home">
+            <div class="page-header"><a href="/" class="page-header-icon page-header-home">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
         <path d="M9 17.25H15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12 2L18.5437 6.06429C20.4649 7.25769 21.4255 7.85439 21.8378 8.6075C22.25 9.36061 22.25 10.4914 22.25 12.753V13.7799C22.25 15.6838 22.25 17.1866 22.0973 18.3616C21.9406 19.567 21.6114 20.5401 20.8676 21.3094C20.1204 22.0824 19.1695 22.4277 17.9924 22.5914C16.8515 22.75 15.3944 22.75 13.5581 22.75H10.4419C8.60556 22.75 7.14849 22.75 6.00761 22.5914C4.83046 22.4277 3.87958 22.0824 3.13236 21.3094C2.38856 20.5401 2.05937 19.567 1.9027 18.3616C1.75 17.1866 1.75 15.6837 1.75 13.7799V12.753C1.75 10.4914 1.75 9.36061 2.16224 8.6075C2.57448 7.85439 3.53509 7.25769 5.45628 6.06429L12 2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -65,8 +78,9 @@
 </a>    
 
 <label class="page-header-menu">
-    <div class="page-header-icon page-header-menu-toogle" data-tooltip="Menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M8 7.25C7.58579 7.25 7.25 7.58579 7.25 8C7.25 8.41421 7.58579 8.75 8 8.75H16C16.4142 8.75 16.75 8.41421 16.75 8C16.75 7.58579 16.4142 7.25 16 7.25H8Z" fill="currentColor"></path>
+    <div class="page-header-icon page-header-menu-toogle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none">
+            <path d="M8 7.25C7.58579 7.25 7.25 7.58579 7.25 8C7.25 8.41421 7.58579 8.75 8 8.75H16C16.4142 8.75 16.75 8.41421 16.75 8C16.75 7.58579 16.4142 7.25 16 7.25H8Z" fill="currentColor"></path>
             <path d="M7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H16C16.4142 11.25 16.75 11.5858 16.75 12C16.75 12.4142 16.4142 12.75 16 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z" fill="currentColor"></path>
             <path d="M8 15.25C7.58579 15.25 7.25 15.5858 7.25 16C7.25 16.4142 7.58579 16.75 8 16.75H16C16.4142 16.75 16.75 16.4142 16.75 16C16.75 15.5858 16.4142 15.25 16 15.25H8Z" fill="currentColor"></path>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M15.633 1.25H8.367C7.27486 1.24999 6.40935 1.24999 5.71173 1.30699C4.99834 1.36527 4.39472 1.48688 3.84355 1.76772C2.94978 2.22312 2.22312 2.94978 1.76772 3.84355C1.48688 4.39472 1.36527 4.99834 1.30699 5.71173C1.24999 6.40935 1.24999 7.27485 1.25 8.36699V15.633C1.24999 16.7251 1.24999 17.5906 1.30699 18.2883C1.36527 19.0017 1.48688 19.6053 1.76772 20.1565C2.22312 21.0502 2.94978 21.7769 3.84355 22.2323C4.39472 22.5131 4.99834 22.6347 5.71173 22.693C6.40935 22.75 7.27484 22.75 8.36698 22.75H15.633C16.7252 22.75 17.5906 22.75 18.2883 22.693C19.0017 22.6347 19.6053 22.5131 20.1565 22.2323C21.0502 21.7769 21.7769 21.0502 22.2323 20.1565C22.5131 19.6053 22.6347 19.0017 22.693 18.2883C22.75 17.5906 22.75 16.7252 22.75 15.633V8.36698C22.75 7.27484 22.75 6.40935 22.693 5.71173C22.6347 4.99834 22.5131 4.39472 22.2323 3.84355C21.7769 2.94978 21.0502 2.22312 20.1565 1.76772C19.6053 1.48688 19.0017 1.36527 18.2883 1.30699C17.5906 1.24999 16.7251 1.24999 15.633 1.25ZM4.52453 3.10423C4.829 2.94909 5.21325 2.85271 5.83388 2.80201C6.46327 2.75058 7.26752 2.75 8.4 2.75H15.6C16.7325 2.75 17.5367 2.75058 18.1661 2.80201C18.7867 2.85271 19.171 2.94909 19.4755 3.10423C20.087 3.41582 20.5842 3.913 20.8958 4.52453C21.0509 4.829 21.1473 5.21325 21.198 5.83388C21.2494 6.46327 21.25 7.26752 21.25 8.4V15.6C21.25 16.7325 21.2494 17.5367 21.198 18.1661C21.1473 18.7867 21.0509 19.171 20.8958 19.4755C20.5842 20.087 20.087 20.5842 19.4755 20.8958C19.171 21.0509 18.7867 21.1473 18.1661 21.198C17.5367 21.2494 16.7325 21.25 15.6 21.25H8.4C7.26752 21.25 6.46327 21.2494 5.83388 21.198C5.21325 21.1473 4.829 21.0509 4.52453 20.8958C3.913 20.5842 3.41582 20.087 3.10423 19.4755C2.94909 19.171 2.85271 18.7867 2.80201 18.1661C2.75058 17.5367 2.75 16.7325 2.75 15.6V8.4C2.75 7.26752 2.75058 6.46327 2.80201 5.83388C2.85271 5.21325 2.94909 4.829 3.10423 4.52453C3.41582 3.913 3.913 3.41582 4.52453 3.10423Z" fill="currentColor"></path>
@@ -83,14 +97,6 @@
                 <path d="M32,200a16,16,0,0,1-16-16V88" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
             </svg>
         </a>
-        <a href="/project" class="page-header-icon page-header-menu-item" data-tooltip="Project">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                <rect width="24" height="24" fill="none"/>
-                <path d="M14.1809 4.2755C14.581 4.3827 14.8185 4.79396 14.7113 5.19406L10.7377 20.0238C10.6304 20.4239 10.2192 20.6613 9.81909 20.5541C9.41899 20.4469 9.18156 20.0356 9.28876 19.6355L13.2624 4.80583C13.3696 4.40573 13.7808 4.16829 14.1809 4.2755Z" fill="currentColor"/>
-                <path d="M16.4425 7.32781C16.7196 7.01993 17.1938 6.99497 17.5017 7.27206L19.2392 8.8358C19.9756 9.49847 20.5864 10.0482 21.0058 10.5467C21.4468 11.071 21.7603 11.6342 21.7603 12.3295C21.7603 13.0248 21.4468 13.5881 21.0058 14.1123C20.5864 14.6109 19.9756 15.1606 19.2392 15.8233L17.5017 17.387C17.1938 17.6641 16.7196 17.6391 16.4425 17.3313C16.1654 17.0234 16.1904 16.5492 16.4983 16.2721L18.1947 14.7452C18.9826 14.0362 19.5138 13.5558 19.8579 13.1467C20.1882 12.7541 20.2603 12.525 20.2603 12.3295C20.2603 12.1341 20.1882 11.9049 19.8579 11.5123C19.5138 11.1033 18.9826 10.6229 18.1947 9.91383L16.4983 8.387C16.1904 8.10991 16.1654 7.63569 16.4425 7.32781Z" fill="currentColor"/>
-                <path d="M7.50178 8.387C7.80966 8.10991 7.83462 7.63569 7.55752 7.32781C7.28043 7.01993 6.80621 6.99497 6.49833 7.27206L4.76084 8.8358C4.0245 9.49847 3.41369 10.0482 2.99428 10.5467C2.55325 11.071 2.23975 11.6342 2.23975 12.3295C2.23975 13.0248 2.55325 13.5881 2.99428 14.1123C3.41369 14.6109 4.02449 15.1606 4.76082 15.8232L6.49833 17.387C6.80621 17.6641 7.28043 17.6391 7.55752 17.3313C7.83462 17.0234 7.80966 16.5492 7.50178 16.2721L5.80531 14.7452C5.01743 14.0362 4.48623 13.5558 4.14213 13.1467C3.81188 12.7541 3.73975 12.525 3.73975 12.3295C3.73975 12.1341 3.81188 11.9049 4.14213 11.5123C4.48623 11.1033 5.01743 10.6229 5.80531 9.91383L7.50178 8.387Z" fill="currentColor"/>
-            </svg>
-        </a>
         <a href="/lab" class="page-header-icon page-header-menu-item" data-tooltip="Lab">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 2.75H15"/>
@@ -98,7 +104,7 @@
                 <path d="M7.5 14H16.5"/>
             </svg>
         </a>
-        <a href="./" class="page-header-icon page-header-menu-item" id="page-header-theme-toogle" data-tooltip="Theme">
+        <a href="javascript:void(0)" class="page-header-icon page-header-menu-item" id="page-header-theme-toogle" data-tooltip="Theme" role="button" aria-label="Toggle theme">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none">
                 <path d="M2 12C2 6.47715 6.47715 2 12 2C12.4627 2 12.5392 2.69347 12.1432 2.93276C10.2594 4.07105 9 6.13845 9 8.5C9 12.0899 11.9101 15 15.5 15C17.8615 15 19.9289 13.7406 21.0672 11.8568C21.3065 11.4608 22 11.5373 22 12C22 13.1377 21.81 14.231 21.46 15.25H22C22.4142 15.25 22.75 15.5858 22.75 16C22.75 16.4142 22.4142 16.75 22 16.75H2C1.58579 16.75 1.25 16.4142 1.25 16C1.25 15.5858 1.58579 15.25 2 15.25H2.53998C2.18999 14.231 2 13.1377 2 12Z" fill="currentColor"/>
                 <path d="M5 18.25C4.58579 18.25 4.25 18.5858 4.25 19C4.25 19.4142 4.58579 19.75 5 19.75H19C19.4142 19.75 19.75 19.4142 19.75 19C19.75 18.5858 19.4142 18.25 19 18.25H5Z" fill="currentColor"/>
@@ -128,7 +134,7 @@
             <p> TLDR: Got into my dream university, math is freaking hard, find a girlfriend (optional). </p>
             <div class="page-list-tag-container">
                  
-                     <a class="page-list-tag" href="http://localhost:1313/tags/life/">life</a> <a class="page-list-tag" href="http://localhost:1313/tags/eng/">eng</a>
+                     <a class="page-list-tag" href="http://localhost:1313/tags/life/">life</a> <a class="page-list-tag" href="http://localhost:1313/tags/english/">english</a>
             </div>
         </div>
         
@@ -138,7 +144,7 @@
             <p> An example on how markdown is rendered. </p>
             <div class="page-list-tag-container">
                  
-                     <a class="page-list-tag" href="http://localhost:1313/tags/eng/">eng</a>
+                     <a class="page-list-tag" href="http://localhost:1313/tags/english/">english</a>
             </div>
         </div>
         
@@ -152,7 +158,7 @@
         <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
         <path d="M160,152a40,40,0,1,1,0-48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
 </svg>
-<text> 2025 </text>
+<text> 2026 </text>
 <a href="https://github.com/itsccao">itsccao</a>
 </div>
         </div>

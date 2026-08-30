@@ -74,22 +74,25 @@
 .page-header-menu .page-header-menu-container
 {
     position: absolute;
-    flex-direction: column;
-    display: none;
-}
-
-/* Shows buttons when hover
-.page-header-menu:hover .page-header-menu-container
-{
     display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    visibility: hidden;
+    transition: visibility 0.28s ease;
 }
-*/
 
 .page-header-menu-item
 {
     position: relative;
     margin-top: 0.75rem;
     opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.22s ease,
+                transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease;
 }
 
 .page-header-menu-item:hover
@@ -116,11 +119,14 @@
     padding: 0 0.55rem;
     border-radius: 0.35rem;
     background-color: var(--off-background);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: var(--text);
     border: 0.1rem solid var(--text);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.15s ease;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    transform: translateX(4px);
 }
 
 .page-header-home[data-tooltip]::before
@@ -137,103 +143,69 @@
     padding: 0 0.55rem;
     border-radius: 0.35rem;
     background-color: var(--off-background);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: var(--text);
     border: 0.1rem solid var(--text);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.15s ease;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    transform: translateX(-4px);
 }
 
 .page-header-menu-item[data-tooltip]:hover::before, .page-header-menu-toogle[data-tooltip]:hover::before, .page-header-home[data-tooltip]:hover::before
 {
     opacity: 1;
+    transform: translateX(0);
 }
 
-@keyframes menuItemFade
-{
-    from
-    {
-        opacity: 0;
-        transform: translateY(-10px) scale(1);
-    }
-    to
-    {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.page-header-menu-input:checked + .page-header-menu-container
-{
-    display: flex;
-}
-
-.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item
-{
-    animation: menuItemFade 0.4s ease forwards;
-}
-
-.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item:nth-child(1)
-{
-    animation-delay: 0.1s;
-}
-
-.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item:nth-child(2)
-{
-    animation-delay: 0.25s;
-}
-
-.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item:nth-child(3)
-{
-    animation-delay: 0.4s;
-}
-
-.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item:nth-child(4)
-{
-    animation-delay: 0.5s;
-}
-
-@keyframes menuItemHide
-{
-    from
-    {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-    to
-    {
-        opacity: 0;
-        transform: translateY(-10px) scale(1);
-    }
-}
-
-.page-header-menu-input:not(:checked) + .page-header-menu-container
-{
-    display: flex;
-    pointer-events: none;
-}
-
-.page-header-menu-input:not(:checked) + .page-header-menu-container .page-header-menu-item
-{
-    animation: menuItemHide 0.4s ease backwards;
-}
-
+/* Staggered close transition (bottom to top) */
 .page-header-menu-input:not(:checked) + .page-header-menu-container .page-header-menu-item:nth-child(1)
 {
-    animation-delay: 0.1s;
+    transition-delay: 0.08s;
 }
 
 .page-header-menu-input:not(:checked) + .page-header-menu-container .page-header-menu-item:nth-child(2)
 {
-    animation-delay: 0.25s;
+    transition-delay: 0.04s;
 }
 
 .page-header-menu-input:not(:checked) + .page-header-menu-container .page-header-menu-item:nth-child(3)
 {
-    animation-delay: 0.4s;
+    transition-delay: 0s;
 }
 
-.page-header-menu-input:not(:checked) + .page-header-menu-container .page-header-menu-item:nth-child(4)
+/* Staggered open transition (top to bottom) */
+.page-header-menu-input:checked + .page-header-menu-container
 {
-    animation-delay: 0.5s;
+    pointer-events: auto;
+    visibility: visible;
+    transition: visibility 0s;
+}
+
+.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item
+{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item:nth-child(1)
+{
+    transition-delay: 0.04s;
+}
+
+.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item:nth-child(2)
+{
+    transition-delay: 0.1s;
+}
+
+.page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item:nth-child(3)
+{
+    transition-delay: 0.16s;
 }

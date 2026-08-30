@@ -10,6 +10,8 @@
 		
 		
 		
+			<lastBuildDate>Tue, 09 Dec 2025 00:00:00 +0000</lastBuildDate>
+		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Xem ngày Âm Lịch</title>
@@ -31,13 +33,6 @@
 				<pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/lab/hcmus-fit-feeds/</guid>
 				<description>&lt;p&gt; Bypass Same-origin policy problems &lt;a href=&#34;https://allorigins.win/&#34;&gt;allorigins.win&lt;/a&gt; &lt;/p&gt;&#xD;&#xA;&lt;p&gt; Click &lt;a id=&#34;hcmus-fit-refresh&#34; href=&#34;#&#34;&gt;here&lt;/a&gt; to refresh. &lt;/p&gt;&#xD;&#xA;&lt;p&gt; Status: &lt;span id=&#34;hcmus-fit-status&#34; class=&#34;highlight&#34;&gt;Not doing anything.&lt;/span&gt; &lt;/p&gt;&#xD;&#xA;&lt;p&gt; Number of new posts: &lt;b&gt;&lt;span id=&#34;hcmus-fit-new-post&#34; class=&#34;highlight&#34;&gt;0&lt;/span&gt;&lt;/b&gt;. &lt;/p&gt;&#xD;&#xA;&lt;div class=&#34;page-list-container&#34;&gt; &lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;http://localhost:1313/js/hcmus-fit-feeds.js&#34;&gt; &lt;/script&gt;</description>
-			</item>
-			<item>
-				<title>HCMUS Discord Notifier</title>
-				<link>http://localhost:1313/project/hcmus-discord-notifer/</link>
-				<pubDate>Sat, 02 Aug 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/project/hcmus-discord-notifer/</guid>
-				<description></description>
 			</item>
 			<item>
 				<title>Weather Forecast</title>

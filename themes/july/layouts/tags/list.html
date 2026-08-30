@@ -2,9 +2,23 @@
     <h1> {{ .Title | markdownify }} </h1>
     {{ .Content }}
 
-    <ul>
+    <p> <a href="/tags">&larr; Browse all tags</a> </p>
+
+    <div class="page-list-container">
         {{ range .Pages }}
-            <li> <p> <a class="page-list-title" href="{{ .Permalink }}"> {{ .Title | markdownify }} </a> </p> </li>
+        <div class="page-list">
+            <p> <a class="page-list-title" href="{{ .Permalink }}"> {{ .Title | markdownify }} </a> </p>
+            {{ if not .Date.IsZero }}<p> {{ .Date.Format "Jan 2, 2006" }} </p>{{ end }}
+            <p> {{ .Description }} </p>
+            <div class="page-list-tag-container">
+                {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
+                    {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
+                    $taxonomy $tag) -}}
+                    <a class="page-list-tag" href="{{ .Permalink }}">{{ $tag | urlize }}</a>
+                    {{- end -}} {{- end -}}
+                {{ end }}
+            </div>
+        </div>
         {{ end }}
-    </ul>
+    </div>
 {{ end }}

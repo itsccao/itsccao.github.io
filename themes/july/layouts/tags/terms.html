@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <h1> {{ .Title | markdownify }} </h1>
+    {{ .Content }}
+
+    <div class="page-list-tag-container">
+        {{ range .Data.Terms.Alphabetical }}
+            <a class="page-list-tag" href="{{ .Page.Permalink }}">
+                <span>{{ .Page.Title }}</span>
+                <span class="page-list-tag-count">({{ .Count }})</span>
+            </a>
+        {{ end }}
+    </div>
+{{ end }}
