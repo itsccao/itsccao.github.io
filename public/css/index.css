@@ -1,10 +1,17 @@
 html.index-html
 {
     scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;  /* IE & Edge */
     scrollbar-width: none;     /* Firefox */
+}
+
+@media (hover: hover) and (pointer: fine)
+{
+    html.index-html
+    {
+        scroll-behavior: smooth;
+    }
 }
 
 html.index-html::-webkit-scrollbar,
@@ -64,7 +71,7 @@ body.index-body-wrapper
 .index-slide
 {
     min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 100svh;
     width: 100%;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
@@ -77,6 +84,9 @@ body.index-body-wrapper
     padding: 5rem 1.5rem 5.5rem 1.5rem;
     background-color: var(--background);
     isolation: isolate;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 /* =========================================================
@@ -726,10 +736,12 @@ body.index-body-wrapper
     {
         height: auto;
         min-height: 100vh;
-        min-height: 100dvh;
+        min-height: 100svh;
         padding-top: 6.5rem;
         padding-bottom: 5.5rem;
         justify-content: flex-start;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
     }
 
     .index-slide.index-slide-intro
