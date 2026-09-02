@@ -1,6 +1,6 @@
 {{ define "main" }}
     <h1> {{ .Title | markdownify }} </h1>
-    <p> {{ .Date.Format "January 2, 2006" }} </p>
+    <p> {{ .Date.Format "2 January 2006" }} </p>
     <p> {{ .Description | markdownify }} </p>
     <div class="page-list-tag-container">
         {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
@@ -12,4 +12,26 @@
     </div>
     <hr>
     {{ .Content }}
+
+    <button id="page-scroll-top" class="page-scroll-top" aria-label="Scroll to top" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+    <script>
+        (function() {
+            const btn = document.getElementById("page-scroll-top");
+            if (!btn) return;
+            window.addEventListener("scroll", function() {
+                if (window.scrollY > 250) {
+                    btn.classList.add("visible");
+                } else {
+                    btn.classList.remove("visible");
+                }
+            }, { passive: true });
+            btn.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        })();
+    </script>
 {{ end }}

@@ -1,17 +1,9 @@
 html.index-html
 {
-    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;  /* IE & Edge */
     scrollbar-width: none;     /* Firefox */
-}
-
-@media (hover: hover) and (pointer: fine)
-{
-    html.index-html
-    {
-        scroll-behavior: smooth;
-    }
 }
 
 html.index-html::-webkit-scrollbar,
@@ -37,44 +29,24 @@ body.index-body-wrapper
     position: relative;
 }
 
-.index .page-header
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 2rem;
-    z-index: 100;
-    pointer-events: none;
-}
-
-.index .page-header-home,
-.index .page-header-menu-toogle,
-.index .page-header-menu-input:checked + .page-header-menu-container .page-header-menu-item
-{
-    pointer-events: auto;
-}
-
 .index .page-footer
 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     z-index: 1;
+    margin-top: 0.5rem;
+    padding: 1.25rem 1.5rem 1.75rem 1.5rem;
 }
 
 /* =========================================================
-   Slide Presentation Layout (CSS Scroll Snap)
+   Section 1: Intro / Profile (Full Viewport Centered)
    ========================================================= */
 
-.index-slide
+.index-intro
 {
     min-height: 100vh;
     min-height: 100svh;
     width: 100%;
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,9 +56,39 @@ body.index-body-wrapper
     padding: 5rem 1.5rem 5.5rem 1.5rem;
     background-color: var(--background);
     isolation: isolate;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    will-change: transform;
+}
+
+/* =========================================================
+   Section 2: Intro-After (Continuous Flow Layout)
+   ========================================================= */
+
+.index-intro-after
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    padding: 3.5rem 1.5rem 1.5rem 1.5rem;
+    background-color: var(--background);
+}
+
+.index-block
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5rem;
+    box-sizing: border-box;
+    scroll-margin-top: 3.5rem;
+}
+
+.index-block:last-of-type
+{
+    margin-bottom: 1.25rem;
 }
 
 /* =========================================================
@@ -457,13 +459,13 @@ body.index-body-wrapper
 .index-project-link
 {
     color: var(--text);
-    opacity: 0.6;
+    opacity: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 1.35rem;
     height: 1.35rem;
-    transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
     flex-shrink: 0;
 }
 
@@ -473,9 +475,16 @@ body.index-body-wrapper
     height: 1.35rem;
 }
 
+.index-project-link img
+{
+    width: 1.35rem;
+    height: 1.35rem;
+    display: block;
+    object-fit: contain;
+}
+
 .index-project-link:hover
 {
-    opacity: 1;
     color: var(--link-hover);
     transform: scale(1.15);
 }
@@ -661,6 +670,14 @@ body.index-body-wrapper
     transform: translateX(-50%) translateY(3px);
 }
 
+.index-scroll-btn.hidden
+{
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateX(-50%) translateY(12px) !important;
+    animation: none !important;
+}
+
 @keyframes bounceSoft
 {
     0%, 100%
@@ -674,81 +691,34 @@ body.index-body-wrapper
 }
 
 /* =========================================================
-   Slide Navigation Dots
-   ========================================================= */
-
-.index-slide-nav
-{
-    position: fixed;
-    right: 1.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
-    z-index: 90;
-    padding: 0.55rem 0.38rem;
-    border-radius: 1rem;
-    background-color: color-mix(in srgb, var(--off-background) 60%, transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
-}
-
-.index-slide-nav-dot
-{
-    width: 0.55rem;
-    height: 0.55rem;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 1.5px solid color-mix(in srgb, var(--text) 45%, transparent);
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                background-color 0.2s ease,
-                border-color 0.2s ease,
-                box-shadow 0.2s ease;
-    display: block;
-    outline: none;
-    box-sizing: border-box;
-}
-
-.index-slide-nav-dot.active,
-.index-slide-nav-dot:hover,
-.index-slide-nav-dot:focus-visible
-{
-    transform: scale(1.35);
-    background-color: var(--link-hover);
-    border-color: var(--link-hover);
-    box-shadow: 0 0 8px color-mix(in srgb, var(--link-hover) 65%, transparent);
-}
-
-/* =========================================================
    Responsive Design for Tablets & Mobile
    ========================================================= */
 
 @media (max-width: 50rem)
 {
-    .index .page-header
+    .index-intro
     {
-        margin: 1.25rem 1.25rem;
-    }
-
-    .index-slide
-    {
-        height: auto;
         min-height: 100vh;
         min-height: 100svh;
-        padding-top: 6.5rem;
-        padding-bottom: 5.5rem;
-        justify-content: flex-start;
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-    }
-
-    .index-slide.index-slide-intro
-    {
         justify-content: center;
         padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .index-intro-after
+    {
+        padding: 2.25rem 1.25rem 1.5rem 1.25rem;
+    }
+
+    .index-block
+    {
+        margin-bottom: 4rem;
+        scroll-margin-top: 2rem;
+    }
+
+    .index-block:last-of-type
+    {
+        margin-bottom: 1rem;
     }
 
     .index-body
@@ -757,11 +727,6 @@ body.index-body-wrapper
         gap: 1.35rem;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-    }
-
-    .index-slide-intro .index-body
-    {
         justify-content: center;
         margin: auto 0;
     }
@@ -820,20 +785,10 @@ body.index-body-wrapper
         grid-template-columns: 1fr;
     }
 
-    .index-slide.index-slide-contact
-    {
-        padding-bottom: 1.25rem;
-    }
-
-    .index-slide-nav
-    {
-        display: none;
-    }
-
     .index .page-footer
     {
         position: relative;
-        margin-top: 1.5rem;
-        padding: 0.75rem 1rem;
+        margin-top: 0.5rem;
+        padding: 1rem 1.25rem 1.5rem 1.25rem;
     }
 }

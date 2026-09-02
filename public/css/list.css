@@ -7,7 +7,7 @@
 
 .page-list
 {
-    padding: 1.25rem 1.4rem;
+    padding: 1.2rem 1.4rem 1.25rem 1.4rem;
     background-color: var(--off-background);
     border-radius: 1rem;
     border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
@@ -23,13 +23,30 @@
     box-shadow: 0 10px 28px -10px color-mix(in srgb, var(--link-hover) 22%, transparent);
 }
 
+.page-list p
+{
+    margin: 0 0 0.35rem 0;
+    line-height: 1.5;
+}
+
+.page-list p:first-child
+{
+    margin-top: 0;
+}
+
+.page-list p:last-of-type
+{
+    margin-bottom: 0;
+}
+
 .page-list-title
 {
+    display: inline-block;
     font-weight: 700;
     font-size: 1.25rem;
     color: var(--text);
     text-decoration: none;
-    line-height: 1.35;
+    line-height: 1.25;
     transition: color 0.2s ease;
 }
 
@@ -45,7 +62,7 @@
     flex-wrap: wrap;
     gap: 0.45rem;
     align-items: center;
-    margin-top: 0.75rem;
+    margin-top: 0.85rem;
 }
 
 .page-list-tag

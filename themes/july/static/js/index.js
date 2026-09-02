@@ -77,50 +77,30 @@ function handleScreenChange() {
     initCardImageEffect();
 }
 
-function initSlideNavScrollSpy() {
-    const slides = document.querySelectorAll(".index-slide");
-    const dots = document.querySelectorAll(".index-slide-nav-dot");
-    if (!slides.length || !dots.length) return;
+function initScrollButtonHide() {
+    const scrollBtn = document.querySelector(".index-scroll-btn");
+    if (!scrollBtn) return;
 
-    function updateActiveDot(activeId) {
-        dots.forEach((dot) => {
-            const href = dot.getAttribute("href");
-            if (href === `#${activeId}`) {
-                dot.classList.add("active");
-            } else {
-                dot.classList.remove("active");
-            }
-        });
+    function handleScroll() {
+        if (window.scrollY > 60) {
+            scrollBtn.classList.add("hidden");
+        } else {
+            scrollBtn.classList.remove("hidden");
+        }
     }
 
-    const observerOptions = {
-        root: null,
-        rootMargin: "-30% 0px -30% 0px",
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                updateActiveDot(entry.target.id);
-            }
-        });
-    }, observerOptions);
-
-    slides.forEach((slide) => observer.observe(slide));
-
-    const initialId = window.location.hash ? window.location.hash.slice(1) : "intro";
-    updateActiveDot(initialId);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     handleScreenChange();
-    initSlideNavScrollSpy();
+    initScrollButtonHide();
 });
 
 window.addEventListener("pageshow", () => {
     handleScreenChange();
-    initSlideNavScrollSpy();
+    initScrollButtonHide();
 });
 
 noEffectOnSmallScreen.addEventListener("change", handleScreenChange);

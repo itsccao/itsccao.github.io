@@ -31,9 +31,91 @@ body
     margin-right: auto;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 6rem;
+    padding-bottom: 2.5rem;
     max-width: 50rem;
     width: 100%;
     flex: 1;
+}
+
+/* Page Scroll Top Button */
+.page-scroll-top
+{
+    position: fixed;
+    bottom: 2.25rem;
+    right: 2.25rem;
+    width: 2.65rem;
+    height: 2.65rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--off-background);
+    border: 1px solid color-mix(in srgb, var(--link) 28%, transparent);
+    color: var(--link);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    z-index: 95;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px) scale(0.9);
+    transition: opacity 0.22s ease,
+                transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                color 0.18s ease,
+                border-color 0.18s ease,
+                background-color 0.18s ease,
+                box-shadow 0.18s ease;
+    outline: none;
+}
+
+.page-scroll-top svg
+{
+    color: var(--link);
+    stroke: var(--link);
+    transition: transform 0.2s ease;
+}
+
+.page-scroll-top.visible
+{
+    opacity: 0.85;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.page-scroll-top:hover
+{
+    opacity: 1;
+    color: var(--link);
+    border-color: var(--link);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--link) 30%, transparent);
+}
+
+.page-scroll-top:hover svg
+{
+    transform: translateY(-2px);
+}
+
+.page-scroll-top:active
+{
+    transform: translateY(0) scale(0.95);
+}
+
+@media (max-width: 50rem)
+{
+    .page-body
+    {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    .page-scroll-top
+    {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 2.45rem;
+        height: 2.45rem;
+    }
 }

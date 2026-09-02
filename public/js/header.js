@@ -45,3 +45,26 @@ if (themeToggleBtn) {
         applyTheme(targetTheme);
     });
 }
+
+// Header scroll blur effect
+function initHeaderScroll() {
+    const header = document.querySelector(".page-header");
+    if (!header) return;
+
+    function handleHeaderScroll() {
+        if (window.scrollY > 20) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    }
+
+    window.addEventListener("scroll", handleHeaderScroll, { passive: true });
+    handleHeaderScroll();
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initHeaderScroll);
+} else {
+    initHeaderScroll();
+}
