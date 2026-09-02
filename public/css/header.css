@@ -82,8 +82,12 @@
 
 .page-header-icon svg
 {
-    max-width: 1.25rem;
-    max-height: 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+    flex-shrink: 0;
+    display: block;
     color: var(--text);
     user-select: none;
     -webkit-user-select: none;
@@ -271,5 +275,11 @@
 
 #page-header-theme-toogle svg
 {
+    width: 1.25rem;
+    height: 1.25rem;
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+    flex-shrink: 0;
+    display: block;
     transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), color 0.15s ease;
 }

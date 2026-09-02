@@ -161,6 +161,12 @@
 
 .page-versions-date-row svg
 {
+    width: 0.95rem;
+    height: 0.95rem;
+    min-width: 0.95rem;
+    min-height: 0.95rem;
+    flex-shrink: 0;
+    display: inline-block;
     opacity: 0.85;
 }
 

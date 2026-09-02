@@ -237,6 +237,10 @@ body.index-body-wrapper
 
 .index-p > svg
 {
+    width: 1.15rem;
+    height: 1.15rem;
+    min-width: 1.15rem;
+    min-height: 1.15rem;
     flex-shrink: 0;
 }
 
@@ -462,6 +466,10 @@ body.index-body-wrapper
 {
     width: 1.35rem;
     height: 1.35rem;
+    min-width: 1.35rem;
+    min-height: 1.35rem;
+    flex-shrink: 0;
+    display: block;
 }
 
 .index-project-link img
@@ -575,6 +583,16 @@ body.index-body-wrapper
     flex-shrink: 0;
 }
 
+.index-contact-icon svg
+{
+    width: 1.35rem;
+    height: 1.35rem;
+    min-width: 1.35rem;
+    min-height: 1.35rem;
+    flex-shrink: 0;
+    display: block;
+}
+
 .index-contact-header h3
 {
     margin: 0;
@@ -646,6 +664,16 @@ body.index-body-wrapper
     animation: bounceSoft 2.4s infinite ease-in-out;
     text-decoration: none;
     z-index: 5;
+}
+
+.index-scroll-btn svg
+{
+    width: 1.25rem;
+    height: 1.25rem;
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+    flex-shrink: 0;
+    display: block;
 }
 
 .index-scroll-btn:hover

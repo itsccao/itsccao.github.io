@@ -93,6 +93,12 @@ body
 
 .page-scroll-top svg
 {
+    width: 1.15rem;
+    height: 1.15rem;
+    min-width: 1.15rem;
+    min-height: 1.15rem;
+    flex-shrink: 0;
+    display: block;
     color: var(--link);
     stroke: var(--link);
     transition: color 0.18s ease, stroke 0.18s ease, transform 0.2s ease;

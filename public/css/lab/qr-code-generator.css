@@ -16,6 +16,14 @@
     color: var(--text);
     opacity: 0.88;
 }
+.qr-info-note svg {
+    width: 1rem;
+    height: 1rem;
+    min-width: 1rem;
+    min-height: 1rem;
+    flex-shrink: 0;
+    display: inline-block;
+}
 .qr-studio-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -41,6 +49,12 @@
     color: var(--text);
 }
 .qr-card-title svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    min-width: 1.15rem;
+    min-height: 1.15rem;
+    flex-shrink: 0;
+    display: inline-block;
     color: var(--link-hover);
 }
 #qr-code-input {
@@ -112,6 +126,14 @@
 .qr-download-btn:hover {
     opacity: 0.9;
     transform: translateY(-2px);
+}
+.qr-download-btn svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    min-width: 1.15rem;
+    min-height: 1.15rem;
+    flex-shrink: 0;
+    display: inline-block;
 }
 @media (max-width: 50rem) {
     .qr-studio-grid {

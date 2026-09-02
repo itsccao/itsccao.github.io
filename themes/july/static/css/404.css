@@ -119,6 +119,11 @@
 
 .page-404-btn svg
 {
+    width: 1.15rem;
+    height: 1.15rem;
+    min-width: 1.15rem;
+    min-height: 1.15rem;
+    display: inline-block;
     flex-shrink: 0;
 }
 

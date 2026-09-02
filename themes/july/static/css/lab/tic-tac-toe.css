@@ -96,3 +96,11 @@
     border-color: var(--link-hover);
     background-color: color-mix(in srgb, var(--link-hover) 12%, transparent);
 }
+.ttt-restart-btn svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    min-width: 1.15rem;
+    min-height: 1.15rem;
+    flex-shrink: 0;
+    display: inline-block;
+}
