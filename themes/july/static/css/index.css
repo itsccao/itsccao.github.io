@@ -1,9 +1,8 @@
 html.index-html
 {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;  /* IE & Edge */
     scrollbar-width: none;     /* Firefox */
+    overflow-anchor: none;
 }
 
 html.index-html::-webkit-scrollbar,
@@ -20,6 +19,7 @@ body.index-body-wrapper
     background-color: var(--background);
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overflow-anchor: none;
 }
 
 .index
@@ -27,15 +27,6 @@ body.index-body-wrapper
     margin: 0;
     width: 100%;
     position: relative;
-}
-
-.index .page-footer
-{
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    margin-top: 0.5rem;
-    padding: 1.25rem 1.5rem 1.75rem 1.5rem;
 }
 
 /* =========================================================
@@ -83,7 +74,6 @@ body.index-body-wrapper
     justify-content: flex-start;
     margin-bottom: 5rem;
     box-sizing: border-box;
-    scroll-margin-top: 3.5rem;
 }
 
 .index-block:last-of-type
@@ -401,7 +391,6 @@ body.index-body-wrapper
 {
     border-color: var(--link-hover);
     color: var(--link-hover);
-    transform: translateY(-2px);
     box-shadow: 0 4px 12px color-mix(in srgb, var(--link-hover) 15%, transparent);
 }
 
@@ -529,7 +518,6 @@ body.index-body-wrapper
 {
     border-color: var(--link-hover);
     color: var(--link-hover);
-    transform: translateY(-2px);
     box-shadow: 0 4px 12px color-mix(in srgb, var(--link-hover) 15%, transparent);
 }
 
@@ -713,7 +701,6 @@ body.index-body-wrapper
     .index-block
     {
         margin-bottom: 4rem;
-        scroll-margin-top: 2rem;
     }
 
     .index-block:last-of-type
@@ -783,12 +770,5 @@ body.index-body-wrapper
     .index-contact-grid
     {
         grid-template-columns: 1fr;
-    }
-
-    .index .page-footer
-    {
-        position: relative;
-        margin-top: 0.5rem;
-        padding: 1rem 1.25rem 1.5rem 1.25rem;
     }
 }

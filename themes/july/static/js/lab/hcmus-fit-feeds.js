@@ -97,21 +97,25 @@ function feedGetNewPosts(currentPosts, storedPosts)
 
 function feedCreatePost(post)
 {
-    const container = document.createElement("div");
+    const container = document.createElement("article");
     container.className = "page-list";
 
-    const linkText = document.createElement("p");
+    const header = document.createElement("div");
+    header.className = "page-list-header";
+
     const link = document.createElement("a");
     link.className = "page-list-title";
     link.href = post.link;
-    link.textContent = post.title;
-    linkText.appendChild(link);
+    link.target = "_blank";
+    link.innerHTML = `<span>${post.title}</span>`;
 
-    const dateText = document.createElement("text");
-    dateText.textContent = post.pubDate;
+    const dateText = document.createElement("time");
+    dateText.className = "page-list-date";
+    dateText.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>${post.pubDate}`;
 
-    container.appendChild(linkText);
-    container.appendChild(dateText);
+    header.appendChild(link);
+    header.appendChild(dateText);
+    container.appendChild(header);
 
     return container;
 }

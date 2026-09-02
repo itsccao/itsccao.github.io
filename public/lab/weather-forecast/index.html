@@ -79,7 +79,7 @@
 
 <label class="page-header-menu" aria-label="Navigation menu">
     <div class="page-header-icon page-header-menu-toogle" role="button" aria-label="Toggle navigation menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M8 7.25C7.58579 7.25 7.25 7.58579 7.25 8C7.25 8.41421 7.58579 8.75 8 8.75H16C16.4142 8.75 16.75 8.41421 16.75 8C16.75 7.58579 16.4142 7.25 16 7.25H8Z" fill="currentColor"></path>
             <path d="M7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H16C16.4142 11.25 16.75 11.5858 16.75 12C16.75 12.4142 16.4142 12.75 16 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z" fill="currentColor"></path>
             <path d="M8 15.25C7.58579 15.25 7.25 15.5858 7.25 16C7.25 16.4142 7.58579 16.75 8 16.75H16C16.4142 16.75 16.75 16.4142 16.75 16C16.75 15.5858 16.4142 15.25 16 15.25H8Z" fill="currentColor"></path>
@@ -98,7 +98,7 @@
             </svg>
         </a>
         <a href="/lab" class="page-header-icon page-header-menu-item" data-tooltip="Lab" aria-label="Lab">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 2.75H15"/>
                 <path d="M10 2.75V8.85C10 9.57 9.79 10.27 9.4 10.86L4.46 18.27C4 18.95 3.75 19.75 3.75 20.58C3.75 21.68 4.64 22.58 5.75 22.58H18.25C19.36 22.58 20.25 21.68 20.25 20.58C20.25 19.75 20 18.95 19.54 18.27L14.6 10.86C14.21 10.27 14 9.57 14 8.85V2.75" />
                 <path d="M7.5 14H16.5"/>
@@ -132,167 +132,60 @@
              <a class="page-list-tag" href="http://localhost:1313/tags/javascript/">javascript</a>
     </div>
     <hr>
-    <p class="api-credit"> Weather data: <a href="https://open-meteo.com/" target="_blank">Open-Meteo API</a>. </p>
-<h2> Enter location: </h2>
-<div id="weather-container">
-    <input type="text" id="weather-input" placeholder="Your location..." autofocus>
-    <button id="weather-submit"> Search </button>
+    <div class="weather-wrapper">
+    <div class="weather-credit-bar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+        </svg>
+        <span>Weather and air quality data provided by <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo API</a></span>
+    </div>
+
+    <div class="weather-search-card">
+        <label for="weather-input" class="weather-search-label">Search weather by location:</label>
+        <div class="weather-search-box">
+            <input type="text" id="weather-input" placeholder="Enter city name (e.g. Ho Chi Minh, Tokyo, London)..." autofocus>
+            <button type="button" id="weather-submit" class="weather-search-btn" aria-label="Search weather">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <span>Search</span>
+            </button>
+        </div>
+
+        <div class="weather-quick-tags">
+            <span class="weather-quick-label">Quick suggestions:</span>
+            <button type="button" class="weather-quick-btn" onclick="quickSearch('Ho Chi Minh')">Ho Chi Minh City</button>
+            <button type="button" class="weather-quick-btn" onclick="quickSearch('Tokyo')">Tokyo</button>
+        </div>
+    </div>
+
+    <p id="weather-error" class="weather-error-text"></p>
+
+    <div class="weather-history-section">
+        <h2 class="weather-history-title">Recent Forecasts</h2>
+        <div id="weather-result" class="weather-results-container"></div>
+    </div>
 </div>
-<p id="weather-error"> </p>
-<h2> Location(s) searched: </h2>
-<div id="weather-result"> </div>
-<style>
-    .api-credit {
-        font-style: italic;
-        opacity: 0.8;
-        margin-bottom: 2rem;
-    }
 
-    #weather-container
-    {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        width: 100%;
-        max-width: 30rem;
+<script>
+function quickSearch(city) {
+    const input = document.getElementById('weather-input');
+    if (input) {
+        input.value = city;
+        document.getElementById('weather-submit')?.click();
     }
+}
+</script>
+<script src="/js/lab/weather-forecast.js"></script>
 
-    h2
-    {
-        margin-bottom: 1.25rem;
-    }
 
-    #weather-input
-    {
-        flex: 1 1 200px;
-        box-sizing: border-box;
-        padding: 0.8rem 1rem;
-        background-color: var(--off-background);
-        border: 2px solid var(--box-shadow-hover);
-        border-radius: 0.5rem;
-        color: var(--text);
-        font-size: 1.1rem;
-        transition: border-color 0.2s ease;
-    }
 
-    #weather-input:focus
-    {
-        outline: none;
-        border-color: var(--link-hover);
-    }
-
-    #weather-submit
-    {
-        box-sizing: border-box;
-        padding: 0.8rem 1.5rem;
-        background-color: var(--off-background);
-        border: 2px solid var(--box-shadow-hover);
-        border-radius: 0.5rem;
-        color: var(--text);
-        font-size: 1.1rem;
-        font-weight: 600;
-        transition: all 0.2s ease;
-    }
-
-    #weather-submit:hover
-    {
-        cursor: pointer;
-        border-color: var(--link-hover);
-        color: var(--link-hover);
-        transform: translateY(-2px);
-    }
-
-    .weather-card {
-        background-color: var(--off-background);
-        border: 2px solid var(--box-shadow-hover);
-        border-radius: 0.5rem;
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-        transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    
-    .weather-card:hover {
-        border-color: var(--link-hover);
-        transform: translateY(-2px);
-    }
-
-    .weather-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        border-bottom: 2px solid var(--box-shadow-hover);
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .weather-header h3 {
-        margin: 0;
-        font-size: 1.25rem;
-        color: var(--link-hover);
-    }
-
-    .weather-code {
-        font-weight: 600;
-        color: var(--text);
-        font-size: 0.95rem;
-    }
-
-    .weather-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .weather-item {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .weather-item .label {
-        font-size: 0.75rem;
-        opacity: 0.7;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 0.25rem;
-    }
-
-    .weather-item .value {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--text);
-    }
-
-    .weather-item .sub-label {
-        font-size: 0.85rem;
-        opacity: 0.8;
-        margin-top: 0.25rem;
-    }
-</style>
-<script src="/js/weather-forecast.js"> </script>
-
-    <button id="page-scroll-top" class="page-scroll-top" aria-label="Scroll to top" title="Scroll to top">
+    <a href="#" class="page-scroll-top" aria-label="Scroll to top" title="Scroll to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m18 15-6-6-6 6"/>
         </svg>
-    </button>
-    <script>
-        (function() {
-            const btn = document.getElementById("page-scroll-top");
-            if (!btn) return;
-            window.addEventListener("scroll", function() {
-                if (window.scrollY > 250) {
-                    btn.classList.add("visible");
-                } else {
-                    btn.classList.remove("visible");
-                }
-            }, { passive: true });
-            btn.addEventListener("click", function() {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        })();
-    </script>
+    </a>
 
             </div>
 

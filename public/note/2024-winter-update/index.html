@@ -79,7 +79,7 @@
 
 <label class="page-header-menu" aria-label="Navigation menu">
     <div class="page-header-icon page-header-menu-toogle" role="button" aria-label="Toggle navigation menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M8 7.25C7.58579 7.25 7.25 7.58579 7.25 8C7.25 8.41421 7.58579 8.75 8 8.75H16C16.4142 8.75 16.75 8.41421 16.75 8C16.75 7.58579 16.4142 7.25 16 7.25H8Z" fill="currentColor"></path>
             <path d="M7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H16C16.4142 11.25 16.75 11.5858 16.75 12C16.75 12.4142 16.4142 12.75 16 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z" fill="currentColor"></path>
             <path d="M8 15.25C7.58579 15.25 7.25 15.5858 7.25 16C7.25 16.4142 7.58579 16.75 8 16.75H16C16.4142 16.75 16.75 16.4142 16.75 16C16.75 15.5858 16.4142 15.25 16 15.25H8Z" fill="currentColor"></path>
@@ -98,7 +98,7 @@
             </svg>
         </a>
         <a href="/lab" class="page-header-icon page-header-menu-item" data-tooltip="Lab" aria-label="Lab">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 2.75H15"/>
                 <path d="M10 2.75V8.85C10 9.57 9.79 10.27 9.4 10.86L4.46 18.27C4 18.95 3.75 19.75 3.75 20.58C3.75 21.68 4.64 22.58 5.75 22.58H18.25C19.36 22.58 20.25 21.68 20.25 20.58C20.25 19.75 20 18.95 19.54 18.27L14.6 10.86C14.21 10.27 14 9.57 14 8.85V2.75" />
                 <path d="M7.5 14H16.5"/>
@@ -129,7 +129,7 @@
     <p> TLDR: Got into my dream university, math is freaking hard, find a girlfriend (optional). </p>
     <div class="page-list-tag-container">
          
-             <a class="page-list-tag" href="http://localhost:1313/tags/life/">life</a> <a class="page-list-tag" href="http://localhost:1313/tags/english/">english</a>
+             <a class="page-list-tag" href="http://localhost:1313/tags/casual/">casual</a> <a class="page-list-tag" href="http://localhost:1313/tags/english/">english</a>
     </div>
     <hr>
     <blockquote>
@@ -162,27 +162,11 @@
 </blockquote>
 
 
-    <button id="page-scroll-top" class="page-scroll-top" aria-label="Scroll to top" title="Scroll to top">
+    <a href="#" class="page-scroll-top" aria-label="Scroll to top" title="Scroll to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m18 15-6-6-6 6"/>
         </svg>
-    </button>
-    <script>
-        (function() {
-            const btn = document.getElementById("page-scroll-top");
-            if (!btn) return;
-            window.addEventListener("scroll", function() {
-                if (window.scrollY > 250) {
-                    btn.classList.add("visible");
-                } else {
-                    btn.classList.remove("visible");
-                }
-            }, { passive: true });
-            btn.addEventListener("click", function() {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        })();
-    </script>
+    </a>
 
             </div>
 

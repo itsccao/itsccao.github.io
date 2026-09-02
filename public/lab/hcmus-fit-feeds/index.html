@@ -79,7 +79,7 @@
 
 <label class="page-header-menu" aria-label="Navigation menu">
     <div class="page-header-icon page-header-menu-toogle" role="button" aria-label="Toggle navigation menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M8 7.25C7.58579 7.25 7.25 7.58579 7.25 8C7.25 8.41421 7.58579 8.75 8 8.75H16C16.4142 8.75 16.75 8.41421 16.75 8C16.75 7.58579 16.4142 7.25 16 7.25H8Z" fill="currentColor"></path>
             <path d="M7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H16C16.4142 11.25 16.75 11.5858 16.75 12C16.75 12.4142 16.4142 12.75 16 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z" fill="currentColor"></path>
             <path d="M8 15.25C7.58579 15.25 7.25 15.5858 7.25 16C7.25 16.4142 7.58579 16.75 8 16.75H16C16.4142 16.75 16.75 16.4142 16.75 16C16.75 15.5858 16.4142 15.25 16 15.25H8Z" fill="currentColor"></path>
@@ -98,7 +98,7 @@
             </svg>
         </a>
         <a href="/lab" class="page-header-icon page-header-menu-item" data-tooltip="Lab" aria-label="Lab">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 2.75H15"/>
                 <path d="M10 2.75V8.85C10 9.57 9.79 10.27 9.4 10.86L4.46 18.27C4 18.95 3.75 19.75 3.75 20.58C3.75 21.68 4.64 22.58 5.75 22.58H18.25C19.36 22.58 20.25 21.68 20.25 20.58C20.25 19.75 20 18.95 19.54 18.27L14.6 10.86C14.21 10.27 14 9.57 14 8.85V2.75" />
                 <path d="M7.5 14H16.5"/>
@@ -132,34 +132,58 @@
              <a class="page-list-tag" href="http://localhost:1313/tags/javascript/">javascript</a>
     </div>
     <hr>
-    <p> Bypass Same-origin policy problems <a href="https://allorigins.win/">allorigins.win</a> </p>
-<p> Click <a id="hcmus-fit-refresh" href="#">here</a> to refresh. </p>
-<p> Status: <span id="hcmus-fit-status" class="highlight">Not doing anything.</span> </p>
-<p> Number of new posts: <b><span id="hcmus-fit-new-post" class="highlight">0</span></b>. </p>
-<div class="page-list-container"> </div>
-<script src="/js/hcmus-fit-feeds.js"> </script>
+    <div class="fit-wrapper">
+    <div class="fit-info-bar">
+        <div class="fit-proxy-note">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>Bypass CORS qua <a href="https://allorigins.win/" target="_blank" rel="noopener noreferrer">allorigins.win</a></span>
+        </div>
 
-    <button id="page-scroll-top" class="page-scroll-top" aria-label="Scroll to top" title="Scroll to top">
+        <button id="hcmus-fit-refresh" class="fit-refresh-btn" aria-label="Làm mới tin tức">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.364 3.05762C18.7782 3.05762 19.114 3.3934 19.114 3.80762V8.05026C19.114 8.46447 18.7782 8.80026 18.364 8.80026H14.1213C13.7071 8.80026 13.3713 8.46447 13.3713 8.05026C13.3713 7.63604 13.7071 7.30026 14.1213 7.30026H16.4817C13.6363 5.05718 9.4987 5.24825 6.87348 7.87348C4.04217 10.7048 4.04217 15.2952 6.87348 18.1265C9.70478 20.9578 14.2952 20.9578 17.1265 18.1265C19.0234 16.2297 19.6504 13.5428 19.0039 11.1219C18.897 10.7217 19.1348 10.3106 19.535 10.2038C19.9352 10.0969 20.3462 10.3347 20.4531 10.7349C21.2321 13.6518 20.478 16.8964 18.1872 19.1872C14.7701 22.6043 9.2299 22.6043 5.81282 19.1872C2.39573 15.7701 2.39573 10.2299 5.81282 6.81282C9.04483 3.5808 14.1762 3.40576 17.614 6.28768V3.80762C17.614 3.3934 17.9497 3.05762 18.364 3.05762Z" fill="currentColor"></path>
+            </svg>
+            <span>Làm mới</span>
+        </button>
+    </div>
+
+    <div class="fit-stats-grid">
+        <div class="fit-stat-card">
+            <span class="fit-stat-label">Trạng thái</span>
+            <div class="fit-status-badge">
+                <span class="fit-status-dot"></span>
+                <span id="hcmus-fit-status" class="fit-status-text">Chưa tải dữ liệu</span>
+            </div>
+        </div>
+
+        <div class="fit-stat-card">
+            <span class="fit-stat-label">Tin bài mới</span>
+            <div class="fit-count-badge">
+                <span id="hcmus-fit-new-post">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="fit-section-header">
+        <h2 class="fit-section-title">Danh sách tin tức mới nhất</h2>
+    </div>
+
+    <div class="page-list-container"></div>
+</div>
+
+<script src="/js/lab/hcmus-fit-feeds.js"></script>
+
+
+
+    <a href="#" class="page-scroll-top" aria-label="Scroll to top" title="Scroll to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m18 15-6-6-6 6"/>
         </svg>
-    </button>
-    <script>
-        (function() {
-            const btn = document.getElementById("page-scroll-top");
-            if (!btn) return;
-            window.addEventListener("scroll", function() {
-                if (window.scrollY > 250) {
-                    btn.classList.add("visible");
-                } else {
-                    btn.classList.remove("visible");
-                }
-            }, { passive: true });
-            btn.addEventListener("click", function() {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        })();
-    </script>
+    </a>
 
             </div>
 

@@ -2,23 +2,47 @@
     <h1> {{ .Title | markdownify }} </h1>
     {{ .Content }}
 
-    <p> <a href="/tags">&larr; Browse all tags</a> </p>
+    <p class="tags-back-link"><a href="/tags">&larr; Browse all tags</a></p>
 
     <div class="page-list-container">
         {{ range .Pages }}
-        <div class="page-list">
-            <p> <a class="page-list-title" href="{{ .Permalink }}"> {{ .Title | markdownify }} </a> </p>
-            {{ if not .Date.IsZero }}<p> {{ .Date.Format "Jan 2, 2006" }} </p>{{ end }}
-            <p> {{ .Description }} </p>
-            <div class="page-list-tag-container">
-                {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
-                    {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
-                    $taxonomy $tag) -}}
-                    <a class="page-list-tag" href="{{ .Permalink }}">{{ $tag | urlize }}</a>
-                    {{- end -}} {{- end -}}
+        <article class="page-list">
+            <div class="page-list-header">
+                <a class="page-list-title" href="{{ .Permalink }}">
+                    <span>{{ .Title | markdownify }}</span>
+                </a>
+                {{ if not .Date.IsZero }}
+                <time class="page-list-date" datetime="{{ .Date.Format "2006-01-02" }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none">
+                        <path d="M8 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M16 2V5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M3.5 9.08997H20.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M15.6947 13.7H15.7037" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M15.6947 16.7H15.7037" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M11.9955 13.7H12.0045" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.9955 16.7H12.0045" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M8.29431 13.7H8.30329" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.29431 16.7H8.30329" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    {{ .Date.Format "2 January 2006" }}
+                </time>
                 {{ end }}
             </div>
-        </div>
+            {{ with .Description }}
+            <p class="page-list-desc"> {{ . }} </p>
+            {{ end }}
+            {{ $taxonomy := "tags" }}
+            {{ with .Param $taxonomy }}
+            <div class="page-list-tag-container">
+                {{ range $index, $tag := . }}
+                    {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) }}
+                    <a class="page-list-tag" href="{{ .Permalink }}" aria-label="Tag {{ $tag }}">
+                        <span class="page-list-tag-hash">#</span><span class="page-list-tag-text">{{ $tag | urlize }}</span>
+                    </a>
+                    {{ end }}
+                {{ end }}
+            </div>
+            {{ end }}
+        </article>
         {{ end }}
     </div>
 {{ end }}

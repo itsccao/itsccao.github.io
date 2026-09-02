@@ -84,7 +84,11 @@ function updateBoard(event)
             console.log(squareO);
         }
         drawCheck();
-        if (currentTurn == "x") currentTurn = "o";
-        else currentTurn = "x";
+        if (!isGameOver)
+        {
+            if (currentTurn == "x") currentTurn = "o";
+            else currentTurn = "x";
+            displayResult.innerText = `Turn: ${currentTurn.toUpperCase()}`;
+        }
     }
 }

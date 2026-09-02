@@ -77,9 +77,21 @@ function handleScreenChange() {
     initCardImageEffect();
 }
 
-function initScrollButtonHide() {
+let scrollInitialized = false;
+
+function initScrollButton() {
+    if (scrollInitialized) return;
     const scrollBtn = document.querySelector(".index-scroll-btn");
     if (!scrollBtn) return;
+    scrollInitialized = true;
+
+    scrollBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector("#intro-after");
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+    });
 
     function handleScroll() {
         if (window.scrollY > 60) {
@@ -93,14 +105,19 @@ function initScrollButtonHide() {
     handleScroll();
 }
 
+// Clear any stale anchor hash on load to avoid mobile browser auto-jumping
+if (window.location.hash) {
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     handleScreenChange();
-    initScrollButtonHide();
+    initScrollButton();
 });
 
 window.addEventListener("pageshow", () => {
     handleScreenChange();
-    initScrollButtonHide();
+    initScrollButton();
 });
 
 noEffectOnSmallScreen.addEventListener("change", handleScreenChange);

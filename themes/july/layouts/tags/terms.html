@@ -2,10 +2,11 @@
     <h1> {{ .Title | markdownify }} </h1>
     {{ .Content }}
 
-    <div class="page-list-tag-container">
+    <div class="page-list-tag-container page-tag-terms-container">
         {{ range .Data.Terms.Alphabetical }}
-            <a class="page-list-tag" href="{{ .Page.Permalink }}">
-                <span>{{ .Page.Title }}</span>
+            <a class="page-list-tag page-tag-term" href="{{ .Page.Permalink }}">
+                <span class="page-list-tag-hash">#</span>
+                <span class="page-list-tag-text">{{ .Page.Title }}</span>
                 <span class="page-list-tag-count">({{ .Count }})</span>
             </a>
         {{ end }}

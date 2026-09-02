@@ -5,6 +5,10 @@ date = "2023-08-01"
 tags = [
   "english"
 ]
+
+[build]
+  list = "never"
+  render = "always"
 +++
 
 > Credits to [joeroe/risotto](https://github.com/joeroe/risotto/tree/main/exampleSite/content/post).

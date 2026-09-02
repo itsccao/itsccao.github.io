@@ -29,10 +29,10 @@
     <loc>http://localhost:1313/note/2024-winter-update/</loc>
     <lastmod>2024-11-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/english/</loc>
+    <loc>http://localhost:1313/tags/casual/</loc>
     <lastmod>2024-11-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/life/</loc>
+    <loc>http://localhost:1313/tags/english/</loc>
     <lastmod>2024-11-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/note/</loc>
@@ -40,9 +40,6 @@
   </url><url>
     <loc>http://localhost:1313/lab/tic-tac-toe/</loc>
     <lastmod>2024-07-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/note/example/</loc>
-    <lastmod>2023-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>

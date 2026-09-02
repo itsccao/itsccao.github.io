@@ -1,5 +1,148 @@
 {{ define "main" }}
-    <h1> {{ .Title | markdownify }} </h1>
-    <hr>
-    {{ .Content }}
+<div class="page-versions">
+    <header class="page-versions-header">
+        <span class="page-versions-tag">WEBSITE ARCHIVE</span>
+        <h1 class="page-versions-title"> {{ .Title | markdownify }} </h1>
+        <p class="page-versions-desc">
+            A retrospective tour through previous website layouts, visual themes, and changelogs since 2022. You can also view the commit history on <a href="https://github.com/itsccao/itsccao.github.io" target="_blank" rel="noopener noreferrer" class="page-versions-inline-link">GitHub &rarr;</a>
+        </p>
+    </header>
+
+    <div class="page-versions-list">
+        <!-- Version 6: July -->
+        <article class="page-versions-card">
+            <div class="page-versions-card-header">
+                <div class="page-versions-title-group">
+                    <h2 class="page-versions-card-title">6.x.x &mdash; July</h2>
+                    <span class="page-versions-badge primary">Current Version</span>
+                </div>
+                <div class="page-versions-date-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 8C3.25 6.48122 4.48122 5.25 6 5.25H18C19.5188 5.25 20.75 6.48122 20.75 8V18C20.75 19.5188 19.5188 20.75 18 20.75H6C4.48122 20.75 3.25 19.5188 3.25 18V8ZM6 6.75C5.30964 6.75 4.75 7.30964 4.75 8V9H19.25V8C19.25 7.30964 18.6904 6.75 18 6.75H6ZM19.25 10.5H4.75V18C4.75 18.6904 5.30964 19.25 6 19.25H18C18.6904 19.25 19.25 18.6904 19.25 18V10.5Z" fill="currentColor"/>
+                        <path d="M7 2.25C7.41421 2.25 7.75 2.58579 7.75 3V5.5C7.75 5.91421 7.41421 6.25 7 6.25C6.58579 6.25 6.25 5.91421 6.25 5.5V3C6.25 2.58579 6.58579 2.25 7 2.25Z" fill="currentColor"/>
+                        <path d="M17 2.25C17.4142 2.25 17.75 2.58579 17.75 3V5.5C17.75 5.91421 17.4142 6.25 17 6.25C16.5858 6.25 16.25 5.91421 16.25 5.5V3C16.25 2.58579 16.5858 2.25 17 2.25Z" fill="currentColor"/>
+                    </svg>
+                    <span>July 2025<span class="versions-date"></span></span>
+                </div>
+            </div>
+            <ul class="page-versions-card-notes">
+                <li>Simply named <strong>July</strong> after the month of its creation.</li>
+                <li>The core philosophy here is minimalism &mdash; stripping away clutter to build something clean, lightweight, and fast.</li>
+                <li>Carries beautiful typography inspired by the <strong>risotto theme</strong>, which has become a staple of this space.</li>
+            </ul>
+        </article>
+
+        <!-- Version 5: Sylvie -->
+        <article class="page-versions-card">
+            <div class="page-versions-card-header">
+                <div class="page-versions-title-group">
+                    <h2 class="page-versions-card-title">5.x.x &mdash; Sylvie</h2>
+                    <span class="page-versions-badge">Archived</span>
+                </div>
+                <div class="page-versions-date-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 8C3.25 6.48122 4.48122 5.25 6 5.25H18C19.5188 5.25 20.75 6.48122 20.75 8V18C20.75 19.5188 19.5188 20.75 18 20.75H6C4.48122 20.75 3.25 19.5188 3.25 18V8ZM6 6.75C5.30964 6.75 4.75 7.30964 4.75 8V9H19.25V8C19.25 7.30964 18.6904 6.75 18 6.75H6ZM19.25 10.5H4.75V18C4.75 18.6904 5.30964 19.25 6 19.25H18C18.6904 19.25 19.25 18.6904 19.25 18V10.5Z" fill="currentColor"/>
+                        <path d="M7 2.25C7.41421 2.25 7.75 2.58579 7.75 3V5.5C7.75 5.91421 7.41421 6.25 7 6.25C6.58579 6.25 6.25 5.91421 6.25 5.5V3C6.25 2.58579 6.58579 2.25 7 2.25Z" fill="currentColor"/>
+                        <path d="M17 2.25C17.4142 2.25 17.75 2.58579 17.75 3V5.5C17.75 5.91421 17.4142 6.25 17 6.25C16.5858 6.25 16.25 5.91421 16.25 5.5V3C16.25 2.58579 16.5858 2.25 17 2.25Z" fill="currentColor"/>
+                    </svg>
+                    <span>April 2025<span class="versions-date"></span></span>
+                </div>
+            </div>
+            <ul class="page-versions-card-notes">
+                <li>Designed to mimic the aesthetic of a classic desktop application window, complete with a decorative close button.</li>
+                <li>Continued to use the gorgeous <strong>risotto theme</strong> typography to maintain high readability.</li>
+            </ul>
+        </article>
+
+        <!-- Version 4: Chloe -->
+        <article class="page-versions-card">
+            <div class="page-versions-card-header">
+                <div class="page-versions-title-group">
+                    <h2 class="page-versions-card-title">4.x.x &mdash; Chloe</h2>
+                    <span class="page-versions-badge">Archived</span>
+                </div>
+                <div class="page-versions-date-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 8C3.25 6.48122 4.48122 5.25 6 5.25H18C19.5188 5.25 20.75 6.48122 20.75 8V18C20.75 19.5188 19.5188 20.75 18 20.75H6C4.48122 20.75 3.25 19.5188 3.25 18V8ZM6 6.75C5.30964 6.75 4.75 7.30964 4.75 8V9H19.25V8C19.25 7.30964 18.6904 6.75 18 6.75H6ZM19.25 10.5H4.75V18C4.75 18.6904 5.30964 19.25 6 19.25H18C18.6904 19.25 19.25 18.6904 19.25 18V10.5Z" fill="currentColor"/>
+                        <path d="M7 2.25C7.41421 2.25 7.75 2.58579 7.75 3V5.5C7.75 5.91421 7.41421 6.25 7 6.25C6.58579 6.25 6.25 5.91421 6.25 5.5V3C6.25 2.58579 6.58579 2.25 7 2.25Z" fill="currentColor"/>
+                        <path d="M17 2.25C17.4142 2.25 17.75 2.58579 17.75 3V5.5C17.75 5.91421 17.4142 6.25 17 6.25C16.5858 6.25 16.25 5.91421 16.25 5.5V3C16.25 2.58579 16.5858 2.25 17 2.25Z" fill="currentColor"/>
+                    </svg>
+                    <span>August 2023<span class="versions-date"></span></span>
+                </div>
+            </div>
+            <ul class="page-versions-card-notes">
+                <li>Introduced to the <a href="https://themes.gohugo.io/themes/risotto/" target="_blank" rel="noopener noreferrer">risotto theme</a> by a friend and instantly fell in love with its elegant, reading-focused layout.</li>
+                <li>Heavily customized the original theme to fit personal taste and named the result <strong>Chloe</strong>.</li>
+            </ul>
+        </article>
+
+        <!-- Version 3: Lost Media -->
+        <article class="page-versions-card muted">
+            <div class="page-versions-card-header">
+                <div class="page-versions-title-group">
+                    <h2 class="page-versions-card-title">3.x &mdash; Lost Media</h2>
+                    <span class="page-versions-badge muted">Lost</span>
+                </div>
+                <div class="page-versions-date-row">
+                    <span>Year unknown</span>
+                </div>
+            </div>
+            <ul class="page-versions-card-notes">
+                <li>The &ldquo;Lost Media&rdquo; of the portfolio. Unfortunately, the source code and design for this iteration have been completely lost to time.</li>
+                <li>No exact release date or screenshots remain to remember it by.</li>
+            </ul>
+        </article>
+
+        <!-- Version 2: osu! Theme -->
+        <article class="page-versions-card">
+            <div class="page-versions-card-header">
+                <div class="page-versions-title-group">
+                    <h2 class="page-versions-card-title">2.x &mdash; osu! Theme</h2>
+                    <span class="page-versions-badge">Archived</span>
+                </div>
+                <div class="page-versions-date-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 8C3.25 6.48122 4.48122 5.25 6 5.25H18C19.5188 5.25 20.75 6.48122 20.75 8V18C20.75 19.5188 19.5188 20.75 18 20.75H6C4.48122 20.75 3.25 19.5188 3.25 18V8ZM6 6.75C5.30964 6.75 4.75 7.30964 4.75 8V9H19.25V8C19.25 7.30964 18.6904 6.75 18 6.75H6ZM19.25 10.5H4.75V18C4.75 18.6904 5.30964 19.25 6 19.25H18C18.6904 19.25 19.25 18.6904 19.25 18V10.5Z" fill="currentColor"/>
+                        <path d="M7 2.25C7.41421 2.25 7.75 2.58579 7.75 3V5.5C7.75 5.91421 7.41421 6.25 7 6.25C6.58579 6.25 6.25 5.91421 6.25 5.5V3C6.25 2.58579 6.58579 2.25 7 2.25Z" fill="currentColor"/>
+                        <path d="M17 2.25C17.4142 2.25 17.75 2.58579 17.75 3V5.5C17.75 5.91421 17.4142 6.25 17 6.25C16.5858 6.25 16.25 5.91421 16.25 5.5V3C16.25 2.58579 16.5858 2.25 17 2.25Z" fill="currentColor"/>
+                    </svg>
+                    <span>2022<span class="versions-date"></span></span>
+                </div>
+            </div>
+            <ul class="page-versions-card-notes">
+                <li>Heavily inspired by the UI of an <a href="https://osu.ppy.sh/" target="_blank" rel="noopener noreferrer">osu!</a> skin (though the exact skin name is long forgotten).</li>
+                <li>A fun, highly stylized experiment in custom theme building.</li>
+            </ul>
+            <div class="page-versions-card-action">
+                <a href="/versions/v2/" target="_blank" class="page-versions-card-link">Take a look back in time &rarr;</a>
+            </div>
+        </article>
+
+        <!-- Version 1.0: Original -->
+        <article class="page-versions-card">
+            <div class="page-versions-card-header">
+                <div class="page-versions-title-group">
+                    <h2 class="page-versions-card-title">1.0 &mdash; The Beginning</h2>
+                    <span class="page-versions-badge">Archived</span>
+                </div>
+                <div class="page-versions-date-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 8C3.25 6.48122 4.48122 5.25 6 5.25H18C19.5188 5.25 20.75 6.48122 20.75 8V18C20.75 19.5188 19.5188 20.75 18 20.75H6C4.48122 20.75 3.25 19.5188 3.25 18V8ZM6 6.75C5.30964 6.75 4.75 7.30964 4.75 8V9H19.25V8C19.25 7.30964 18.6904 6.75 18 6.75H6ZM19.25 10.5H4.75V18C4.75 18.6904 5.30964 19.25 6 19.25H18C18.6904 19.25 19.25 18.6904 19.25 18V10.5Z" fill="currentColor"/>
+                        <path d="M7 2.25C7.41421 2.25 7.75 2.58579 7.75 3V5.5C7.75 5.91421 7.41421 6.25 7 6.25C6.58579 6.25 6.25 5.91421 6.25 5.5V3C6.25 2.58579 6.58579 2.25 7 2.25Z" fill="currentColor"/>
+                        <path d="M17 2.25C17.4142 2.25 17.75 2.58579 17.75 3V5.5C17.75 5.91421 17.4142 6.25 17 6.25C16.5858 6.25 16.25 5.91421 16.25 5.5V3C16.25 2.58579 16.5858 2.25 17 2.25Z" fill="currentColor"/>
+                    </svg>
+                    <span>2022<span class="versions-date"></span></span>
+                </div>
+            </div>
+            <ul class="page-versions-card-notes">
+                <li>Where it all started. The very first iteration of the website, built while taking initial steps into front-end development.</li>
+                <li>Simple, nostalgic, and marks the starting point of this journey.</li>
+            </ul>
+            <div class="page-versions-card-action">
+                <a href="/versions/v1/" target="_blank" class="page-versions-card-link">Experience the original &rarr;</a>
+            </div>
+        </article>
+    </div>
+</div>
+<script src="/js/versions.js"></script>
 {{ end }}

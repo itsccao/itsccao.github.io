@@ -1,0 +1,140 @@
+.amlich-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.amlich-header-note {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.15rem;
+    background-color: var(--off-background);
+    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    border-radius: 0.75rem;
+    font-size: 0.88rem;
+    color: var(--text);
+    opacity: 0.88;
+}
+.amlich-header-note a {
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.amlich-picker-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--off-background);
+    border-radius: 1rem;
+    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+}
+.amlich-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+.amlich-input {
+    padding: 0.65rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.65rem;
+    border: 1px solid color-mix(in srgb, var(--text) 16%, transparent);
+    background-color: var(--background);
+    color: var(--text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+.amlich-input:focus {
+    border-color: var(--link-hover);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--link-hover) 20%, transparent);
+}
+.amlich-result-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.75rem;
+    background-color: var(--off-background);
+    border-radius: 1rem;
+    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.08);
+}
+.amlich-primary-banner {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: var(--background);
+    border-radius: 0.85rem;
+    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+}
+.amlich-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--link-hover);
+    background-color: color-mix(in srgb, var(--link-hover) 12%, transparent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid color-mix(in srgb, var(--link-hover) 30%, transparent);
+}
+.amlich-main-date {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+}
+.amlich-weekday {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--link-hover);
+    text-transform: capitalize;
+}
+.amlich-canchi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.amlich-canchi-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.15rem 0.75rem;
+    background-color: var(--background);
+    border-radius: 0.75rem;
+    border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.amlich-canchi-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--link-hover) 40%, transparent);
+}
+.amlich-canchi-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.65;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+}
+.amlich-canchi-value {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+}
+@media (max-width: 50rem) {
+    .amlich-canchi-grid {
+        grid-template-columns: 1fr;
+    }
+    .amlich-main-date {
+        font-size: 1.3rem;
+    }
+}

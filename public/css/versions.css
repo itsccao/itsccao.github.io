@@ -1,0 +1,233 @@
+/* =========================================================
+   Versions Archive Page Styles
+   ========================================================= */
+
+.page-versions
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-versions-header
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.page-versions-tag
+{
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--link-hover);
+    margin-bottom: 0.4rem;
+}
+
+.page-versions-title
+{
+    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text);
+}
+
+.page-versions-desc
+{
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.6;
+    opacity: 0.82;
+    max-width: 42rem;
+}
+
+.page-versions-inline-link
+{
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+}
+
+.page-versions-list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.page-versions-card
+{
+    background-color: var(--off-background);
+    border-radius: 1rem;
+    padding: 1.35rem 1.5rem;
+    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.page-versions-card:hover
+{
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--link-hover) 45%, transparent);
+    box-shadow: 0 10px 28px -10px color-mix(in srgb, var(--link-hover) 22%, transparent);
+}
+
+.page-versions-card.muted
+{
+    opacity: 0.75;
+}
+
+.page-versions-card.muted:hover
+{
+    opacity: 1;
+}
+
+.page-versions-card-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.page-versions-title-group
+{
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+}
+
+.page-versions-card-title
+{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+.page-versions-badge
+{
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 9999px;
+    background-color: var(--background);
+    border: 1px solid color-mix(in srgb, var(--text) 16%, transparent);
+    color: var(--text);
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+}
+
+.page-versions-badge.primary
+{
+    background-color: color-mix(in srgb, var(--link-hover) 12%, transparent);
+    border-color: color-mix(in srgb, var(--link-hover) 35%, transparent);
+    color: var(--link-hover);
+}
+
+.page-versions-badge.muted
+{
+    opacity: 0.6;
+}
+
+.page-versions-date-row
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text);
+    opacity: 0.65;
+    white-space: nowrap;
+    margin-top: 0.15rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.page-versions-date-row svg
+{
+    opacity: 0.85;
+}
+
+.page-versions-card-notes
+{
+    margin: 0 0 0.5rem 0;
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    color: var(--text);
+}
+
+.page-versions-card-notes li
+{
+    margin-bottom: 0.3rem;
+}
+
+.page-versions-card-notes li:last-child
+{
+    margin-bottom: 0;
+}
+
+.page-versions-card-notes a
+{
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.page-versions-card-action
+{
+    margin-top: 0.75rem;
+    display: flex;
+}
+
+.page-versions-card-link
+{
+    display: inline-block;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.2s ease;
+}
+
+.page-versions-card-link:hover
+{
+    opacity: 0.8;
+}
+
+@media (max-width: 50rem)
+{
+    .page-versions-card
+    {
+        padding: 1.15rem 1.25rem;
+    }
+
+    .page-versions-card-header
+    {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .page-versions-title
+    {
+        font-size: 1.8rem;
+    }
+}
