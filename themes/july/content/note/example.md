@@ -3,7 +3,7 @@ title = "Example"
 description = "An example on how markdown is rendered."
 date = "2023-08-01"
 tags = [
-  "english"
+  
 ]
 
 [build]

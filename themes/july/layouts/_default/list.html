@@ -7,7 +7,13 @@
         {{ range .Pages }}
         <article class="page-list">
             <div class="page-list-header">
-                <a class="page-list-title" href="{{ .Permalink }}">
+                {{ $targetLink := .Permalink }}
+                {{ $isExternal := false }}
+                {{ with .Params.link }}
+                    {{ $targetLink = . }}
+                    {{ $isExternal = true }}
+                {{ end }}
+                <a class="page-list-title" href="{{ $targetLink }}" {{ if $isExternal }}target="_blank" rel="noopener noreferrer"{{ end }}>
                     <span>{{ .Title | markdownify }}</span>
                 </a>
                 {{ if not .Date.IsZero }}

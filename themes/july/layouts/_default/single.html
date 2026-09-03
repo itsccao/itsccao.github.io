@@ -1,4 +1,8 @@
 {{ define "main" }}
+    {{ with .Params.link }}
+    <script>window.location.replace("{{ . }}");</script>
+    <meta http-equiv="refresh" content="0; url={{ . }}">
+    {{ end }}
     <h1> {{ .Title | markdownify }} </h1>
     <p> {{ .Date.Format "2 January 2006" }} </p>
     <p> {{ .Description | markdownify }} </p>

@@ -6,11 +6,11 @@
 @import "contact.css";
 @import "versions.css";
 @import "colours.css";
-@import "lab/xem-ngay-am-lich.css";
-@import "lab/hcmus-fit-feeds.css";
-@import "lab/qr-code-generator.css";
-@import "lab/tic-tac-toe.css";
-@import "lab/weather-forecast.css";
+@import "tools/xem-ngay-am-lich.css";
+@import "tools/hcmus-fit-feeds.css";
+@import "tools/qr-code-generator.css";
+@import "tools/tic-tac-toe.css";
+@import "tools/weather-forecast.css";
 
 *
 {
