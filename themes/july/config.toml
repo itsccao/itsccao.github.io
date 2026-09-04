@@ -8,7 +8,7 @@ author = "itsccao"
 description = "ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧"
 source = "https://github.com/itsccao"
 baseURL = "https://itsccao.github.io"
-imageURL = "/assets/index.png"
+imageURL = "/asset/index.png"
 
 [params.Theme]
 themeColor = "#000000"

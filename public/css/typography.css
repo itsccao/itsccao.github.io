@@ -62,7 +62,6 @@ a:link, a:visited
 a:hover, a:active, a.active
 {
     color: var(--link-hover);
-    text-shadow: 0 0 6px var(--link-hover);
 }
 
 /* Blockquotes */

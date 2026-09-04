@@ -10,9 +10,23 @@
 	--blockquote: var(--base0C);
 	--code-background: var(--base02);
 	--highlight: var(--base0D);
-	--list-hover-soft: color-mix(in srgb, var(--link-hover) 22%, var(--off-background));
+	--github-color: var(--github-brand-color, #ffffff);
 }
 
 .link { color: var(--link); }
 .text { color: var(--text); }
 .highlight { color: var(--highlight); }
+
+.github-icon,
+svg.github-icon,
+svg.github-icon path,
+.index-project-link svg.github-icon,
+.index-project-link:hover svg.github-icon,
+.page-list-icon-link svg.github-icon,
+.page-list-icon-link:hover svg.github-icon,
+.page-contact-btn svg.github-icon,
+.page-contact-btn:hover svg.github-icon
+{
+	color: var(--github-color) !important;
+	fill: var(--github-color) !important;
+}

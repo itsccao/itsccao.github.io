@@ -1,5 +1,5 @@
 /* =========================================================
-   Versions Archive Page Styles
+   Versions Page Styles
    ========================================================= */
 
 .page-versions
@@ -14,17 +14,6 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
-}
-
-.page-versions-tag
-{
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--link-hover);
-    margin-bottom: 0.4rem;
 }
 
 .page-versions-title
@@ -63,13 +52,12 @@
 
 .page-versions-card
 {
+    position: relative;
+    padding: 1.35rem 1.5rem;
     background-color: var(--off-background);
     border-radius: 1rem;
-    padding: 1.35rem 1.5rem;
     border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.25s ease,
-                box-shadow 0.25s ease;
+    transition: border-color 0.25s ease;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -77,14 +65,12 @@
 
 .page-versions-card:hover
 {
-    transform: translateY(-3px);
-    border-color: color-mix(in srgb, var(--link-hover) 45%, transparent);
-    box-shadow: 0 10px 28px -10px color-mix(in srgb, var(--link-hover) 22%, transparent);
+    border-color: color-mix(in srgb, var(--link-hover) 50%, transparent);
 }
 
 .page-versions-card.muted
 {
-    opacity: 0.75;
+    opacity: 0.72;
 }
 
 .page-versions-card.muted:hover
@@ -96,85 +82,60 @@
 {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
-    flex-wrap: wrap;
-}
-
-.page-versions-title-group
-{
-    display: flex;
     align-items: center;
-    gap: 0.65rem;
+    gap: 0.75rem;
+    margin-bottom: 0.35rem;
     flex-wrap: wrap;
 }
 
 .page-versions-card-title
 {
-    margin: 0;
-    font-size: 1.2rem;
     font-weight: 700;
+    font-size: 1.25rem;
     color: var(--text);
-    line-height: 1.3;
+    line-height: 1.35;
 }
 
 .page-versions-badge
 {
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 0.2rem 0.55rem;
-    border-radius: 9999px;
-    background-color: var(--background);
-    border: 1px solid color-mix(in srgb, var(--text) 16%, transparent);
+    font-size: 0.82rem;
+    font-weight: 500;
     color: var(--text);
-    line-height: 1;
+    opacity: 0.65;
+    line-height: 1.2;
+    user-select: none;
     display: inline-flex;
     align-items: center;
 }
 
 .page-versions-badge.primary
 {
-    background-color: color-mix(in srgb, var(--link-hover) 12%, transparent);
-    border-color: color-mix(in srgb, var(--link-hover) 35%, transparent);
     color: var(--link-hover);
+    opacity: 1;
+    font-weight: 600;
 }
 
 .page-versions-badge.muted
 {
-    opacity: 0.6;
+    opacity: 0.45;
 }
 
-.page-versions-date-row
+.page-versions-card-date
 {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
     font-size: 0.8rem;
     font-weight: 500;
     color: var(--text);
     opacity: 0.65;
     white-space: nowrap;
-    margin-top: 0.15rem;
+    margin-bottom: 0.75rem;
     font-variant-numeric: tabular-nums;
-}
-
-.page-versions-date-row svg
-{
-    width: 0.95rem;
-    height: 0.95rem;
-    min-width: 0.95rem;
-    min-height: 0.95rem;
-    flex-shrink: 0;
-    display: inline-block;
-    opacity: 0.85;
 }
 
 .page-versions-card-notes
 {
-    margin: 0 0 0.5rem 0;
-    padding-left: 1.25rem;
-    font-size: 0.9rem;
+    margin: 0;
+    padding-left: 1.2rem;
+    font-size: 0.92rem;
     line-height: 1.6;
     opacity: 0.85;
     color: var(--text);
@@ -182,7 +143,7 @@
 
 .page-versions-card-notes li
 {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.35rem;
 }
 
 .page-versions-card-notes li:last-child
@@ -197,43 +158,28 @@
     text-underline-offset: 2px;
 }
 
-.page-versions-card-action
+.page-versions-card-footer
 {
-    margin-top: 0.75rem;
     display: flex;
-}
-
-.page-versions-card-link
-{
-    display: inline-block;
-    font-size: 0.88rem;
-    font-weight: 500;
-    color: var(--link-hover);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: opacity 0.2s ease;
-}
-
-.page-versions-card-link:hover
-{
-    opacity: 0.8;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0.75rem;
 }
 
 @media (max-width: 50rem)
 {
+    .page-versions-title
+    {
+        font-size: 1.8rem;
+    }
+
     .page-versions-card
     {
         padding: 1.15rem 1.25rem;
     }
 
-    .page-versions-card-header
+    .page-versions-card-title
     {
-        flex-direction: column;
-        gap: 0.35rem;
-    }
-
-    .page-versions-title
-    {
-        font-size: 1.8rem;
+        font-size: 1.15rem;
     }
 }

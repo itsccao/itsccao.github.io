@@ -9,7 +9,3 @@ title = "Contact"
 ## Primary
 + GitHub: [itsccao](https://github.com/itsccao)
 + Email: [itsccao@proton.me](mailto:itsccao@proton.me)
-
-## Coding Platforms
-+ [LeetCode](https://leetcode.com/u/ccaoishere/)
-+ [HackerRank](https://www.hackerrank.com/profile/ccaoishere)

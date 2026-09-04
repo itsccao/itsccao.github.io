@@ -12,12 +12,11 @@
                 {{- partial "header.html" . -}}
             </div>
 
-            <!-- Section 1: Intro / Profile -->
             <section class="index-intro" id="intro">
                 <div class="index-body">
                     <div class="index-avatar-wrapper">
                         <div class="index-card">
-                            <img src="/assets/profile-banner.webp" draggable="false" alt="Profile Banner">
+                            <img src="/asset/profile-banner.webp" draggable="false" alt="Profile Banner">
                         </div>
                     </div>
                     <div class="index-content">
@@ -52,210 +51,140 @@
                 </a>
             </section>
 
-            <!-- Section 2: Intro-After (Continuous scroll: Expertise, Projects, Contact, Footer) -->
             <section class="index-intro-after" id="intro-after">
-                <!-- Part 1: Expertise / Skills -->
                 <div class="index-block index-block-skills" id="skills">
                     <div class="index-slide-content">
                         <div class="index-slide-header">
-                            <span class="index-slide-tag"> EXPERTISE </span>
                             <h2 class="index-slide-title"> Skills & Technologies </h2>
                             <p class="index-slide-desc"> A collection of technical skills and technologies I work with. </p>
                         </div>
 
-                        <div class="index-skill-grid">
-                            <div class="index-skill-card">
-                                <div class="index-skill-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
-                                        <path d="M14.0184 7.36446C14.1256 6.96436 13.8882 6.55311 13.4881 6.4459C13.088 6.3387 12.6767 6.57614 12.5695 6.97623L9.98131 16.6355C9.8741 17.0356 10.1115 17.4468 10.5116 17.5541C10.9117 17.6613 11.323 17.4238 11.4302 17.0237L14.0184 7.36446Z" fill="currentColor"></path>
-                                        <path d="M16.0303 8.46967C15.7374 8.17678 15.2626 8.17678 14.9697 8.46967C14.6768 8.76256 14.6768 9.23744 14.9697 9.53033L15.1412 9.7019C15.8229 10.3836 16.2797 10.8426 16.5753 11.2301C16.8577 11.6002 16.9216 11.8157 16.9216 12C16.9216 12.1843 16.8577 12.3998 16.5753 12.7699C16.2797 13.1574 15.8229 13.6164 15.1412 14.2981L14.9697 14.4697C14.6768 14.7626 14.6768 15.2374 14.9697 15.5303C15.2626 15.8232 15.7374 15.8232 16.0303 15.5303L16.2387 15.322C16.874 14.6867 17.4038 14.1569 17.7678 13.6798C18.1521 13.1762 18.4216 12.6441 18.4216 12C18.4216 11.3559 18.1521 10.8238 17.7678 10.3202C17.4038 9.84307 16.874 9.31331 16.2387 8.67801L16.0303 8.46967Z" fill="currentColor"></path>
-                                        <path d="M7.96986 8.46967C8.26275 8.17678 8.73762 8.17678 9.03052 8.46967C9.32341 8.76256 9.32341 9.23744 9.03052 9.53033L8.85894 9.7019C8.17729 10.3836 7.72052 10.8426 7.42488 11.2301C7.14245 11.6002 7.07861 11.8157 7.07861 12C7.07861 12.1843 7.14245 12.3998 7.42488 12.7699C7.72052 13.1574 8.17729 13.6164 8.85894 14.2981L9.03052 14.4697C9.32341 14.7626 9.32341 15.2374 9.03052 15.5303C8.73762 15.8232 8.26275 15.8232 7.96986 15.5303L7.76151 15.322C7.12618 14.6867 6.59637 14.1569 6.23235 13.6798C5.84811 13.1762 5.57861 12.6441 5.57861 12C5.57861 11.3559 5.84811 10.8238 6.23235 10.3202C6.59637 9.84307 7.12617 9.31332 7.7615 8.67802L7.96986 8.46967Z" fill="currentColor"></path>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9426 1.25C9.63423 1.24999 7.82519 1.24998 6.41371 1.43975C4.96897 1.63399 3.82895 2.03933 2.93414 2.93414C2.03933 3.82895 1.63399 4.96897 1.43975 6.41371C1.24998 7.82519 1.24999 9.63423 1.25 11.9426V12.0574C1.24999 14.3658 1.24998 16.1748 1.43975 17.5863C1.63399 19.031 2.03933 20.1711 2.93414 21.0659C3.82895 21.9607 4.96897 22.366 6.41371 22.5603C7.82519 22.75 9.63423 22.75 11.9426 22.75H12.0574C14.3658 22.75 16.1748 22.75 17.5863 22.5603C19.031 22.366 20.1711 21.9607 21.0659 21.0659C21.9607 20.1711 22.366 19.031 22.5603 17.5863C22.75 16.1748 22.75 14.3658 22.75 12.0574V11.9426C22.75 9.63423 22.75 7.82519 22.5603 6.41371C22.366 4.96897 21.9607 3.82895 21.0659 2.93414C20.1711 2.03933 19.031 1.63399 17.5863 1.43975C16.1748 1.24998 14.3658 1.24999 12.0574 1.25H11.9426ZM3.9948 3.9948C4.56445 3.42514 5.33517 3.09825 6.61358 2.92637C7.91356 2.75159 9.62178 2.75 12 2.75C14.3782 2.75 16.0864 2.75159 17.3864 2.92637C18.6648 3.09825 19.4355 3.42514 20.0052 3.9948C20.5749 4.56445 20.9018 5.33517 21.0736 6.61358C21.2484 7.91356 21.25 9.62178 21.25 12C21.25 14.3782 21.2484 16.0864 21.0736 17.3864C20.9018 18.6648 20.5749 19.4355 20.0052 20.0052C19.4355 20.5749 18.6648 20.9018 17.3864 21.0736C16.0864 21.2484 14.3782 21.25 12 21.25C9.62178 21.25 7.91356 21.2484 6.61358 21.0736C5.33517 20.9018 4.56445 20.5749 3.9948 20.0052C3.42514 19.4355 3.09825 18.6648 2.92637 17.3864C2.75159 16.0864 2.75 14.3782 2.75 12C2.75 9.62178 2.75159 7.91356 2.92637 6.61358C3.09825 5.33517 3.42514 4.56445 3.9948 3.9948Z" fill="currentColor"></path>
-                                    </svg>
-                                    <h3> Programming Languages </h3>
-                                </div>
-                                <div class="index-skill-badges">
-                                    <span class="index-skill-badge primary"> SQL </span>
-                                    <span class="index-skill-badge primary"> Python </span>
-                                    <span class="index-skill-badge"> C / C++ </span>
-                                    <span class="index-skill-badge"> JavaScript </span>
-                                </div>
+                        <div class="index-tech-grid">
+                            <div class="index-tech-badge">
+                                <span class="index-tech-badge-logo">
+                                    <img src="/icon/c.svg" alt="C">
+                                </span>
+                                <span class="index-tech-badge-name"> C </span>
                             </div>
-
-                            <div class="index-skill-card">
-                                <div class="index-skill-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.20646 3.18191C8.95433 3.26179 8.70533 3.35257 8.46018 3.45411C7.33792 3.91897 6.3182 4.60032 5.45926 5.45926C4.60032 6.3182 3.91897 7.33792 3.45411 8.46018C3.0852 9.35081 2.85837 10.2922 2.78045 11.25H7.26094C7.29294 10.1541 7.39498 9.0741 7.56457 8.05057C7.7725 6.79558 8.07972 5.63914 8.47522 4.65039C8.69114 4.11057 8.9351 3.61641 9.20646 3.18191ZM12 1.25C10.5883 1.25 9.1904 1.52806 7.88615 2.06829C6.5819 2.60853 5.39683 3.40037 4.3986 4.3986C3.40037 5.39683 2.60853 6.5819 2.0683 7.88615C1.52806 9.1904 1.25 10.5883 1.25 12C1.25 13.4117 1.52806 14.8096 2.06829 16.1138C2.60853 17.4181 3.40037 18.6032 4.3986 19.6014C5.39683 20.5996 6.5819 21.3915 7.88615 21.9317C9.1904 22.4719 10.5883 22.75 12 22.75C13.4117 22.75 14.8096 22.4719 16.1138 21.9317C17.4181 21.3915 18.6032 20.5996 19.6014 19.6014C20.5996 18.6032 21.3915 17.4181 21.9317 16.1138C22.4719 14.8096 22.75 13.4117 22.75 12C22.75 10.5883 22.4719 9.1904 21.9317 7.88615C21.3915 6.5819 20.5996 5.39683 19.6014 4.3986C18.6032 3.40037 17.4181 2.60853 16.1138 2.0683C14.8096 1.52806 13.4117 1.25 12 1.25ZM12 2.75C11.7387 2.75 11.4012 2.87579 11.0088 3.2822C10.6134 3.69161 10.2176 4.33326 9.86793 5.20747C9.52056 6.07589 9.2385 7.12424 9.04439 8.29576C8.88866 9.23569 8.79316 10.2331 8.76162 11.25L15.2384 11.25C15.2068 10.2331 15.1113 9.23569 14.9556 8.29576C14.7615 7.12424 14.4794 6.0759 14.1321 5.20748C13.7824 4.33326 13.3866 3.69161 12.9912 3.2822C12.5988 2.87579 12.2613 2.75 12 2.75ZM16.7391 11.25C16.7071 10.1541 16.605 9.07411 16.4354 8.05057C16.2275 6.79558 15.9203 5.63914 15.5248 4.65039C15.3089 4.11057 15.0649 3.61641 14.7935 3.18191C15.0457 3.26179 15.2947 3.35257 15.5398 3.45411C16.6621 3.91897 17.6818 4.60032 18.5407 5.45926C19.3997 6.31821 20.081 7.33792 20.5459 8.46018C20.9148 9.35082 21.1416 10.2922 21.2195 11.25H16.7391ZM15.2384 12.75L8.76162 12.75C8.79316 13.7669 8.88866 14.7643 9.04439 15.7042C9.2385 16.8758 9.52056 17.9241 9.86793 18.7925C10.2176 19.6667 10.6134 20.3084 11.0088 20.7178C11.4012 21.1242 11.7387 21.25 12 21.25C12.2613 21.25 12.5988 21.1242 12.9912 20.7178C13.3866 20.3084 13.7824 19.6667 14.1321 18.7925C14.4794 17.9241 14.7615 16.8758 14.9556 15.7042C15.1113 14.7643 15.2068 13.7669 15.2384 12.75ZM14.7935 20.8181C15.0649 20.3836 15.3089 19.8894 15.5248 19.3496C15.9203 18.3609 16.2275 17.2044 16.4354 15.9494C16.605 14.9259 16.7071 13.8459 16.7391 12.75H21.2195C21.1416 13.7078 20.9148 14.6492 20.5459 15.5398C20.081 16.6621 19.3997 17.6818 18.5407 18.5407C17.6818 19.3997 16.6621 20.081 15.5398 20.5459C15.2947 20.6474 15.0457 20.7382 14.7935 20.8181ZM9.20646 20.8181C8.9351 20.3836 8.69114 19.8894 8.47521 19.3496C8.07971 18.3609 7.7725 17.2044 7.56457 15.9494C7.39498 14.9259 7.29294 13.8459 7.26094 12.75H2.78045C2.85837 13.7078 3.0852 14.6492 3.45411 15.5398C3.91897 16.6621 4.60032 17.6818 5.45926 18.5407C6.3182 19.3997 7.33792 20.081 8.46018 20.5459C8.70533 20.6474 8.95433 20.7382 9.20646 20.8181Z" fill="currentColor"></path>
-                                    </svg>
-                                    <h3> Web Development </h3>
-                                </div>
-                                <div class="index-skill-badges">
-                                    <span class="index-skill-badge"> HTML5 / CSS3 </span>
-                                    <span class="index-skill-badge"> REST APIs </span>
-                                </div>
+                            <div class="index-tech-badge">
+                                <span class="index-tech-badge-logo">
+                                    <img src="/icon/c-plus-plus.svg" alt="C++">
+                                </span>
+                                <span class="index-tech-badge-name"> C++ </span>
                             </div>
-
-                            <div class="index-skill-card">
-                                <div class="index-skill-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="18" cy="8" r="4.3333" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
-                                        <rect x="6.3333" y="14.3333" width="7.3333" height="7.3333" rx="1.3333" ry="1.3333" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></rect>
-                                        <path d="M 5.0907 2.6533 L 1.5853 8.664 c -0.2587 0.444 0.0613 1.0027 0.576 1.0027 H 9.172 c 0.5147 0 0.8347 -0.5587 0.576 -1.0027 L 6.2427 2.6533 c -0.2573 -0.4413 -0.8947 -0.4413 -1.152 0 Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-                                    </svg>
-                                    <h3> Tools </h3>
-                                </div>
-                                <div class="index-skill-badges">
-                                    <span class="index-skill-badge"> Git & GitHub </span>
-                                </div>
+                            <div class="index-tech-badge">
+                                <span class="index-tech-badge-logo">
+                                    <img src="/icon/css3.svg" alt="CSS">
+                                </span>
+                                <span class="index-tech-badge-name"> CSS </span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Part 2: Education -->
-                <div class="index-block index-block-education" id="education">
-                    <div class="index-slide-content">
-                        <div class="index-slide-header">
-                            <span class="index-slide-tag"> EDUCATION </span>
-                            <h2 class="index-slide-title"> Academic Background </h2>
-                            <p class="index-slide-desc"> My academic journey, institution, and field of study. </p>
-                        </div>
-
-                        <div class="index-edu-grid">
-                            <div class="index-edu-card">
-                                <div class="index-edu-logo">
-                                    <img src="/assets/hcmus.png" alt="VNUHCM - University of Science">
-                                </div>
-                                <div class="index-edu-info">
-                                    <div class="index-edu-heading">
-                                        <h3> VNUHCM - University of Science </h3>
-                                        <span class="index-edu-badge"> 2024 &ndash; Present </span>
-                                    </div>
-                                    <p class="index-edu-degree"> Bachelor of Science in Computer Science </p>
-                                </div>
+                            <div class="index-tech-badge">
+                                <span class="index-tech-badge-logo">
+                                    <img src="/icon/git.svg" alt="Git">
+                                </span>
+                                <span class="index-tech-badge-name"> Git </span>
                             </div>
-                            
-                            <div class="index-edu-card">
-                                <div class="index-edu-logo">
-                                    <img src="/assets/nqd.png" alt="Nguyen Quang Dieu High School for the Gifted">
-                                </div>
-                                <div class="index-edu-info">
-                                    <div class="index-edu-heading">
-                                        <h3> Nguyen Quang Dieu High School for the Gifted </h3>
-                                        <span class="index-edu-badge"> 2021 &ndash; 2024 </span>
-                                    </div>
-                                    <p class="index-edu-degree"> Math </p>
-                                </div>
+                            <div class="index-tech-badge">
+                                <span class="index-tech-badge-logo">
+                                    <img src="/icon/html5.svg" alt="HTML">
+                                </span>
+                                <span class="index-tech-badge-name"> HTML </span>
+                            </div>
+                            <div class="index-tech-badge">
+                                <span class="index-tech-badge-logo">
+                                    <img src="/icon/javascript.svg" alt="JavaScript">
+                                </span>
+                                <span class="index-tech-badge-name"> JavaScript </span>
+                            </div>
+                            <div class="index-tech-badge">
+                                <span class="index-tech-badge-logo">
+                                    <img src="/icon/microsoft-sql-server-2.svg" alt="Microsoft SQL">
+                                </span>
+                                <span class="index-tech-badge-name"> Microsoft SQL </span>
+                            </div>
+                            <div class="index-tech-badge">
+                                <span class="index-tech-badge-logo">
+                                    <img src="/icon/python.svg" alt="Python">
+                                </span>
+                                <span class="index-tech-badge-name"> Python </span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Part 3: Featured Projects -->
                 <div class="index-block index-block-project" id="project">
                     <div class="index-slide-content">
                         <div class="index-slide-header">
-                            <span class="index-slide-tag"> PORTFOLIO </span>
                             <h2 class="index-slide-title"> Featured Projects </h2>
                             <p class="index-slide-desc"> Explore my selected projects, technical work, and software solutions. </p>
                         </div>
 
                         <div class="index-project-grid">
                             <div class="index-project-card">
-                                <div class="index-project-header">
-                                    <div class="index-project-title-group">
-                                        <h3> Tools </h3>
-                                    </div>
-                                    <a href="/project/tools" target="_blank" class="index-project-link" aria-label="Explore interactive tools">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M12 1.25H11.9426C9.63423 1.24999 7.82519 1.24998 6.41371 1.43975C4.96897 1.63399 3.82895 2.03933 2.93414 2.93414C2.03933 3.82895 1.63399 4.96897 1.43975 6.41371C1.24998 7.82519 1.24999 9.63423 1.25 11.9426V12.0574C1.24999 14.3658 1.24998 16.1748 1.43975 17.5863C1.63399 19.031 2.03933 20.1711 2.93414 21.0659C3.82895 21.9607 4.96897 22.366 6.41371 22.5603C7.82519 22.75 9.63423 22.75 11.9426 22.75H12.0574C14.3658 22.75 16.1748 22.75 17.5863 22.5603C19.031 22.366 20.1711 21.9607 21.0659 21.0659C21.9607 20.1711 22.366 19.031 22.5603 17.5863C22.75 16.1748 22.75 14.3658 22.75 12.0574V12C22.75 11.5858 22.4142 11.25 22 11.25C21.5858 11.25 21.25 11.5858 21.25 12C21.25 14.3782 21.2484 16.0864 21.0736 17.3864C20.9018 18.6648 20.5749 19.4355 20.0052 20.0052C19.4355 20.5749 18.6648 20.9018 17.3864 21.0736C16.0864 21.2484 14.3782 21.25 12 21.25C9.62178 21.25 7.91356 21.2484 6.61358 21.0736C5.33517 20.9018 4.56445 20.5749 3.9948 20.0052C3.42514 19.4355 3.09825 18.6648 2.92637 17.3864C2.75159 16.0864 2.75 14.3782 2.75 12C2.75 9.62178 2.75159 7.91356 2.92637 6.61358C3.09825 5.33517 3.42514 4.56445 3.9948 3.9948C4.56445 3.42514 5.33517 3.09825 6.61358 2.92637C7.91356 2.75159 9.62178 2.75 12 2.75C12.4142 2.75 12.75 2.41421 12.75 2C12.75 1.58579 12.4142 1.25 12 1.25Z" fill="currentColor"></path>
-                                            <path d="M12.4697 10.4697C12.1768 10.7626 12.1768 11.2374 12.4697 11.5303C12.7626 11.8232 13.2374 11.8232 13.5303 11.5303L21.25 3.81066V7.34375C21.25 7.75796 21.5858 8.09375 22 8.09375C22.4142 8.09375 22.75 7.75796 22.75 7.34375V2C22.75 1.58579 22.4142 1.25 22 1.25H16.6562C16.242 1.25 15.9062 1.58579 15.9062 2C15.9062 2.41421 16.242 2.75 16.6562 2.75H20.1893L12.4697 10.4697Z" fill="currentColor"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="index-project-desc"> A collection of interactive web experiments, creative tools, and front-end prototypes. </p>
+                                <h3 class="index-project-title"> Toolbox </h3>
                                 <div class="index-project-tags">
                                     <span class="index-project-tag"> Vanilla CSS </span>
                                     <span class="index-project-tag"> Javascript </span>
                                 </div>
+                                <p class="index-project-desc"> A collection of interactive web experiments, creative utilities, and front-end prototypes. </p>
+                                <div class="index-project-links">
+                                    <a href="/project/toolbox" target="_blank" class="index-project-link" aria-label="Explore interactive toolbox">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none">
+                                            <path d="M13.9551 5.18341L18.9329 9.60815C19.8635 10.4353 20.3288 10.8489 20.5002 11.3373C20.6508 11.7662 20.6508 12.2335 20.5002 12.6624C20.3288 13.1508 19.8635 13.5644 18.9329 14.3916L13.9551 18.8163C13.5328 19.1917 13.3216 19.3794 13.1423 19.3861C12.9865 19.3919 12.8369 19.3247 12.7377 19.2044C12.6236 19.0659 12.6236 18.7834 12.6236 18.2184V15.4284C10.1955 15.4284 7.63093 16.2083 5.75831 17.5926C4.78342 18.3133 4.29595 18.6737 4.11029 18.6595C3.92932 18.6456 3.81446 18.575 3.72056 18.4196C3.62423 18.2603 3.70932 17.7624 3.87949 16.7666C4.98446 10.3004 9.43443 8.57129 12.6236 8.57129V5.78134C12.6236 5.21632 12.6236 4.93381 12.7377 4.79531C12.8369 4.67498 12.9865 4.6078 13.1423 4.61363C13.3216 4.62034 13.5328 4.80803 13.9551 5.18341Z" fill="currentColor"></path>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
 
                             <div class="index-project-card">
-                                <div class="index-project-header">
-                                    <div class="index-project-title-group">
-                                        <h3> HCMUS Discord Notifier </h3>
-                                    </div>
-                                    <a href="https://github.com/itsccao/hcmus-discord-notifier" target="_blank" class="index-project-link" aria-label="GitHub Repository">
-                                        <img src="https://cdn.reicon.dev/logos/github/original.svg" alt="Github" width="24" height="24" />
-                                    </a>
-                                </div>
-                                <p class="index-project-desc"> Automated notifier bot for faculty updates and academic posts. </p>
+                                <h3 class="index-project-title"> HCMUS Discord Notifier </h3>
                                 <div class="index-project-tags">
                                     <span class="index-project-tag"> Python </span>
-                                    <span class="index-project-tag"> Discord </span>
                                     <span class="index-project-tag"> Automation </span>
+                                </div>
+                                <p class="index-project-desc"> Automated notifier bot for faculty updates and academic posts. </p>
+                                <div class="index-project-links">
+                                    <a href="https://github.com/itsccao/hcmus-discord-notifier" target="_blank" class="index-project-link" aria-label="GitHub Repository">
+                                        <svg class="github-icon" width="98" height="96" viewBox="0 0 98 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_730_27136)">
+                                                <path d="M41.4395 69.3848C28.8066 67.8535 19.9062 58.7617 19.9062 46.9902C19.9062 42.2051 21.6289 37.0371 24.5 33.5918C23.2559 30.4336 23.4473 23.7344 24.8828 20.959C28.7109 20.4805 33.8789 22.4902 36.9414 25.2656C40.5781 24.1172 44.4062 23.543 49.0957 23.543C53.7852 23.543 57.6133 24.1172 61.0586 25.1699C64.0254 22.4902 69.2891 20.4805 73.1172 20.959C74.457 23.543 74.6484 30.2422 73.4043 33.4961C76.4668 37.1328 78.0937 42.0137 78.0937 46.9902C78.0937 58.7617 69.1934 67.6621 56.3691 69.2891C59.623 71.3945 61.8242 75.9883 61.8242 81.252L61.8242 91.2051C61.8242 94.0762 64.2168 95.7031 67.0879 94.5547C84.4102 87.9512 98 70.6289 98 49.1914C98 22.1074 75.9883 6.69539e-07 48.9043 4.309e-07C21.8203 1.92261e-07 -1.9479e-07 22.1074 -4.3343e-07 49.1914C-6.20631e-07 70.4375 13.4941 88.0469 31.6777 94.6504C34.2617 95.6074 36.75 93.8848 36.75 91.3008L36.75 83.6445C35.4102 84.2188 33.6875 84.6016 32.1562 84.6016C25.8398 84.6016 22.1074 81.1563 19.4277 74.7441C18.375 72.1602 17.2266 70.6289 15.0254 70.3418C13.877 70.2461 13.4941 69.7676 13.4941 69.1934C13.4941 68.0449 15.4082 67.1836 17.3223 67.1836C20.0977 67.1836 22.4902 68.9063 24.9785 72.4473C26.8926 75.2227 28.9023 76.4668 31.2949 76.4668C33.6875 76.4668 35.2187 75.6055 37.4199 73.4043C39.0469 71.7773 40.291 70.3418 41.4395 69.3848Z" fill="currentColor"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_730_27136">
+                                                    <rect width="98" height="96" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Part 4: Contact, Guestbook & Older Versions -->
                 <div class="index-block index-block-contact" id="contact">
                     <div class="index-slide-content">
                         <div class="index-slide-header">
-                            <span class="index-slide-tag"> CONNECT & EXPLORE </span>
-                            <h2 class="index-slide-title"> Keep in Touch </h2>
-                            <p class="index-slide-desc"> Leave a message, get in touch, or explore past versions of this space. </p>
+                            <h2 class="index-slide-title"> Get in Touch </h2>
+                            <p class="index-slide-desc"> Interested in collaborating or working on a project together? </p>
                         </div>
 
-                        <div class="index-contact-grid">
-                            <div class="index-contact-card">
-                                <div class="index-contact-header">
-                                    <div class="index-contact-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none">
-                                            <path d="M19.7276 12.8181C19.6271 12.4163 19.2199 12.172 18.8181 12.2724L14.8181 13.2724C14.4163 13.3729 14.1719 13.7801 14.2724 14.1819C14.3729 14.5838 14.7801 14.8281 15.1819 14.7276L19.1819 13.7276C19.5837 13.6272 19.8281 13.22 19.7276 12.8181Z" fill="currentColor"/>
-                                            <path d="M19.75 5.50004C19.75 5.08582 19.4142 4.75004 19 4.75004C18.5858 4.75004 18.25 5.08582 18.25 5.50004V8.93863L17.5007 8.58269L17.4919 8.57825C17.4429 8.55319 17.2363 8.4476 17 8.4476C16.7637 8.4476 16.5571 8.55319 16.5081 8.57825L16.4993 8.58269L15.75 8.93863V6.95006C15.75 6.53584 15.4142 6.20006 15 6.20006C14.5858 6.20006 14.25 6.53584 14.25 6.95006L14.25 9.53724C14.2498 9.64846 14.2496 9.80702 14.2709 9.94314C14.2969 10.1096 14.3824 10.4308 14.7151 10.6261C15.0355 10.8143 15.3488 10.7444 15.4978 10.6981C15.6276 10.6577 15.77 10.5899 15.8762 10.5393L17 10.0055L18.1238 10.5393C18.23 10.5899 18.3724 10.6577 18.5022 10.6981C18.6512 10.7444 18.9645 10.8143 19.2849 10.6261C19.6176 10.4308 19.7031 10.1096 19.7291 9.94314C19.7504 9.80702 19.7502 9.64846 19.75 9.53724L19.75 5.50004Z" fill="currentColor"/>
-                                            <path d="M4.27239 8.81813C4.37285 8.41629 4.78006 8.17197 5.1819 8.27243L9.1819 9.27243C9.58375 9.37289 9.82807 9.78009 9.72761 10.1819C9.62715 10.5838 9.21994 10.8281 8.8181 10.7276L4.8181 9.72764C4.41625 9.62718 4.17193 9.21998 4.27239 8.81813Z" fill="currentColor"/>
-                                            <path d="M5.1819 12.2724C4.78006 12.172 4.37285 12.4163 4.27239 12.8181C4.17193 13.22 4.41625 13.6272 4.8181 13.7276L8.8181 14.7276C9.21994 14.8281 9.62715 14.5838 9.72761 14.1819C9.82807 13.7801 9.58375 13.3729 9.1819 13.2724L5.1819 12.2724Z" fill="currentColor"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.75 4.93323C22.75 3.46992 21.5847 2.21498 20.0559 2.26824C18.9175 2.30789 17.4296 2.4263 16.2849 2.76899C15.2899 3.06687 14.1706 3.64872 13.2982 4.15366C12.4801 4.62712 11.4617 4.65074 10.6328 4.21248C9.63736 3.68609 8.32766 3.06215 7.19136 2.7623C6.23055 2.50876 5.01517 2.38698 4.02841 2.32634C2.47017 2.23057 1.25 3.49868 1.25 4.99784V16.1436C1.25 17.6798 2.49378 18.8792 3.96804 18.9714C4.9268 19.0314 6.00566 19.1467 6.80864 19.3586C7.8012 19.6205 9.0286 20.2029 10.0196 20.7311C11.2529 21.3885 12.7471 21.3885 13.9804 20.7311C14.9714 20.2029 16.1988 19.6205 17.1914 19.3586C17.9943 19.1467 19.0732 19.0314 20.032 18.9714C21.5062 18.8792 22.75 17.6798 22.75 16.1436V4.93323ZM20.1081 3.76733C20.7229 3.74591 21.25 4.25164 21.25 4.93323V16.1436C21.25 16.8294 20.6817 17.4278 19.9383 17.4743C18.9582 17.5356 17.7591 17.6574 16.8086 17.9082C15.6383 18.2171 14.2827 18.8701 13.2748 19.4074C13.1065 19.4971 12.9305 19.5678 12.75 19.6194V5.94207C13.2023 5.85153 13.6421 5.68771 14.0495 5.45191C14.9 4.95972 15.8949 4.45152 16.7151 4.20597C17.6643 3.92182 18.9892 3.8063 20.1081 3.76733ZM11.25 5.97501C10.795 5.90426 10.349 5.75918 9.93167 5.53851C8.95486 5.022 7.77076 4.46654 6.80864 4.21266C5.99643 3.99833 4.90238 3.88288 3.93639 3.82351C3.30243 3.78455 2.75 4.30065 2.75 4.99784V16.1436C2.75 16.8294 3.31831 17.4278 4.06168 17.4743C5.04176 17.5356 6.24092 17.6574 7.19136 17.9082C8.3617 18.2171 9.71727 18.8701 10.7252 19.4074C10.8935 19.4971 11.0695 19.5678 11.25 19.6194V5.97501Z" fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <h3> Guestbook </h3>
-                                </div>
-                                <p class="index-contact-desc"> Leave a note, greeting, or sign my digital guest book! </p>
-                                <a href="https://itsccao.atabook.org/" target="_blank" rel="noopener noreferrer" class="index-contact-link" aria-label="Sign digital guestbook">itsccao.atabook.org &rarr;</a>
-                            </div>
+                        <p class="index-contact-line">
+                            <a href="/contact" class="index-contact-anchor"> I'd love to hear from you &rarr; </a>
+                        </p>
+                    </div>
+                </div>
 
-                            <div class="index-contact-card">
-                                <div class="index-contact-header">
-                                    <div class="index-contact-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none">
-                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M9.94358 3.25H14.0564C15.8942 3.24998 17.3498 3.24997 18.489 3.40314C19.6614 3.56076 20.6104 3.89288 21.3588 4.64124C22.1071 5.38961 22.4392 6.33856 22.5969 7.51098C22.75 8.65019 22.75 10.1058 22.75 11.9436V12.0564C22.75 13.8942 22.75 15.3498 22.5969 16.489C22.4392 17.6614 22.1071 18.6104 21.3588 19.3588C20.6104 20.1071 19.6614 20.4392 18.489 20.5969C17.3498 20.75 15.8942 20.75 14.0564 20.75H9.94359C8.10583 20.75 6.65019 20.75 5.51098 20.5969C4.33856 20.4392 3.38961 20.1071 2.64124 19.3588C1.89288 18.6104 1.56076 17.6614 1.40314 16.489C1.24997 15.3498 1.24998 13.8942 1.25 12.0564V11.9436C1.24998 10.1058 1.24997 8.65019 1.40314 7.51098C1.56076 6.33856 1.89288 5.38961 2.64124 4.64124C3.38961 3.89288 4.33856 3.56076 5.51098 3.40314C6.65019 3.24997 8.10582 3.24998 9.94358 3.25ZM5.71085 4.88976C4.70476 5.02502 4.12511 5.27869 3.7019 5.7019C3.27869 6.12511 3.02502 6.70476 2.88976 7.71085C2.75159 8.73851 2.75 10.0932 2.75 12C2.75 13.9068 2.75159 15.2615 2.88976 16.2892C3.02502 17.2952 3.27869 17.8749 3.7019 18.2981C4.12511 18.7213 4.70476 18.975 5.71085 19.1102C6.73851 19.2484 8.09318 19.25 10 19.25H14C15.9068 19.25 17.2615 19.2484 18.2892 19.1102C19.2952 18.975 19.8749 18.7213 20.2981 18.2981C20.7213 17.8749 20.975 17.2952 21.1102 18.2892C21.2484 15.2615 21.25 13.9068 21.25 12C21.25 10.0932 21.2484 8.73851 21.1102 7.71085C20.975 6.70476 20.7213 6.12511 20.2981 5.7019C19.8749 5.27869 19.2952 5.02502 18.2892 4.88976C17.2615 4.75159 15.9068 4.75 14 4.75H10C8.09318 4.75 6.73851 4.75159 5.71085 4.88976ZM5.42383 7.51986C5.68901 7.20165 6.16193 7.15866 6.48014 7.42383L8.63903 9.22291C9.57199 10.0004 10.2197 10.5384 10.7666 10.8901C11.2959 11.2306 11.6549 11.3449 12 11.3449C12.3451 11.3449 12.7041 11.2306 13.2334 10.8901C13.7803 10.5384 14.428 10.0004 15.361 9.22291L17.5199 7.42383C17.8381 7.15866 18.311 7.20165 18.5762 7.51986C18.8413 7.83807 18.7983 8.31099 18.4801 8.57617L16.2836 10.4066C15.3973 11.1452 14.6789 11.7439 14.0448 12.1517C13.3843 12.5765 12.7411 12.8449 12 12.8449C11.2589 12.8449 10.6157 12.5765 9.95518 12.1517C9.32112 11.7439 8.60272 11.1452 7.71636 10.4066L5.51986 8.57617C5.20165 8.31099 5.15866 7.83807 5.42383 7.51986Z"/>
-                                        </svg>
-                                    </div>
-                                    <h3> Direct Contact </h3>
-                                </div>
-                                <p class="index-contact-desc"> Feel free to email me directly or explore my open-source projects.</p>
-                                <div class="index-contact-links">
-                                    <a href="mailto:takai1124@proton.me" class="index-contact-link" aria-label="Send email to takai1124@proton.me">takai1124@proton.me</a>
-                                    <a href="https://github.com/itsccao" target="_blank" rel="noopener noreferrer" class="index-contact-link" aria-label="Visit GitHub profile">github.com/itsccao &rarr;</a>
-                                </div>
-                            </div>
-
-                            <div class="index-contact-card">
-                                <div class="index-contact-header">
-                                    <div class="index-contact-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.07868 5.06891C8.87402 1.27893 15.0437 1.31923 18.8622 5.13778C22.6824 8.95797 22.7211 15.1313 18.9262 18.9262C15.1312 22.7211 8.95793 22.6824 5.13774 18.8622C2.87389 16.5984 1.93904 13.5099 2.34047 10.5812C2.39672 10.1708 2.775 9.88377 3.18537 9.94002C3.59575 9.99627 3.88282 10.3745 3.82658 10.7849C3.4866 13.2652 4.27782 15.881 6.1984 17.8016C9.44288 21.0461 14.6664 21.0646 17.8655 17.8655C21.0646 14.6664 21.046 9.44292 17.8015 6.19844C14.5587 2.95561 9.33889 2.93539 6.13935 6.12957L6.88705 6.13333C7.30126 6.13541 7.63535 6.47288 7.63327 6.88709C7.63119 7.3013 7.29372 7.63539 6.87951 7.63331L4.33396 7.62052C3.92269 7.61845 3.58981 7.28556 3.58774 6.8743L3.57495 4.32874C3.57286 3.91454 3.90696 3.57707 4.32117 3.57498C4.73538 3.5729 5.07285 3.907 5.07493 4.32121L5.07868 5.06891ZM11.9999 7.24992C12.4141 7.24992 12.7499 7.58571 12.7499 7.99992V11.6893L15.0302 13.9696C15.3231 14.2625 15.3231 14.7374 15.0302 15.0302C14.7373 15.3231 14.2624 15.3231 13.9696 15.0302L11.2499 12.3106V7.99992C11.2499 7.58571 11.5857 7.24992 11.9999 7.24992Z" fill="currentColor"></path>
-                                        </svg>
-                                    </div>
-                                    <h3> Website Archive </h3>
-                                </div>
-                                <p class="index-contact-desc"> Explore past design iterations, vintage themes, and archive history. </p>
-                                <a href="/versions" class="index-contact-link" aria-label="Browse website archive versions">Browse archive versions &rarr;</a>
-                            </div>
+                <div class="index-block index-block-versions" id="versions">
+                    <div class="index-slide-content">
+                        <div class="index-slide-header">
+                            <h2 class="index-slide-title"> Versions </h2>
+                            <p class="index-slide-desc"> A retrospective archive of previous website designs and iterations. </p>
                         </div>
+
+                        <p class="index-contact-line">
+                            <a href="/versions" class="index-contact-anchor"> Explore version history &rarr; </a>
+                        </p>
                     </div>
                 </div>
             </section>

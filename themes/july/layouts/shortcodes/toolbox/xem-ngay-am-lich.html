@@ -1,0 +1,48 @@
+<div class="amlich-wrapper">
+    <div class="amlich-header-note">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <span>Thuật toán tính ngày Âm Lịch bởi tác giả Hồ Ngọc Đức — <a href="https://www.xemamlich.uhm.vn/calrules.html" target="_blank" rel="noopener noreferrer">Xem tài liệu thuật toán &rarr;</a></span>
+    </div>
+
+    <div class="amlich-picker-card">
+        <label for="am-lich-input" class="amlich-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                <line x1="16" x2="16" y1="2" y2="6"/>
+                <line x1="8" x2="8" y1="2" y2="6"/>
+                <line x1="3" x2="21" y1="10" y2="10"/>
+            </svg>
+            <span>Chọn ngày Dương Lịch:</span>
+        </label>
+        <input type="date" id="am-lich-input" name="am-lich" class="amlich-input">
+    </div>
+
+    <div class="amlich-result-card">
+        <div class="amlich-primary-banner">
+            <div class="amlich-badge">Âm Lịch</div>
+            <div id="am-lich-result" class="amlich-main-date">Đang tải...</div>
+            <div id="am-lich-thu" class="amlich-weekday">...</div>
+        </div>
+
+        <div class="amlich-canchi-grid">
+            <div class="amlich-canchi-card">
+                <span class="amlich-canchi-label">Ngày</span>
+                <span id="am-lich-ngay" class="amlich-canchi-value">...</span>
+            </div>
+            <div class="amlich-canchi-card">
+                <span class="amlich-canchi-label">Tháng</span>
+                <span id="am-lich-thang" class="amlich-canchi-value">...</span>
+            </div>
+            <div class="amlich-canchi-card">
+                <span class="amlich-canchi-label">Năm</span>
+                <span id="am-lich-nam" class="amlich-canchi-value">...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="/js/toolbox/am-lich.js"></script>

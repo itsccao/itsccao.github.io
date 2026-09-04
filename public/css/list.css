@@ -8,50 +8,34 @@
 .page-list
 {
     position: relative;
-    padding: 1.25rem 1.5rem;
+    padding: 1.35rem 1.5rem;
     background-color: var(--off-background);
     border-radius: 1rem;
     border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.25s ease,
-                box-shadow 0.25s ease;
+    transition: border-color 0.25s ease;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .page-list:hover
 {
-    transform: translateY(-3px);
-    border-color: color-mix(in srgb, var(--link-hover) 45%, transparent);
-    box-shadow: 0 10px 28px -10px color-mix(in srgb, var(--link-hover) 22%, transparent);
+    border-color: color-mix(in srgb, var(--link-hover) 50%, transparent);
 }
 
 .page-list-header
 {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0.35rem;
 }
 
 .page-list-title
 {
-    display: inline-flex;
-    align-items: center;
     font-weight: 700;
-    font-size: 1.22rem;
+    font-size: 1.25rem;
     color: var(--text);
-    text-decoration: none;
     line-height: 1.35;
-    transition: color 0.2s ease;
-}
-
-.page-list-title:hover
-{
-    color: var(--link-hover);
-    text-shadow: 0 0 6px color-mix(in srgb, var(--link-hover) 60%, transparent);
 }
 
 .page-list-date
@@ -64,105 +48,136 @@
     color: var(--text);
     opacity: 0.65;
     white-space: nowrap;
-    margin-top: 0.15rem;
+    margin-bottom: 0.75rem;
     font-variant-numeric: tabular-nums;
-}
-
-.page-list-date svg
-{
-    width: 0.95rem;
-    height: 0.95rem;
-    min-width: 0.95rem;
-    min-height: 0.95rem;
-    flex-shrink: 0;
-    display: inline-block;
-    opacity: 0.85;
 }
 
 .page-list-desc
 {
-    margin: 0 0 1.1rem 0;
+    margin: 0 0 1rem 0;
     font-size: 0.92rem;
     line-height: 1.6;
     opacity: 0.82;
     color: var(--text);
 }
 
-.page-list p:not(.page-list-desc)
+.page-list-footer
 {
-    margin: 0 0 0.4rem 0;
-    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+    flex-wrap: wrap;
 }
 
 .page-list-tag-container
 {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.45rem;
+    gap: 0.65rem;
     align-items: center;
-    margin-top: auto;
 }
 
 .page-list-tag
 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.22rem;
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     font-weight: 500;
-    line-height: 1;
-    padding: 0.26rem 0.65rem;
-    border-radius: 9999px;
-    background-color: var(--background);
-    border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
     color: var(--text) !important;
+    opacity: 0.7;
     text-decoration: none;
-    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.2s ease,
-                background-color 0.2s ease,
-                color 0.2s ease,
-                box-shadow 0.2s ease;
+    transition: color 0.2s ease, opacity 0.2s ease;
     user-select: none;
-    vertical-align: middle;
-}
-
-.page-list-tag-hash
-{
-    opacity: 0.5;
-    font-size: 0.76rem;
-    line-height: 1;
-    color: var(--link-hover);
-    display: inline-flex;
-    align-items: center;
-}
-
-.page-list-tag-text
-{
-    line-height: 1;
-    display: inline-flex;
-    align-items: center;
 }
 
 .page-list-tag:hover
 {
-    border-color: var(--link-hover);
     color: var(--link-hover) !important;
-    background-color: color-mix(in srgb, var(--link-hover) 10%, var(--background));
-    box-shadow: 0 4px 12px color-mix(in srgb, var(--link-hover) 18%, transparent);
-    text-shadow: none !important;
+    opacity: 1;
+}
+
+.page-list-readmore
+{
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-left: auto;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+.page-list-readmore:hover
+{
+    opacity: 0.8;
+}
+
+.page-list-links
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-left: auto;
+}
+
+.page-list-icon-link
+{
+    color: var(--text);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: color 0.2s ease;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.page-list-icon-link svg
+{
+    width: 1.35rem;
+    height: 1.35rem;
+    min-width: 1.35rem;
+    min-height: 1.35rem;
+    flex-shrink: 0;
+    display: block;
+}
+
+.page-list-icon-link:hover
+{
+    color: var(--link-hover);
 }
 
 .page-tag-terms-container
 {
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.65rem;
     margin-top: 1.5rem;
 }
 
 .page-tag-term
 {
+    display: inline-flex;
+    align-items: center;
     font-size: 0.88rem;
+    font-weight: 500;
     padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    background-color: var(--off-background);
+    border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+    color: var(--text) !important;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.page-tag-term:hover
+{
+    border-color: var(--link-hover);
+    background-color: color-mix(in srgb, var(--link-hover) 8%, var(--off-background));
 }
 
 .tags-back-link
@@ -196,14 +211,8 @@
         padding: 1.15rem 1.25rem;
     }
 
-    .page-list-header
-    {
-        flex-direction: column;
-        gap: 0.25rem;
-    }
-
     .page-list-title
     {
-        font-size: 1.12rem;
+        font-size: 1.15rem;
     }
 }

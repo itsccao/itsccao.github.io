@@ -14,6 +14,8 @@ Personal portfolio, technical notes, and creative experiments.
 | :--- | :--- |
 | **Font** | [Inter](https://rsms.me/inter/) |
 | **SVG** | [Reicon](https://reicon.dev/) |
+| **SVG** | [Developer Icons](https://xandemon.github.io/developer-icons/) |
+| **GitHub SVG** | [GitHub Brand Toolkit](https://brand.github.com/) |
 | **Card & Favicon** | [Arsum (pixiv)](https://www.pixiv.net/en/artworks/147591259) |
 
 ---

@@ -7,4 +7,3 @@ title = "Contact"
 
 + GitHub: [itsccao](https://github.com/itsccao)
 + Email: [takai1124@proton.me](mailto:itsccao@proton.me)
-+ Discord: [cc.7z]()

@@ -37,10 +37,6 @@ function initCardImageEffect() {
             const rotateX = ((y - centerY) / centerY) * -10;
             const rotateY = ((x - centerX) / centerX) * 10;
 
-            card.style.setProperty("--glow-x", `${x}px`);
-            card.style.setProperty("--glow-y", `${y}px`);
-            card.classList.add("glow");
-
             card.style.transform =
                 `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
         });
@@ -49,7 +45,6 @@ function initCardImageEffect() {
             clearTimeout(transitionTimeout);
             clearTimeout(leaveTimeout);
 
-            card.classList.remove("glow");
             card.style.transition = "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), width 0.5s cubic-bezier(0.16, 1, 0.3, 1), height 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-radius 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease, border-color 0.35s ease";
             card.style.transform =
                 "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
@@ -67,7 +62,6 @@ function handleScreenChange() {
 
     if (noEffectOnSmallScreen.matches) {
         cards.forEach((card) => {
-            card.classList.remove("glow");
             card.style.transition = "";
             card.style.transform = "";
         });

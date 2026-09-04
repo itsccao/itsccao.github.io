@@ -1,0 +1,69 @@
+.page-header
+{
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px 15px 0px 0px;
+    background-color: var(--bg);
+}
+
+.page-header-top
+{
+    position: relative;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.page-header-favicon
+{
+    position: relative;
+    left: 5px;
+    pointer-events: none;
+}
+
+.page-header-favicon img
+{
+    width: 32px;
+}
+
+.page-header-title
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: default;
+}
+
+.page-header-x
+{
+    position: relative;
+    right: 15px;
+    cursor: pointer;
+}
+
+.page-header-container
+{
+    position: relative;
+    right: 15px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    column-gap: 25px;
+    row-gap: 5px;
+}
+
+.page-header-link a
+{
+    text-decoration: none;
+}

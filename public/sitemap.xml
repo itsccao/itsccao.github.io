@@ -8,9 +8,6 @@
     <loc>http://localhost:1313/tags/automation/</loc>
     <lastmod>2026-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/discord/</loc>
-    <lastmod>2026-07-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/project/hcmus-discord-notifier/</loc>
     <lastmod>2026-07-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -26,19 +23,19 @@
     <loc>http://localhost:1313/tags/javascript/</loc>
     <lastmod>2025-12-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/tools/</loc>
+    <loc>http://localhost:1313/project/toolbox/</loc>
     <lastmod>2025-12-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/tools/xem-ngay-am-lich/</loc>
+    <loc>http://localhost:1313/project/toolbox/xem-ngay-am-lich/</loc>
     <lastmod>2025-12-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/tools/qr-code-generator/</loc>
+    <loc>http://localhost:1313/project/toolbox/qr-code-generator/</loc>
     <lastmod>2025-10-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/tools/hcmus-fit-feeds/</loc>
+    <loc>http://localhost:1313/project/toolbox/hcmus-fit-feeds/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/tools/weather-forecast/</loc>
+    <loc>http://localhost:1313/project/toolbox/weather-forecast/</loc>
     <lastmod>2025-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/note/2024-winter-update/</loc>
@@ -53,7 +50,7 @@
     <loc>http://localhost:1313/note/</loc>
     <lastmod>2024-11-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/project/tools/tic-tac-toe/</loc>
+    <loc>http://localhost:1313/project/toolbox/tic-tac-toe/</loc>
     <lastmod>2024-07-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
