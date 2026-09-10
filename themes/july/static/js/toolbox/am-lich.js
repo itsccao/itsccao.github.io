@@ -6,7 +6,6 @@ const PI = Math.PI;
 export class CalendarConverter {
     constructor(timeZone = 7) { // Default to GMT+7
         this._timeZone = timeZone;
-        console.log(`CalendarConverter initialized with timeZone: ${this._timeZone}`);
     }
 
     // Chuyển đổi ngày sang số ngày Julius

@@ -42,7 +42,6 @@ function winCheck(currentCombination, currentTurn)
         }
         if (fullCombination == 3)
         {
-            console.log(`${currentTurn} wins!`);
             isGameOver = true;
             displayResult.innerText = `The winner is ${currentTurn}!`;
             squares.forEach(element => {
@@ -70,18 +69,15 @@ function updateBoard(event)
         squareClicked.innerText = currentTurn.toUpperCase();
         squareCount += 1;
         let squareOrder = +squareClicked.id;
-        console.log(`clicked ${squareOrder}`);
         if (currentTurn == "x")
         {
             squareX.push(squareOrder);
             winCheck(squareX, "x");
-            console.log(squareX);
         }
         else
         {
             squareO.push(squareOrder);
             winCheck(squareO, "o");
-            console.log(squareO);
         }
         drawCheck();
         if (!isGameOver)

@@ -36,7 +36,6 @@ async function fetchRecentPosts()
             posts.push({title, link, pubDate});
         }
 
-        console.log("Recent Posts: ", posts);
         return posts;
     }
     catch (error)
@@ -134,7 +133,6 @@ function feedRenderPosts(posts)
 
 async function feedDoTheJob()
 {
-    console.log("Doing The Job");
     feedStatus.innerText = "Loading...";
     const storedPosts = feedGetLocal();
     feedRenderPosts(storedPosts);
@@ -149,7 +147,6 @@ async function feedDoTheJob()
         if (updatedPosts.length > feedPosts)
         {
             updatedPosts.splice(feedPosts);
-            console.log("Updated Posts: ", updatedPosts);
         }
         feedSaveLocal(updatedPosts);
         feedRenderPosts(updatedPosts);
@@ -157,8 +154,6 @@ async function feedDoTheJob()
         feedStatus.innerText = "Done";
     }
     else feedStatus.innerText = "No new posts.";
-
-    console.log("Done");
 }
 
 const storedPosts = feedGetLocal();
@@ -170,10 +165,6 @@ if (feedCurrentTime - feedLastTime > 1000 * 60 * 60 * 24 || localStorage.getItem
 {
     feedDoTheJob();
     localStorage.setItem(feedIsFirstRun, "false");
-}
-else
-{
-    console.log("Not doing the job");
 }
 
 feedRefresh.addEventListener("click", feedDoTheJob);

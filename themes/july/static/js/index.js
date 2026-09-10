@@ -99,7 +99,6 @@ function initScrollButton() {
     handleScroll();
 }
 
-// Clear any stale anchor hash on load to avoid mobile browser auto-jumping
 if (window.location.hash) {
     history.replaceState(null, "", window.location.pathname + window.location.search);
 }

@@ -1,3 +1,13 @@
+try {
+    const currentThemeKeys = ["pageTheme", "fitLocal", "fitLocalTime", "feedIsFirstRun"];
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+        const key = localStorage.key(i);
+        if (key && !currentThemeKeys.includes(key)) {
+            localStorage.removeItem(key);
+        }
+    }
+} catch (e) {}
+
 const themeDark = "catppuccin-mocha";
 const themeLight = "catppuccin-latte";
 
@@ -30,11 +40,9 @@ function updateThemeIcon(theme) {
     }
 }
 
-// Initialize icon on page load
 const currentTheme = localStorage.getItem("pageTheme") || themeDark;
 updateThemeIcon(currentTheme);
 
-// Toggle handler
 const themeToggleBtn = document.getElementById("page-header-theme-toogle");
 if (themeToggleBtn) {
     themeToggleBtn.addEventListener("click", (e) => {
@@ -46,7 +54,6 @@ if (themeToggleBtn) {
     });
 }
 
-// Header scroll blur effect
 function initHeaderScroll() {
     const header = document.querySelector(".page-header");
     if (!header) return;

@@ -42,6 +42,4 @@ for (let i = 0;i < versionsDate.length;++i)
     {
         versionsDate[i].textContent = " (" + (timeText.join(", ") || "This month") + " ago)";
     }
-    
-    console.log(`Version ${i + 1}: ${timeText.join(", ")} ago (${timeDiff.totalDays} total days)`);
 }
