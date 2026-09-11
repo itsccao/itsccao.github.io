@@ -71,14 +71,6 @@
     background-color: color-mix(in srgb, var(--text) 7%, transparent);
     color: var(--text);
     flex-shrink: 0;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-}
-
-.page-contact-card:hover .page-contact-card-icon
-{
-    background-color: color-mix(in srgb, var(--link-hover) 14%, transparent);
-    color: var(--link-hover);
-    transform: scale(1.04);
 }
 
 .page-contact-card-icon svg
@@ -115,15 +107,6 @@
     word-break: break-word;
 }
 
-.page-contact-card-desc
-{
-    margin: 0.1rem 0 0 0;
-    font-size: 0.88rem;
-    line-height: 1.5;
-    opacity: 0.75;
-    color: var(--text);
-}
-
 .page-contact-card-action
 {
     display: flex;
@@ -154,8 +137,6 @@
 .page-contact-footer
 {
     margin-top: 2rem;
-    padding-top: 1.25rem;
-    border-top: 1px dashed color-mix(in srgb, var(--text) 14%, transparent);
 }
 
 .page-contact-footer-text
