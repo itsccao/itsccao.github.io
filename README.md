@@ -16,7 +16,7 @@ Personal portfolio, technical notes, and creative experiments.
 | **SVG** | [Reicon](https://reicon.dev/) |
 | **SVG** | [Developer Icons](https://xandemon.github.io/developer-icons/) |
 | **GitHub SVG** | [GitHub Brand Toolkit](https://brand.github.com/) |
-| **Card & Favicon** | [Arsum (pixiv)](https://www.pixiv.net/en/artworks/147591259) |
+| **Card & Favicon** | [baek_hyang (pixiv)](https://www.pixiv.net/en/artworks/150809849) |
 
 ---
 
