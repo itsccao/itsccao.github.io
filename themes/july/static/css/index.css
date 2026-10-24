@@ -89,40 +89,53 @@ body.index-body-wrapper
 {
     position: relative;
     width: 100%;
-    max-width: 32rem;
+    max-width: 56rem;
     z-index: 2;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1.6rem;
+    gap: clamp(2rem, 5vw, 4rem);
+    padding: 3rem 2rem;
+    border: 1px solid color-mix(in srgb, var(--link) 20%, transparent);
+    border-radius: 2rem;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--link) 7%, var(--background)), var(--background));
+    box-sizing: border-box;
     perspective: 1200px;
 }
 
 .index-avatar-wrapper
 {
     position: relative;
-    width: 17.25rem;
-    height: 17.25rem;
+    width: 16rem;
+    height: 20rem;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 30;
+    transition: transform 0.3s ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference)
+{
+    .index-avatar-wrapper:hover
+    {
+        transform: scale(1.06);
+    }
 }
 
 .index-card
 {
     position: absolute;
     z-index: 10;
-    width: 17.25rem;
-    height: 17.25rem;
-    border-radius: 50%;
+    width: 16rem;
+    height: 20rem;
+    border-radius: 8rem 8rem 1.25rem 1.25rem;
     display: block;
     transform-style: preserve-3d;
-    will-change: transform, width, height, border-radius;
-    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-                height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-                border-radius 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    will-change: transform;
+    transition: border-radius 0.45s cubic-bezier(0.16, 1, 0.3, 1),
                 border-color 0.35s ease,
                 transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     border: 2.5px solid color-mix(in srgb, var(--link-hover) 35%, transparent);
@@ -146,10 +159,6 @@ body.index-body-wrapper
 
 .index-card:hover
 {
-    width: 23rem;
-    height: 37.5rem;
-    max-width: 90vw;
-    max-height: 82vh;
     border-radius: 1.25rem;
     z-index: 50;
     border-color: color-mix(in srgb, var(--link-hover) 65%, transparent);
@@ -161,22 +170,22 @@ body.index-body-wrapper
     z-index: 1;
     width: 100%;
     max-width: 28rem;
-    padding: 1.6rem 2.2rem;
-    background-color: var(--off-background);
-    border-radius: 1rem;
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    flex: 1;
+    min-width: 0;
+    padding: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.75rem;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.15rem;
 }
 
 .index-content h1
 {
-    margin: 0 0 0.15rem 0;
-    font-size: 1.85rem;
+    margin: 0 0 0.35rem;
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    letter-spacing: -0.045em;
     font-weight: 700;
     color: var(--text);
     line-height: 1.25;
@@ -191,8 +200,8 @@ body.index-body-wrapper
 {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
+    justify-content: flex-start;
+    gap: 0.75rem;
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.5;
@@ -200,10 +209,14 @@ body.index-body-wrapper
 
 .index-p > svg
 {
-    width: 1.15rem;
-    height: 1.15rem;
-    min-width: 1.15rem;
-    min-height: 1.15rem;
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    padding: 0.4rem;
+    border-radius: 0.6rem;
+    color: var(--link);
+    background: color-mix(in srgb, var(--link) 9%, transparent);
     flex-shrink: 0;
 }
 
@@ -400,8 +413,8 @@ body.index-body-wrapper
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
     transition: color 0.2s ease;
     flex-shrink: 0;
     text-decoration: none;
@@ -439,8 +452,6 @@ body.index-body-wrapper
 {
     color: var(--link-hover);
     font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 4px;
     transition: opacity 0.2s ease, color 0.2s ease;
 }
 
@@ -460,7 +471,7 @@ body.index-body-wrapper
     left: 50%;
     transform: translateX(-50%);
     color: var(--text);
-    opacity: 0.5;
+    opacity: 1;
     transition: opacity 0.2s ease,
                 color 0.2s ease,
                 border-color 0.2s ease,
@@ -475,7 +486,6 @@ body.index-body-wrapper
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
-    animation: bounceSoft 2.4s infinite ease-in-out;
     text-decoration: none;
     z-index: 5;
 }
@@ -496,7 +506,6 @@ body.index-body-wrapper
     color: var(--link-hover);
     border-color: color-mix(in srgb, var(--link-hover) 50%, transparent);
     background-color: var(--off-background);
-    animation: none;
     transform: translateX(-50%);
 }
 
@@ -505,19 +514,6 @@ body.index-body-wrapper
     opacity: 0 !important;
     pointer-events: none !important;
     transform: translateX(-50%) translateY(12px) !important;
-    animation: none !important;
-}
-
-@keyframes bounceSoft
-{
-    0%, 100%
-    {
-        transform: translateX(-50%) translateY(0);
-    }
-    50%
-    {
-        transform: translateX(-50%) translateY(6px);
-    }
 }
 
 /* =========================================================
@@ -552,34 +548,36 @@ body.index-body-wrapper
 
     .index-body
     {
-        position: static;
+        position: relative;
         gap: 1.35rem;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: auto 0;
+        padding: 2rem 1.25rem;
+        border-radius: 1.5rem;
     }
 
     .index-avatar-wrapper
     {
-        width: clamp(11.25rem, 52vw, 14.5rem);
-        height: clamp(11.25rem, 52vw, 14.5rem);
+        width: min(100%, 12rem);
+        height: auto;
+        aspect-ratio: 4 / 5;
     }
 
     .index-card
     {
         position: relative;
-        width: clamp(11.25rem, 52vw, 14.5rem);
-        height: clamp(11.25rem, 52vw, 14.5rem);
-        border-radius: 50%;
-        border-width: 3px;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        border-width: 1px;
+        overflow: hidden;
     }
 
     .index-card:hover
     {
-        width: clamp(11.25rem, 52vw, 14.5rem);
-        height: clamp(11.25rem, 52vw, 14.5rem);
-        border-radius: 50%;
+        border-radius: 1rem;
     }
 
     .index-content
@@ -587,14 +585,14 @@ body.index-body-wrapper
         width: 100%;
         max-width: 23rem;
         height: auto;
-        padding: 1.35rem 1.5rem;
-        border-radius: 1rem;
+        padding: 0;
+        flex: none;
     }
 
     .index-content h1
     {
         margin-top: 0;
-        font-size: 1.7rem;
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
     }
 
     .index-project-grid

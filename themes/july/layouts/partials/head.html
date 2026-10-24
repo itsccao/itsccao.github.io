@@ -54,7 +54,7 @@
 <script>
     (function() {
         var saved = localStorage.getItem("pageTheme");
-        var theme = (saved === "catppuccin-latte" || saved === "catppuccin-mocha") ? saved : "catppuccin-mocha";
+        var theme = (saved === "sage-light" || saved === "catppuccin-latte") ? "sage-light" : "sage-dark";
         var link = document.createElement("link");
         link.id = "page-theme-link";
         link.type = "text/css";
@@ -65,5 +65,5 @@
 </script>
 
 <noscript>
-    <link rel="stylesheet" href="{{ "css/schemes/catppuccin-mocha.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/schemes/sage-dark.css" | absURL }}">
 </noscript>

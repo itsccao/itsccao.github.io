@@ -8,8 +8,14 @@ try {
     }
 } catch (e) {}
 
-const themeDark = "catppuccin-mocha";
-const themeLight = "catppuccin-latte";
+const themeDark = "sage-dark";
+const themeLight = "sage-light";
+
+// Preserve the selected mode when moving from the previous palette.
+function getSavedTheme() {
+    const saved = localStorage.getItem("pageTheme");
+    return (saved === themeLight || saved === "catppuccin-latte") ? themeLight : themeDark;
+}
 
 function applyTheme(theme) {
     const link = document.getElementById("page-theme-link");
@@ -40,14 +46,14 @@ function updateThemeIcon(theme) {
     }
 }
 
-const currentTheme = localStorage.getItem("pageTheme") || themeDark;
+const currentTheme = getSavedTheme();
 updateThemeIcon(currentTheme);
 
 const themeToggleBtn = document.getElementById("page-header-theme-toogle");
 if (themeToggleBtn) {
     themeToggleBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        const activeTheme = localStorage.getItem("pageTheme") || themeDark;
+        const activeTheme = getSavedTheme();
         const targetTheme = (activeTheme === themeDark) ? themeLight : themeDark;
         localStorage.setItem("pageTheme", targetTheme);
         applyTheme(targetTheme);

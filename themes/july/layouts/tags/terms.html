@@ -5,8 +5,7 @@
     <div class="page-list-tag-container page-tag-terms-container">
         {{ range .Data.Terms.Alphabetical }}
             <a class="page-list-tag page-tag-term" href="{{ .Page.Permalink }}">
-                <span class="page-list-tag-hash">#</span>
-                <span class="page-list-tag-text">{{ .Page.Title }}</span>
+                #{{ .Page.Title }}
                 <span class="page-list-tag-count">({{ .Count }})</span>
             </a>
         {{ end }}

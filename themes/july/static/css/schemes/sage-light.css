@@ -1,0 +1,22 @@
+/* Ivory & Forest — a warm neutral palette with green accents. */
+:root
+{
+    color-scheme: light;
+    --base00: #f7f7f2;
+    --base01: #eeefe7;
+    --base02: #e0e4d8;
+    --base03: #bcc5b6;
+    --base04: #697568;
+    --base05: #29372e;
+    --base06: #3e5144;
+    --base07: #506b58;
+    --base08: #b3434b;
+    --base09: #a85b2c;
+    --base0A: #86651b;
+    --base0B: #326747;
+    --base0C: #326e68;
+    --base0D: #245338;
+    --base0E: #775b8c;
+    --base0F: #965e51;
+    --github-brand-color: #000000;
+}

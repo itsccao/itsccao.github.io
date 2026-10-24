@@ -101,8 +101,6 @@
     font-size: 0.88rem;
     font-weight: 600;
     color: var(--link-hover);
-    text-decoration: underline;
-    text-underline-offset: 3px;
     margin-left: auto;
     white-space: nowrap;
     transition: opacity 0.2s ease;
@@ -129,8 +127,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
     transition: color 0.2s ease;
     flex-shrink: 0;
     text-decoration: none;

@@ -1,0 +1,64 @@
+/* Shared by navigation arrows; brand icons keep their own styling. */
+a:has(svg),
+a:has(.site-arrow)
+{
+    text-decoration: none;
+}
+
+/* One continuous rule under the label and arrow, without text-node spaces. */
+a.site-text-link
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    line-height: 1.2;
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
+}
+
+.site-arrow,
+svg.site-arrow
+{
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+    color: var(--link);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+svg.site-arrow[stroke]
+{
+    stroke: currentColor;
+}
+
+.site-text-link > svg.site-arrow
+{
+    width: 1em;
+    height: 1em;
+}
+
+a:hover .site-arrow,
+a:focus-visible .site-arrow,
+button:hover .site-arrow,
+button:focus-visible .site-arrow
+{
+    color: var(--link-hover);
+    transform: translateX(3px);
+}
+
+@media (prefers-reduced-motion: reduce)
+{
+    .site-arrow,
+    svg.site-arrow
+    {
+        transition: none;
+    }
+
+    a:hover .site-arrow,
+    a:focus-visible .site-arrow,
+    button:hover .site-arrow,
+    button:focus-visible .site-arrow
+    {
+        transform: none;
+    }
+}
