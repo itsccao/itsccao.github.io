@@ -101,7 +101,6 @@ body.index-body-wrapper
     border-radius: 2rem;
     background: linear-gradient(135deg, color-mix(in srgb, var(--link) 7%, var(--background)), var(--background));
     box-sizing: border-box;
-    perspective: 1200px;
 }
 
 .index-avatar-wrapper
@@ -114,15 +113,6 @@ body.index-body-wrapper
     align-items: center;
     justify-content: center;
     z-index: 30;
-    transition: transform 0.3s ease;
-}
-
-@media (hover: hover) and (prefers-reduced-motion: no-preference)
-{
-    .index-avatar-wrapper:hover
-    {
-        transform: scale(1.06);
-    }
 }
 
 .index-card
@@ -133,8 +123,7 @@ body.index-body-wrapper
     height: 20rem;
     border-radius: 8rem 8rem 1.25rem 1.25rem;
     display: block;
-    transform-style: preserve-3d;
-    will-change: transform;
+    /* Keep the resting image in normal paint flow, including at browser zoom. */
     transition: border-radius 0.45s cubic-bezier(0.16, 1, 0.3, 1),
                 border-color 0.35s ease,
                 transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);

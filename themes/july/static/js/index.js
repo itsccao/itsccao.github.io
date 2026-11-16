@@ -1,75 +1,48 @@
 const noEffectOnSmallScreen = window.matchMedia("(max-width: 50rem)");
+const cardMotionAllowed = window.matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)");
 
 let initialized = false;
+const cardResets = new Map();
+
+function resetCard(card, animate = true) {
+    clearTimeout(cardResets.get(card));
+    if (!animate) card.style.transition = "none";
+    // Remove the 3D transform entirely so the image is repainted at the current zoom.
+    card.style.transform = "";
+    cardResets.set(card, setTimeout(() => {
+        card.style.transition = "";
+        cardResets.delete(card);
+    }, animate ? 500 : 0));
+}
 
 function initCardImageEffect() {
     if (initialized) return;
     initialized = true;
 
-    const cards = document.querySelectorAll(".index-card");
-
-    cards.forEach((card) => {
-        let transitionTimeout;
-        let leaveTimeout;
-
-        card.addEventListener("mouseenter", function () {
-            if (noEffectOnSmallScreen.matches) return;
-
-            clearTimeout(transitionTimeout);
-            clearTimeout(leaveTimeout);
-
-            transitionTimeout = setTimeout(() => {
-                card.style.transition = "width 0.5s cubic-bezier(0.16, 1, 0.3, 1), height 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-radius 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease, border-color 0.35s ease";
-            }, 200);
+    document.querySelectorAll(".index-card").forEach((card) => {
+        const wrapper = card.closest(".index-avatar-wrapper");
+        card.addEventListener("pointermove", (event) => {
+            if (noEffectOnSmallScreen.matches || !cardMotionAllowed.matches) return;
+            clearTimeout(cardResets.get(card));
+            // Measure the stationary wrapper, avoiding feedback from the tilted card.
+            const rect = wrapper.getBoundingClientRect();
+            const x = Math.max(-1, Math.min(1, (event.clientX - rect.left) / rect.width * 2 - 1));
+            const y = Math.max(-1, Math.min(1, (event.clientY - rect.top) / rect.height * 2 - 1));
+            card.style.transform = `perspective(900px) rotateX(${-y * 10}deg) rotateY(${x * 10}deg) scale(1.1)`;
         });
-
-        card.addEventListener("mousemove", function (e) {
-            if (noEffectOnSmallScreen.matches) return;
-
-            const rect = card.getBoundingClientRect();
-
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = ((y - centerY) / centerY) * -10;
-            const rotateY = ((x - centerX) / centerX) * 10;
-
-            card.style.transform =
-                `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-        });
-
-        card.addEventListener("mouseleave", function () {
-            clearTimeout(transitionTimeout);
-            clearTimeout(leaveTimeout);
-
-            card.style.transition = "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), width 0.5s cubic-bezier(0.16, 1, 0.3, 1), height 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-radius 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease, border-color 0.35s ease";
-            card.style.transform =
-                "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
-
-            leaveTimeout = setTimeout(() => {
-                card.style.transition = "";
-                card.style.transform = "";
-            }, 500);
-        });
+        card.addEventListener("pointerleave", () => resetCard(card));
+        card.addEventListener("pointercancel", () => resetCard(card, false));
     });
 }
 
 function handleScreenChange() {
-    const cards = document.querySelectorAll(".index-card");
-
-    if (noEffectOnSmallScreen.matches) {
-        cards.forEach((card) => {
-            card.style.transition = "";
-            card.style.transform = "";
-        });
-        return;
-    }
-
+    document.querySelectorAll(".index-card").forEach((card) => resetCard(card, false));
     initCardImageEffect();
 }
+
+cardMotionAllowed.addEventListener("change", handleScreenChange);
+window.addEventListener("blur", handleScreenChange);
+window.addEventListener("resize", handleScreenChange);
 
 let scrollInitialized = false;
 

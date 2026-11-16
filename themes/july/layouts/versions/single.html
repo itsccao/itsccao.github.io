@@ -7,32 +7,27 @@
     (dict "version" "2" "name" "osu! Theme" "date" "2022" "datetime" "2022" "status" "Archived" "url" "/versions/v2/" "notes" (slice "An experiment inspired by an [osu!](https://osu.ppy.sh/) skin, whose name I've since forgotten." "Playful, heavily styled, and a chance to try something different."))
     (dict "version" "1" "name" "The Beginning" "date" "2022" "datetime" "2022" "status" "Archived" "url" "/versions/v1/" "notes" (slice "My first steps into front-end development. Simple, a little rough, and where this all started."))
 }}
-<div class="page-versions">
-    <header class="page-versions-header">
-        <h1 class="page-versions-title">{{ .Title | markdownify }}</h1>
-        <p class="page-versions-desc">A little history of this website, one design at a time. Explore the old versions, or see what's changed on <a href="https://github.com/itsccao/itsccao.github.io" target="_blank" rel="noopener noreferrer" class="site-text-link">GitHub{{ partial "arrow.html" . }}</a>.</p>
-    </header>
-    <ol class="page-versions-list" aria-label="Website design history, newest first">
+<section class="page-versions" aria-labelledby="versions-title">
+    <h1 id="versions-title">{{ .Title | markdownify }}</h1>
+    <p>A little history of this website, one design at a time. Explore the old versions, or see what's changed on <a href="https://github.com/itsccao/itsccao.github.io" target="_blank" rel="noopener noreferrer" class="site-text-link">GitHub{{ partial "arrow.html" . }}</a>.</p>
+    <ol class="page-list-container page-versions-list" aria-label="Website design history, newest first">
 {{- range $versions -}}
-        <li class="page-versions-entry{{ if eq .status "Current" }} is-current{{ end }}">
-            <div class="page-versions-meta">
-                <span class="page-versions-number">v{{ .version }}</span>
-                {{ with .datetime }}<time class="page-versions-date" datetime="{{ . }}">{{ else }}<span class="page-versions-date">{{ end }}{{ .date }}{{ if .datetime }}</time>{{ else }}</span>{{ end }}
+        <li class="page-list">
+            <div class="page-list-header page-versions-entry-header">
+                <h2 class="page-list-title">v{{ .version }} · {{ .name }}</h2>
+                <span class="page-versions-status{{ if eq .status "Current" }} is-current{{ end }}">{{ .status }}</span>
             </div>
-            <article class="page-versions-card">
-                <div class="page-versions-card-header">
-                    <h2 class="page-versions-card-title">{{ .name }}</h2>
-                    <span class="page-versions-badge{{ if eq .status "Current" }} primary{{ end }}">{{ .status }}</span>
-                </div>
-                <div class="page-versions-card-notes">
-{{- range .notes }}<p>{{ . | markdownify }}</p>{{ end -}}
-                </div>
-{{- if .url -}}
-                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="page-versions-visit site-text-link" aria-label="Visit {{ .name }} (v{{ .version }})">Visit this version{{ partial "arrow.html" . }}</a>
-{{- end -}}
-            </article>
+            {{ with .datetime }}<time class="page-list-date" datetime="{{ . }}">{{ else }}<span class="page-list-date">{{ end }}{{ .date }}{{ if .datetime }}</time>{{ else }}</span>{{ end }}
+{{- range .notes }}
+            <p class="page-list-desc">{{ . | markdownify }}</p>
+{{- end }}
+{{- if .url }}
+            <div class="page-list-footer">
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="page-list-readmore site-text-link" aria-label="Visit {{ .name }} (v{{ .version }})">Visit this version {{ partial "arrow.html" . }}</a>
+            </div>
+{{- end }}
         </li>
-{{- end -}}
+{{- end }}
     </ol>
-</div>
+</section>
 {{- end -}}
