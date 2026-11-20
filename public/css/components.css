@@ -1,0 +1,100 @@
+:root {
+    --control-radius: 0.55rem;
+    --panel-radius: 0.75rem;
+    --motion-duration: 180ms;
+    --motion-ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+    --hover-lift: 0 -2px;
+    --font-mono: ui-monospace, monospace;
+}
+
+.site-panel,
+.page-list {
+    border: 1px solid var(--border);
+    border-radius: var(--panel-radius);
+    background-color: var(--off-background);
+    transition: border-color var(--motion-duration);
+}
+
+.site-meta,
+.page-list-date {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.site-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 2.75rem;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--button-border, var(--border));
+    border-radius: var(--control-radius);
+    background-color: var(--button-background, var(--off-background));
+    color: var(--link);
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color var(--motion-duration), border-color var(--motion-duration),
+        color var(--motion-duration), translate var(--motion-duration) var(--motion-ease);
+}
+
+.site-button[hidden] {
+    display: none;
+}
+
+@media (hover: hover) {
+    :is(.site-panel, .page-list):hover {
+        border-color: color-mix(in srgb, var(--link) 50%, var(--border));
+    }
+
+    .site-button:not(:disabled):hover {
+        background-color: var(--button-hover-background, color-mix(in srgb, var(--link) 8%, var(--off-background)));
+        border-color: var(--button-hover-border, var(--link));
+        color: var(--link-hover);
+        translate: var(--hover-lift);
+    }
+}
+
+.site-button:not(:disabled):active {
+    translate: 0 0;
+}
+
+.site-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.site-button svg {
+    flex: none;
+}
+
+.site-button--icon {
+    width: 2.75rem;
+    padding: 0;
+}
+
+.site-button--quiet {
+    --button-border: transparent;
+    --button-background: transparent;
+}
+
+:where(a, button, input, select, textarea, summary):focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --hover-lift: 0 0;
+    }
+
+    .site-button {
+        transition: none;
+    }
+}

@@ -1,0 +1,27 @@
+:root
+{
+	--background: var(--base00);
+	--off-background: var(--base01);
+	--text: var(--base05);
+	--muted: var(--base04);
+	--border: var(--base02);
+	--error: var(--base08);
+	--link: var(--base0B);
+	--link-hover: var(--base0D);
+	--blockquote: var(--base0C);
+	--code-background: var(--base02);
+	--highlight: var(--base0D);
+	--github-color: var(--github-brand-color, #ffffff);
+}
+
+.github-icon,
+.github-icon path
+{
+	color: var(--github-color) !important;
+	fill: var(--github-color) !important;
+}
+
+svg.github-icon
+{
+    overflow: visible;
+}

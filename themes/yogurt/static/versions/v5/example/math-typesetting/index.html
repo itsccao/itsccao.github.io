@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <noscript>
+        ⚠️ You have disabled <b> JavaScript </b> on this site! Some functions like: <i>theme changer</i>, <i>background loader</i>, etc... relies on it will not working.
+    </noscript>
+
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="theme-color" content="#000000">
+
+
+
+<meta name="title" content="itsccao">
+<meta name="author" content="itsccao">
+<meta name="description" content="hi.">
+
+<meta itemprop="name" content="itsccao">
+<meta itemprop="description" content="hi.">
+<meta itemprop="image" content="/assets/preview.png">
+
+<meta name="twitter:title" content="itsccao">
+<meta name="twitter:creator" content="itsccao">
+<meta name="twitter:description" content="hi.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="/versions/v5/assets/preview.png">
+<meta name="twitter:url" content="https://itsccao.github.io">
+
+<meta property="og:title" content="itsccao">
+<meta property="og:type" content="website">
+<meta property="og:description" content="hi.">
+<meta property="og:image" content="/versions/v5/assets/preview.png">
+<meta property="og:url" content="https://itsccao.github.io">
+
+
+
+
+<title> Math Typesetting &ndash; itsccao </title>
+
+<link rel="canonical" href="https://itsccao.github.io">
+
+<link rel="icon" type="image/png" sizes="16x16" href="/versions/v5/favicon/favicon-16px.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/versions/v5/favicon/favicon-32px.png">
+<link rel="apple-touch-icon" sizes="192x192" href="/versions/v5/favicon/favicon-192px.png">
+
+<link rel="stylesheet" href="/versions/v5/css/palettes/mocha.css">
+<link rel="stylesheet" href="/versions/v5/css/sylvie.css"></head>
+
+    <body>
+        <main>
+            <div class="page">
+                <div class="page-header"><div class="page-header-top">
+    <text class="page-header-favicon">
+        <img src="/versions/v5/favicon/favicon-192px.png">
+    </text>
+    
+    <text class="page-header-title">itsccao</text>
+    
+    <div class="page-header-x" id="page-header-x">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+    </div>
+</div>
+
+<div class="page-header-container">
+    
+    
+    <text class="page-header-link">
+        <a href="/versions/v5/" title=""> home </a>
+    </text>
+    
+    <text class="page-header-link">
+        <a href="/versions/v5/note/" title=""> note </a>
+    </text>
+    
+    <text class="page-header-link">
+        <a href="/versions/v5/lab/" title=""> lab </a>
+    </text>
+    
+    <text class="page-header-link">
+        <a href="/versions/v5/contact/" title=""> contact </a>
+    </text>
+    
+    <text class="page-header-link">
+        <a href="/versions/v5/config/" title=""> config </a>
+    </text>
+    
+    <text class="page-header-link">
+        <a href="/versions/v5/example/" title="Example"> Example </a>
+    </text>
+    
+</div></div>
+
+                <div class="page-body">
+    <header class="content-header">
+        <h1> Math Typesetting </h1>
+    </header>
+    
+    <div class="content-body">
+        <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
+<p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
+<ul>
+<li>Create a partial under <code>/layouts/partials/math.html</code></li>
+<li>Within this partial reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
+<li>Include the partial in your templates like so:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> or .Params.math .Site.Params.math <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;math.html&#34;</span> . <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</span></span></code></pre></div><ul>
+<li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
+<li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
+</ul>
+<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a></p>
+
+<h3 id="examples">Examples</h3>
+
+<p>Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$</p>
+    </div>
+    <footer class="content-footer"> </footer>
+
+                </div>
+            </div>
+
+            <div id="page-hidden">
+                <img id="page-hidden-img" src="/versions/v5/favicon/favicon-192px.png">
+            </div>
+        </main>
+
+        <script src="/versions/v5/js/index.js"> </script>
+    </body>
+</html>

@@ -1,6 +1,6 @@
 baseURL = "https://itsccao.github.io"
 locale = "en-us"
-theme = "july"
+theme = "yogurt"
 enableEmoji = true
 enableInlineShortcodes = true
 

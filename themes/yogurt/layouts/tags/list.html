@@ -1,0 +1,10 @@
+{{ define "main" }}
+    <header class="page-intro">
+        <h1>{{ .Title | markdownify }}</h1>
+        {{- .Content -}}
+    </header>
+
+    <p class="tags-back-link"><a class="site-button" href="{{ "tags/" | relURL }}">&larr; Browse all tags</a></p>
+
+    {{ partial "page-list.html" . }}
+{{ end }}

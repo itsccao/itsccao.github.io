@@ -40,25 +40,10 @@
     line-height: 1.6;
 }
 
-.page-404-link,
-.page-404-link:link,
-.page-404-link:visited
+.page-404-return-label
 {
-    display: inline-block;
-    margin-top: 0.5rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--link);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    transition: color 0.2s ease;
-    user-select: none;
-}
-
-.page-404-link:hover,
-.page-404-link:active
-{
-    color: var(--link-hover);
+    line-height: 1;
+    text-box: trim-both cap alphabetic;
 }
 
 @media (max-width: 40rem)

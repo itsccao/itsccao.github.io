@@ -3,6 +3,9 @@
 	--background: var(--base00);
 	--off-background: var(--base01);
 	--text: var(--base05);
+	--muted: var(--base04);
+	--border: var(--base02);
+	--error: var(--base08);
 	--link: var(--base0B);
 	--link-hover: var(--base0D);
 	--blockquote: var(--base0C);
@@ -21,28 +24,4 @@
 svg.github-icon
 {
     overflow: visible;
-    transform-origin: center;
-    transition: transform 0.2s ease;
-}
-
-a:hover svg.github-icon,
-a:focus-visible svg.github-icon,
-svg.github-icon:hover
-{
-    transform: scale(1.1);
-}
-
-@media (prefers-reduced-motion: reduce)
-{
-    svg.github-icon
-    {
-        transition: none;
-    }
-
-    a:hover svg.github-icon,
-    a:focus-visible svg.github-icon,
-    svg.github-icon:hover
-    {
-        transform: none;
-    }
 }

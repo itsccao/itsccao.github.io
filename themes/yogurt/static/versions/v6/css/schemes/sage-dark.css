@@ -1,0 +1,22 @@
+/* Charcoal & Sage — soft green accents on deep neutral surfaces. */
+:root
+{
+    color-scheme: dark;
+    --base00: #191f1c;
+    --base01: #222b25;
+    --base02: #303c33;
+    --base03: #49584c;
+    --base04: #9aaa9b;
+    --base05: #e0e7dc;
+    --base06: #c3d3bd;
+    --base07: #d9e8d2;
+    --base08: #e49a9a;
+    --base09: #dfb08b;
+    --base0A: #d8c58c;
+    --base0B: #a5c99b;
+    --base0C: #93c7bc;
+    --base0D: #c5e5b9;
+    --base0E: #c1add1;
+    --base0F: #d1a69a;
+    --github-brand-color: #ffffff;
+}

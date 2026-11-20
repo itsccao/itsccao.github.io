@@ -1,0 +1,73 @@
+<div class="page-list-container">
+    {{ range .Pages }}
+    {{ $targetLink := .RelPermalink }}
+    {{ $isExternal := false }}
+    {{ with .Params.link }}
+        {{ $targetLink = . }}
+        {{ $isExternal = partial "is-external-link.html" . }}
+    {{ end }}
+    {{ $isProjectOrLab := or (eq .Section "project") (eq .Section "lab") (eq .Section "toolbox") (eq .Section "tools") (in .RelPermalink "/project/") (in .RelPermalink "/lab/") (in .RelPermalink "/toolbox/") (in .RelPermalink "/tools/") }}
+    <div class="page-list">
+        <div class="page-list-header">
+            <h2 class="page-list-title">{{ .Title | markdownify }}</h2>
+        </div>
+        {{ if not .Date.IsZero }}
+        <time class="page-list-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        {{ end }}
+        {{ with .Description }}
+        <p class="page-list-desc"> {{ . }} </p>
+        {{ end }}
+        <div class="page-list-footer">
+            {{ $taxonomy := "tags" }}
+            {{ with .Param $taxonomy }}
+            <div class="page-list-tag-container">
+                {{ range $index, $tag := . }}
+                    {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) }}
+                    <a class="page-list-tag" href="{{ .RelPermalink }}" aria-label="Tag {{ $tag }}">#{{ $tag | urlize }}</a>
+                    {{ end }}
+                {{ end }}
+            </div>
+            {{ else }}
+            <div></div>
+            {{ end }}
+
+            {{ if $isProjectOrLab }}
+            <div class="page-list-links">
+                {{ $hasGithub := false }}
+                {{ with .Params.github }}
+                    {{ $hasGithub = true }}
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="site-button site-button--icon page-list-icon-link" aria-label="GitHub Repository">
+                        {{ partial "github-icon.html" . }}
+                    </a>
+                {{ end }}
+                {{ with .Params.link }}
+                    {{ if and (strings.Contains . "github.com") (not $hasGithub) }}
+                        {{ $hasGithub = true }}
+                        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="site-button site-button--icon page-list-icon-link" aria-label="GitHub Repository">
+                            {{ partial "github-icon.html" . }}
+                        </a>
+                    {{ else if not (strings.Contains . "github.com") }}
+                        <a href="{{ . }}"{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }} class="site-button site-button--icon page-list-icon-link" aria-label="Direct Link">
+                            {{ partial "arrow.html" (cond $isExternal "up-right" "right") }}
+                        </a>
+                    {{ end }}
+                {{ end }}
+                {{ with .Params.direct }}
+                    {{ $external := partial "is-external-link.html" . }}
+                    <a href="{{ . }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }} class="site-button site-button--icon page-list-icon-link" aria-label="Direct Link">
+                        {{ partial "arrow.html" (cond $external "up-right" "right") }}
+                    </a>
+                {{ end }}
+                {{ if and (not .Params.link) (not .Params.github) (not .Params.direct) }}
+                    <a href="{{ .RelPermalink }}" class="site-button site-button--icon page-list-icon-link" aria-label="Direct Link">
+                        {{ partial "arrow.html" "right" }}
+                    </a>
+                {{ end }}
+            </div>
+            {{ else }}
+            <a class="site-button page-list-readmore" href="{{ $targetLink }}"{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }}>Keep reading {{ partial "arrow.html" (cond $isExternal "up-right" "right") }}</a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>

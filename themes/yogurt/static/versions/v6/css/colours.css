@@ -1,0 +1,48 @@
+:root
+{
+	--background: var(--base00);
+	--off-background: var(--base01);
+	--text: var(--base05);
+	--link: var(--base0B);
+	--link-hover: var(--base0D);
+	--blockquote: var(--base0C);
+	--code-background: var(--base02);
+	--highlight: var(--base0D);
+	--github-color: var(--github-brand-color, #ffffff);
+}
+
+.github-icon,
+.github-icon path
+{
+	color: var(--github-color) !important;
+	fill: var(--github-color) !important;
+}
+
+svg.github-icon
+{
+    overflow: visible;
+    transform-origin: center;
+    transition: transform 0.2s ease;
+}
+
+a:hover svg.github-icon,
+a:focus-visible svg.github-icon,
+svg.github-icon:hover
+{
+    transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: reduce)
+{
+    svg.github-icon
+    {
+        transition: none;
+    }
+
+    a:hover svg.github-icon,
+    a:focus-visible svg.github-icon,
+    svg.github-icon:hover
+    {
+        transform: none;
+    }
+}

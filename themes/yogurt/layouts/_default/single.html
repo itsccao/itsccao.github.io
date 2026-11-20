@@ -1,0 +1,34 @@
+{{ define "main" }}
+    {{ with .Params.link -}}
+    <script>window.location.replace("{{ . }}");</script>
+    <meta http-equiv="refresh" content="0; url={{ . }}">
+    {{ end -}}
+
+    <article class="page-article">
+        <header class="page-intro page-article-header">
+            {{- if not .Date.IsZero }}
+            <time class="page-list-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+            {{- end }}
+            <h1>{{ .Title | markdownify }}</h1>
+            {{- with .Description }}
+            <p>{{ . | markdownify }}</p>
+            {{- end }}
+            {{- with .GetTerms "tags" }}
+            <div class="page-list-tag-container">
+                {{- range . }}
+                <a class="page-list-tag" href="{{ .RelPermalink }}">#{{ .LinkTitle | urlize }}</a>
+                {{- end }}
+            </div>
+            {{- end }}
+        </header>
+        <div class="page-prose">
+            {{- .Content -}}
+        </div>
+    </article>
+
+    <a href="#" class="site-button site-button--icon page-scroll-top" aria-label="Scroll to top" title="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </a>
+{{ end }}

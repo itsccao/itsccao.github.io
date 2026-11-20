@@ -1,5 +1,19 @@
 @import "fonts.css";
 
+html
+{
+    scrollbar-gutter: stable;
+    scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: no-preference)
+{
+    html
+    {
+        scroll-behavior: smooth;
+    }
+}
+
 body
 {
     margin: 0;
@@ -7,7 +21,7 @@ body
     color: var(--text);
     font-family: "Be Vietnam Pro", sans-serif;
     font-size: 16px;
-    line-height: 1.5rem;
+    line-height: 1.65;
 }
 
 .page
@@ -23,115 +37,41 @@ body
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 6rem;
-    padding-bottom: 2.5rem;
+    padding-inline: clamp(1rem, 4vw, 2rem);
+    padding-block: clamp(2rem, 5vw, 3.5rem);
     max-width: 50rem;
     width: 100%;
     flex: 1;
 }
 
-/* Page Scroll Top Button */
 .page-scroll-top
 {
     position: fixed;
-    bottom: 4.75rem;
-    right: 2rem;
-    width: 2.65rem;
-    height: 2.65rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--off-background);
-    border: 1px solid color-mix(in srgb, var(--link) 28%, transparent);
-    color: var(--link);
-    cursor: pointer;
+    bottom: 4.5rem;
+    right: clamp(1rem, 4vw, 2rem);
     z-index: 95;
-    opacity: 0.8;
-    pointer-events: auto;
-    text-decoration: none;
-    transition: opacity 0.22s ease,
-                color 0.18s ease,
-                border-color 0.18s ease,
-                background-color 0.18s ease;
-    outline: none;
 }
 
 @supports (animation-timeline: scroll())
 {
     .page-scroll-top
     {
-        animation: showScrollTop linear both;
+        animation: show-scroll-top linear both;
         animation-timeline: scroll();
-        animation-range: 150px 320px;
+        animation-range: 100px 160px;
     }
 
-    @keyframes showScrollTop
+    @keyframes show-scroll-top
     {
-        from
-        {
-            opacity: 0;
-            pointer-events: none;
-            transform: translateY(10px);
-        }
-        to
-        {
-            opacity: 0.8;
-            pointer-events: auto;
-            transform: translateY(0);
-        }
+        from { visibility: hidden; }
+        to { visibility: visible; }
     }
 }
 
-.page-scroll-top svg
+@media (max-width: 36rem)
 {
-    width: 1.15rem;
-    height: 1.15rem;
-    min-width: 1.15rem;
-    min-height: 1.15rem;
-    flex-shrink: 0;
-    display: block;
-    color: var(--link);
-    stroke: var(--link);
-    transition: color 0.18s ease, stroke 0.18s ease, transform 0.2s ease;
-}
-
-.page-scroll-top:hover
-{
-    opacity: 1;
-    color: var(--link-hover);
-    border-color: var(--link-hover);
-    box-shadow: none;
-}
-
-.page-scroll-top:hover svg
-{
-    color: var(--link-hover);
-    stroke: var(--link-hover);
-}
-
-.page-scroll-top:active
-{
-    transform: scale(0.95);
-}
-
-@media (max-width: 50rem)
-{
-    .page-body
+    html
     {
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-        padding-top: 5rem;
-        padding-bottom: 2rem;
-    }
-
-    .page-scroll-top
-    {
-        bottom: 4rem;
-        right: 1.25rem;
-        width: 2.45rem;
-        height: 2.45rem;
+        scroll-padding-top: 7.5rem;
     }
 }

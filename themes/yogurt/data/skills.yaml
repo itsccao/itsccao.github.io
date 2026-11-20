@@ -1,0 +1,6 @@
+- name: C++
+  icon: c-plus-plus
+- name: PostgreSQL
+  icon: postgresql
+- name: Python
+  icon: python

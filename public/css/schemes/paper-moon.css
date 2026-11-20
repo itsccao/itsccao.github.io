@@ -1,0 +1,31 @@
+:root {
+    /* Flexoki Light, adapted for the site's interface and text contrast. */
+    color-scheme: light;
+    --base00: #fffcf0;
+    --base01: #f2f0e5;
+    --base02: #e6e4d9;
+    --base03: #b7b5ac;
+    --base04: #575653;
+    --base05: #282726;
+    --base08: #af3029;
+    --base0B: #205ea6;
+    --base0C: #276d65;
+    --base0D: #17477f;
+    --github-brand-color: #100f0f;
+}
+
+:root[data-theme="dark"] {
+    /* Rosé Pine Moon. */
+    color-scheme: dark;
+    --base00: #232136;
+    --base01: #2a273f;
+    --base02: #393552;
+    --base03: #59546d;
+    --base04: #a39cbd;
+    --base05: #e0def4;
+    --base08: #eb6f92;
+    --base0B: #9ccfd8;
+    --base0C: #c4a7e7;
+    --base0D: #ea9a97;
+    --github-brand-color: #e0def4;
+}

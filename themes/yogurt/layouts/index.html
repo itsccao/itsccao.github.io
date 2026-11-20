@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+    <head>
+        {{ partial "head.html" . }}
+        <link rel="stylesheet" href="{{ "css/index.css" | relURL }}">
+        <script src="{{ "js/portrait.js" | relURL }}" defer></script>
+    </head>
+
+    <body class="page">
+        <header class="page-header">
+            {{ partial "header.html" . }}
+        </header>
+
+        <main class="page-body home">
+            <section class="home-intro" id="intro" aria-labelledby="intro-title">
+                <div>
+                    <h1 id="intro-title">Hello, I'm Cao<span>!</span></h1>
+                    <p class="home-bio">I'm a third-year Information Systems student at <a href="https://www.fit.hcmus.edu.vn/">fit@hcmus</a>.</p>
+                </div>
+                <div class="home-portrait-wrapper">
+                    <img class="home-portrait" src="{{ "asset/profile-banner.webp" | relURL }}" width="1353" height="1384" alt="Illustrated profile portrait" draggable="false">
+                </div>
+            </section>
+
+            <section class="home-section" id="skills" aria-labelledby="skills-title">
+                <div>
+                    <h2 id="skills-title">What I work with</h2>
+                    <p>Languages and tools I'm familiar with.</p>
+                </div>
+                <ul class="home-skills">
+                    {{- range sort hugo.Data.skills "name" "asc" }}
+                    <li class="site-panel">
+                        <img src="{{ printf "icon/%s.svg" .icon | relURL }}" width="20" height="20" alt="" loading="lazy">
+                        {{ .name }}
+                    </li>
+                    {{- end }}
+                </ul>
+            </section>
+
+            <section class="home-section" id="education" aria-labelledby="education-title">
+                <div>
+                    <h2 id="education-title">Education</h2>
+                    <p>The schools and subjects that shaped my interests.</p>
+                </div>
+                <ul class="home-education">
+                    {{- range hugo.Data.education }}
+                    <li class="site-panel">
+                        {{- with .years }}
+                        <p class="site-meta home-education-years">{{ . }}</p>
+                        {{- end }}
+                        <h3>{{ .school }}</h3>
+                        {{- with .program }}
+                        <p class="home-education-program">{{ . }}</p>
+                        {{- end }}
+                    </li>
+                    {{- end }}
+                </ul>
+            </section>
+
+            <section class="home-section" id="contact" aria-labelledby="contact-title">
+                <div>
+                    <h2 id="contact-title">Contact</h2>
+                    <p>A project, a question, or a simple hello. I'd love to hear from you.</p>
+                </div>
+                <ul class="home-contact-links">
+                    {{- range hugo.Data.contacts }}
+                    {{- $external := partial "is-external-link.html" .url }}
+                    <li{{ if eq .icon "email" }} class="home-contact-email"{{ end }}>
+                        <a class="site-button" href="{{ .url }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>
+                            {{- partial "contact-icon.html" .icon }}
+                            <span>{{ .name }}{{ with .handle }}<strong>{{ . }}</strong>{{ end }}</span>
+                            {{- partial "arrow.html" (cond (or $external (strings.HasPrefix .url "mailto:")) "up-right" "right") }}
+                        </a>
+                    </li>
+                    {{- end }}
+                </ul>
+            </section>
+
+            <section class="home-section" id="versions" aria-labelledby="versions-title">
+                <div>
+                    <h2 id="versions-title">Versions</h2>
+                    <p>See how this little corner of the web has changed.</p>
+                </div>
+                <a class="site-button home-version-link" href="{{ "versions/" | relURL }}">Explore version history {{ partial "arrow.html" "right" }}</a>
+            </section>
+        </main>
+
+        <footer class="page-footer">
+            {{- partial "footer.html" . }}
+        </footer>
+    </body>
+</html>

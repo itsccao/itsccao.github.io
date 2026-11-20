@@ -1,0 +1,15 @@
+{{- $destination := printf "%s#contact" ("" | absURL) -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex">
+        <title>Contact | {{ site.Params.About.Title }}</title>
+        <link rel="canonical" href="{{ "" | absURL }}">
+        <meta http-equiv="refresh" content="0; url={{ $destination }}">
+    </head>
+    <body>
+        <p><a href="{{ $destination }}">Go to Contact</a></p>
+    </body>
+</html>

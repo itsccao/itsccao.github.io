@@ -1,0 +1,12 @@
+- name: Email
+  handle: takai1124@proton.me
+  url: mailto:takai1124@proton.me
+  icon: email
+
+- name: GitHub
+  url: https://github.com/itsccao
+  icon: github
+
+- name: Guestbook
+  url: https://itsccao.atabook.org/
+  icon: guestbook

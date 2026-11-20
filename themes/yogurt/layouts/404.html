@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="{{- site.Language.Lang -}}">
+    <head>
+        {{- partial "head.html" . -}}
+        <link rel="stylesheet" href="/css/404.css">
+    </head>
+
+    <body>
+        <div class="page">
+            <header class="page-header">
+                {{- partial "header.html" . -}}
+            </header>
+
+            <div class="page-body">
+                <main class="page-404-container">
+                    <h1 class="page-404-title">404</h1>
+                    <h2 class="page-404-subtitle">Page Not Found</h2>
+                    <p class="page-404-desc">The page you are looking for doesn't exist or has been moved.</p>
+                    <a href="{{ site.Home.RelPermalink }}" class="site-button">
+                        {{- partial "arrow.html" "left" }}
+                        <span class="page-404-return-label">Return Home</span>
+                    </a>
+                </main>
+            </div>
+
+            <div class="page-footer">
+                {{- partial "footer.html" . -}}
+            </div>
+        </div>
+    </body>
+</html>

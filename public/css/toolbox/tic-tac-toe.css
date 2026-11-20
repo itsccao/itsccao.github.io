@@ -45,7 +45,7 @@
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
 }
-.ttt-square {
+.site-button.ttt-square {
     width: 100%;
     height: 100%;
     min-width: 0;
@@ -63,38 +63,14 @@
     font-weight: 800;
     line-height: 1;
     cursor: pointer;
-    transition: background-color 0.15s ease, border-color 0.15s ease;
     padding: 0;
     margin: 0;
     user-select: none;
     overflow: hidden;
 }
-.ttt-square:hover {
-    border-color: var(--link-hover);
-    background-color: color-mix(in srgb, var(--link-hover) 10%, var(--background));
-}
 .ttt-controls {
     display: flex;
     justify-content: center;
-}
-.ttt-restart-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.65rem 1.4rem;
-    background-color: var(--off-background);
-    border: 1px solid color-mix(in srgb, var(--link-hover) 40%, transparent);
-    border-radius: 9999px;
-    color: var(--link-hover);
-    font-size: 0.92rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
-}
-.ttt-restart-btn:hover {
-    transform: translateY(-2px);
-    border-color: var(--link-hover);
-    background-color: color-mix(in srgb, var(--link-hover) 12%, transparent);
 }
 .ttt-restart-btn svg {
     width: 1.15rem;

@@ -1,0 +1,189 @@
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.035em;
+}
+
+h1 {
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    letter-spacing: -0.05em;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+a:link, a:visited {
+    color: var(--link);
+}
+
+a:hover, a:active, a.active {
+    color: var(--link-hover);
+}
+
+a {
+    text-underline-offset: 0.22em;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
+
+.page-intro {
+    margin-bottom: 1.75rem;
+}
+
+.page-intro > p {
+    margin: 0.65rem 0 0;
+    max-width: 63ch;
+    color: var(--muted);
+}
+
+.page-article-header {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-article-header .page-list-tag-container {
+    margin-top: 0.85rem;
+}
+
+.page-prose {
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+.page-prose > :first-child {
+    margin-top: 0;
+}
+
+.page-prose > :where(h1, h2, h3, h4, h5, h6) {
+    margin-top: 1.75em;
+    margin-bottom: 0.5em;
+}
+
+.page-prose > h2 {
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-prose > :where(h1, h2, h3, h4, h5, h6) + :where(h2, h3, h4, h5, h6) {
+    margin-top: 0.65em;
+}
+
+.page-prose :where(p, ul, ol, dl, figure, blockquote, .highlight, .table-wrapper, table) {
+    margin-block: 0 1.1em;
+}
+
+.page-prose :where(ul, ol) {
+    padding-inline-start: 1.5em;
+}
+
+.page-prose :where(ul, ol) :where(ul, ol) {
+    margin-bottom: 0;
+}
+
+.page-prose blockquote {
+    margin-inline: 0;
+    padding: 0.7rem 1rem;
+    border-inline-start: 3px solid var(--blockquote);
+    border-radius: 0 var(--control-radius) var(--control-radius) 0;
+    background: var(--off-background);
+}
+
+.page-prose blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+pre, code, kbd, samp {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+}
+
+:where(code, kbd, samp) {
+    padding: 0.12em 0.35em;
+    border-radius: 0.25rem;
+    background-color: var(--code-background);
+}
+
+pre {
+    margin: 0 0 1.1em;
+    padding: 1rem;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--panel-radius);
+    background-color: var(--off-background);
+    line-height: 1.55;
+    overflow-wrap: normal;
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+}
+
+hr {
+    margin-block: 1.75rem;
+    border: 0;
+    border-top: 1px solid var(--border);
+}
+
+::selection, mark {
+    background-color: var(--highlight);
+    color: var(--background);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.page-prose :where(img, video) {
+    max-width: 100%;
+    border-radius: var(--panel-radius);
+}
+
+.page-prose figure {
+    margin-inline: 0;
+}
+
+.page-prose figcaption {
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--panel-radius);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-wrapper table {
+    margin: 0;
+}
+
+th, td {
+    padding: 0.7rem clamp(0.4rem, 2vw, 1rem);
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    font-weight: 700;
+    background: var(--off-background);
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}

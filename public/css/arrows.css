@@ -1,6 +1,5 @@
 /* Shared by navigation arrows; brand icons keep their own styling. */
-a:has(svg),
-a:has(.site-arrow)
+a:has(svg)
 {
     text-decoration: none;
 }
@@ -16,14 +15,13 @@ a.site-text-link
     text-decoration: none;
 }
 
-.site-arrow,
-svg.site-arrow
+.site-arrow
 {
     display: inline-block;
     vertical-align: middle;
     flex-shrink: 0;
     color: var(--link);
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color var(--motion-duration), transform var(--motion-duration) var(--motion-ease);
 }
 
 svg.site-arrow[stroke]
@@ -37,27 +35,35 @@ svg.site-arrow[stroke]
     height: 1em;
 }
 
-a:hover .site-arrow,
-a:focus-visible .site-arrow,
-button:hover .site-arrow,
-button:focus-visible .site-arrow
+a:is(:hover, :focus-visible) .site-arrow
 {
     color: var(--link-hover);
-    transform: translateX(3px);
+    transform: var(--arrow-hover-transform, translateX(4px));
+}
+
+.site-arrow--left
+{
+    --arrow-hover-transform: translateX(-4px);
+}
+
+.site-arrow--up-right
+{
+    --arrow-hover-transform: translate(2px, -2px);
+}
+
+.site-arrow--down
+{
+    --arrow-hover-transform: translateY(4px);
 }
 
 @media (prefers-reduced-motion: reduce)
 {
-    .site-arrow,
-    svg.site-arrow
+    .site-arrow
     {
         transition: none;
     }
 
-    a:hover .site-arrow,
-    a:focus-visible .site-arrow,
-    button:hover .site-arrow,
-    button:focus-visible .site-arrow
+    a:is(:hover, :focus-visible) .site-arrow
     {
         transform: none;
     }

@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{ $versions := slice
+    (dict "version" "7" "name" "Yogurt" "date" "November 2026" "datetime" "2026-11" "status" "Current" "notes" (slice "A fresh start for my little corner of the web. Yogurt gives me a place to share what I’m learning, what I’m building, and a little more about myself."))
+    (dict "version" "6" "name" "July" "date" "July 2025" "datetime" "2025-07" "status" "Archived" "url" "/versions/v6/" "notes" (slice "Named after the month it began. A simpler, lighter home for my projects and notes." "Built around minimalism, with typography inspired by the risotto theme."))
+    (dict "version" "5" "name" "Sylvie" "date" "April 2025" "datetime" "2025-04" "status" "Archived" "url" "/versions/v5/" "notes" (slice "A little desktop window for the web, complete with a decorative close button." "Kept the reading-friendly typography from risotto."))
+    (dict "version" "4" "name" "Chloe" "date" "August 2023" "datetime" "2023-08" "status" "Archived" "url" "/versions/v4/" "notes" (slice "A friend introduced me to the [risotto theme](https://themes.gohugo.io/themes/risotto/), and I made it my own." "A personal take on its clean, reading-focused layout."))
+    (dict "version" "3" "name" "Lost Media" "date" "Sometime in 2022–2023" "status" "Lost" "notes" (slice "A missing chapter. The source code, screenshots, and release date are no longer around."))
+    (dict "version" "2" "name" "osu! Theme" "date" "2022" "datetime" "2022" "status" "Archived" "url" "/versions/v2/" "notes" (slice "An experiment inspired by an [osu!](https://osu.ppy.sh/) skin, whose name I've since forgotten." "Playful, heavily styled, and a chance to try something different."))
+    (dict "version" "1" "name" "The Beginning" "date" "2022" "datetime" "2022" "status" "Archived" "url" "/versions/v1/" "notes" (slice "My first steps into front-end development. Simple, a little rough, and where this all started."))
+}}
+<section class="page-versions" aria-labelledby="versions-title">
+    <h1 id="versions-title">{{ .Title | markdownify }}</h1>
+    <p>A little history of this website, one design at a time. Explore the old versions, or see what's changed on <a href="https://github.com/itsccao/itsccao.github.io" target="_blank" rel="noopener noreferrer" class="site-text-link">GitHub{{ partial "arrow.html" "up-right" }}</a>.</p>
+    <ol class="page-list-container page-versions-list" aria-label="Website design history, newest first">
+{{- range $versions -}}
+        <li class="page-list">
+            <div class="page-list-header page-versions-entry-header">
+                <h2 class="page-list-title">v{{ .version }} · {{ .name }}</h2>
+                <span class="page-versions-status{{ if eq .status "Current" }} is-current{{ end }}">{{ .status }}</span>
+            </div>
+            {{ with .datetime }}<time class="page-list-date" datetime="{{ . }}">{{ else }}<span class="page-list-date">{{ end }}{{ .date }}{{ if .datetime }}</time>{{ else }}</span>{{ end }}
+{{- range .notes }}
+            <p class="page-list-desc">{{ . | markdownify }}</p>
+{{- end }}
+{{- if .url }}
+            <div class="page-list-footer">
+                <a href="{{ .url }}" class="page-list-readmore site-text-link" aria-label="Open archive: {{ .name }} (v{{ .version }})">Open archive {{ partial "arrow.html" "right" }}</a>
+            </div>
+{{- end }}
+        </li>
+{{- end }}
+    </ol>
+</section>
+{{- end -}}

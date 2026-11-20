@@ -1,0 +1,3 @@
+{{- $destination := urls.Parse . -}}
+{{- $origin := urls.Parse site.BaseURL -}}
+{{- return (and (ne $destination.Host "") (ne (lower $destination.Host) (lower $origin.Host))) -}}
