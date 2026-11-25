@@ -17,6 +17,14 @@
     padding-inline: clamp(1rem, 4vw, 2rem);
 }
 
+@media (width >= 60rem) {
+    .page-header-inner {
+        --header-offset: max(0px, (100vw - 65rem) / 2);
+        width: min(65rem, calc(100% - var(--header-offset)));
+        margin-inline: var(--header-offset) 0;
+    }
+}
+
 .page-header .page-brand {
     justify-self: start;
     display: inline-flex;

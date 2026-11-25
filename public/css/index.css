@@ -79,14 +79,18 @@
 }
 
 .home-portrait-wrapper {
+    --portrait-padding: clamp(0.55rem, 1.5vw, 0.95rem);
+    --portrait-radius-top: 2rem;
+    --portrait-radius-bottom: 0.85rem;
     position: relative;
     isolation: isolate;
     width: min(100%, 24rem);
     margin: 0;
     justify-self: end;
-    padding: clamp(0.55rem, 1.5vw, 0.95rem);
+    padding: var(--portrait-padding);
     border: 1px solid var(--border);
-    border-radius: 2rem 2rem 0.85rem 0.85rem;
+    border-radius: var(--portrait-radius-top) var(--portrait-radius-top)
+        var(--portrait-radius-bottom) var(--portrait-radius-bottom);
     background: var(--off-background);
 }
 
@@ -400,14 +404,13 @@ html:has(.home-portrait-dialog[open]) {
 }
 
 @media (width >= 60rem) {
-    @supports not selector(::-webkit-scrollbar-thumb) {
-        html:has(.home-page) {
-            scrollbar-color: transparent transparent;
-        }
+    html:has(.home-page) {
+        scrollbar-width: none;
+        scrollbar-gutter: auto;
     }
 
-    html:has(.home-page)::-webkit-scrollbar-thumb {
-        background-color: transparent;
+    html:has(.home-page)::-webkit-scrollbar {
+        display: none;
     }
 
     .home-section-nav {
@@ -486,13 +489,31 @@ html:has(.home-portrait-dialog[open]) {
     }
 
     .home-portrait-wrapper {
+        --portrait-radius-top: 1.5rem;
+        --portrait-radius-bottom: var(--portrait-radius-top);
         grid-row: 1;
         width: min(100% - 0.5rem, 19rem);
         justify-self: center;
     }
 
+    .home-portrait-wrapper::before {
+        content: none;
+    }
+
+    .home-portrait-trigger {
+        appearance: none;
+        overflow: hidden;
+        border-radius: calc(var(--portrait-radius-top) - var(--portrait-padding) - 1px);
+    }
+
     .home-portrait {
-        border-radius: 0.75rem;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .home-education-logo {
+        flex-basis: clamp(3.75rem, 10vw, 5.9375rem);
+        padding: 0.625rem;
     }
 }
 
