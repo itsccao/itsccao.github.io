@@ -52,13 +52,14 @@
 <script>
     (() => {
         let saved;
+        const root = document.documentElement;
         try {
             saved = localStorage.getItem("pageTheme");
         } catch {}
         const light = ["light", "sage-light", "catppuccin-latte"];
         const dark = ["dark", "sage-dark", "catppuccin-mocha"];
         const systemTheme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        document.documentElement.dataset.theme = light.includes(saved) ? "light" : dark.includes(saved) ? "dark" : systemTheme;
+        root.dataset.theme = light.includes(saved) ? "light" : dark.includes(saved) ? "dark" : systemTheme;
     })();
 </script>
 
@@ -68,7 +69,7 @@
     <body>
         <div class="page">
             <header class="page-header"><div class="page-header-inner">
-    <a class="site-button site-button--quiet page-brand" href="/">itsccao</a>
+    <a class="page-brand" href="/" aria-label="itsccao"><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 0">i</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 1">t</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 2">s</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 3">c</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 4">c</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 5">a</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 6">o</span></a>
     <nav class="page-nav" aria-label="Main navigation">
         <span class="page-nav-indicator" aria-hidden="true"></span>
         <a class="site-button site-button--quiet" data-home href="/">Home</a>
@@ -92,10 +93,12 @@
             <main class="page-body">
 
 <section class="page-versions" aria-labelledby="versions-title">
-    <h1 id="versions-title">Versions</h1>
-    <p>A little history of this website, one design at a time. Explore the old versions, or see what's changed on <a href="https://github.com/itsccao/itsccao.github.io" target="_blank" rel="noopener noreferrer" class="site-text-link">GitHub<svg class="site-arrow site-arrow--up-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.35" stroke-linejoin="round" aria-hidden="true">
+    <header class="page-intro">
+        <h1 id="versions-title">Versions</h1>
+        <p>A little history of this website, one design at a time. Explore the old versions, or see what's changed on <a href="https://github.com/itsccao/itsccao.github.io" target="_blank" rel="noopener noreferrer" class="site-text-link">GitHub<svg class="site-arrow site-arrow--up-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.35" stroke-linejoin="round" aria-hidden="true">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M9 6.75C8.58579 6.75 8.25 6.41421 8.25 6C8.25 5.58579 8.58579 5.25 9 5.25H18C18.4142 5.25 18.75 5.58579 18.75 6V15C18.75 15.4142 18.4142 15.75 18 15.75C17.5858 15.75 17.25 15.4142 17.25 15V7.81066L6.53033 18.5303C6.23744 18.8232 5.76256 18.8232 5.46967 18.5303C5.17678 18.2374 5.17678 17.7626 5.46967 17.4697L16.1893 6.75H9Z" fill="currentColor"></path>
 </svg></a>.</p>
+    </header>
     <ol class="page-list-container page-versions-list" aria-label="Website design history, newest first"><li class="page-list">
             <div class="page-list-header page-versions-entry-header">
                 <h2 class="page-list-title">v7 · Yogurt</h2>

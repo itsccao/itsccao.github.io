@@ -102,7 +102,6 @@ class qrCode
         this.qrOutput.innerHTML = "";
         this.qrOutput.appendChild(canvas);
         this.qrDownload.style.display = "block";
-        window.scrollTo(0, document.body.scrollHeight);
     }
 
     qrDownloadFunction()

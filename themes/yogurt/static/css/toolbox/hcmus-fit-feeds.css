@@ -46,9 +46,6 @@
 }
 .fit-stat-card {
     padding: 1.15rem 1.35rem;
-    background-color: var(--off-background);
-    border-radius: 0.85rem;
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
     display: flex;
     flex-direction: column;
     gap: 0.45rem;
@@ -73,12 +70,6 @@
     height: 8px;
     border-radius: 50%;
     background-color: var(--link-hover);
-    box-shadow: 0 0 8px var(--link-hover);
-    animation: pulseDot 2s infinite ease-in-out;
-}
-@keyframes pulseDot {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.85); }
 }
 .fit-count-badge {
     font-size: 1.4rem;

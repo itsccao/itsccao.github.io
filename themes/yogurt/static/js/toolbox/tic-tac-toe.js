@@ -17,7 +17,6 @@ const winCondition = [
 ]
 
 const displayResult = document.getElementById("ttt-display-result");
-const board = document.getElementById("ttt-board");
 
 squares.forEach((element) => {
     element.addEventListener("click", updateBoard, {once: true});

@@ -20,7 +20,7 @@ a.site-text-link
     display: inline-block;
     vertical-align: middle;
     flex-shrink: 0;
-    color: var(--link);
+    color: var(--arrow-color, var(--link));
     transition: color var(--motion-duration), transform var(--motion-duration) var(--motion-ease);
 }
 
@@ -37,7 +37,7 @@ svg.site-arrow[stroke]
 
 a:is(:hover, :focus-visible) .site-arrow
 {
-    color: var(--link-hover);
+    color: var(--arrow-color, var(--link-hover));
     transform: var(--arrow-hover-transform, translateX(4px));
 }
 
@@ -49,11 +49,6 @@ a:is(:hover, :focus-visible) .site-arrow
 .site-arrow--up-right
 {
     --arrow-hover-transform: translate(2px, -2px);
-}
-
-.site-arrow--down
-{
-    --arrow-hover-transform: translateY(4px);
 }
 
 @media (prefers-reduced-motion: reduce)

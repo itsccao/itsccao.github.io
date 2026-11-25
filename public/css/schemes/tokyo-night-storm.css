@@ -1,0 +1,15 @@
+/* Tokyo Night Storm, adapted from the site's dark theme preview. */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --base00: #292e42;
+    --base01: #30364c;
+    --base02: #3b435b;
+    --base03: #5b6580;
+    --base04: #a7b0ca;
+    --base05: #c0cae3;
+    --base08: #d9a1b6;
+    --base0B: #a6bb95;
+    --base0C: #a0bec9;
+    --base0D: #a4b6dd;
+    --github-brand-color: var(--base05);
+}

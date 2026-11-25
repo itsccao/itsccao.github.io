@@ -52,13 +52,14 @@
 <script>
     (() => {
         let saved;
+        const root = document.documentElement;
         try {
             saved = localStorage.getItem("pageTheme");
         } catch {}
         const light = ["light", "sage-light", "catppuccin-latte"];
         const dark = ["dark", "sage-dark", "catppuccin-mocha"];
         const systemTheme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        document.documentElement.dataset.theme = light.includes(saved) ? "light" : dark.includes(saved) ? "dark" : systemTheme;
+        root.dataset.theme = light.includes(saved) ? "light" : dark.includes(saved) ? "dark" : systemTheme;
     })();
 </script>
 

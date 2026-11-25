@@ -9,9 +9,6 @@
     align-items: center;
     gap: 0.6rem;
     padding: 0.85rem 1.15rem;
-    background-color: var(--off-background);
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
-    border-radius: 0.75rem;
     font-size: 0.88rem;
     color: var(--text);
     opacity: 0.88;
@@ -32,9 +29,6 @@
 }
 .qr-card {
     padding: 1.5rem;
-    background-color: var(--off-background);
-    border-radius: 1rem;
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -60,22 +54,9 @@
 #qr-code-input {
     width: 100%;
     min-height: 14rem;
-    padding: 1rem;
-    background-color: var(--background);
-    border: 1px solid color-mix(in srgb, var(--text) 16%, transparent);
-    border-radius: 0.75rem;
-    color: var(--text);
-    font-size: 0.98rem;
     line-height: 1.5;
     resize: vertical;
     box-sizing: border-box;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    outline: none;
-    font-family: inherit;
-}
-#qr-code-input:focus {
-    border-color: var(--link-hover);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--link-hover) 20%, transparent);
 }
 .qr-canvas-frame {
     display: flex;
@@ -83,10 +64,9 @@
     justify-content: center;
     min-height: 14rem;
     padding: 1.25rem;
-    background-color: #ffffff;
+    background-color: var(--background);
     border-radius: 0.75rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border);
 }
 #qr-code-output {
     display: flex;
@@ -94,7 +74,7 @@
     justify-content: center;
     width: 100%;
     font-size: 0.9rem;
-    color: #4a4a4a;
+    color: var(--muted);
     text-align: center;
 }
 #qr-code-output canvas {

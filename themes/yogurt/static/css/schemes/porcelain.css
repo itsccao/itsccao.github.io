@@ -1,0 +1,14 @@
+:root {
+    color-scheme: light;
+    --base00: #faf9f6;
+    --base01: #f1efea;
+    --base02: #e5e0d8;
+    --base03: #b5ada0;
+    --base04: #625b52;
+    --base05: #322f2d;
+    --base08: #a2353f;
+    --base0B: #365879;
+    --base0C: #386861;
+    --base0D: #28455f;
+    --github-brand-color: var(--base05);
+}

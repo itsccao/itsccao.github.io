@@ -5,6 +5,17 @@
     --motion-ease: cubic-bezier(0.2, 0.7, 0.3, 1);
     --hover-lift: 0 -2px;
     --font-mono: ui-monospace, monospace;
+    --font-display: Georgia, serif;
+}
+
+.section-heading::before,
+.page-intro::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 2px;
+    margin-bottom: 0.9rem;
+    background: var(--link);
 }
 
 .site-panel,
@@ -82,6 +93,28 @@
 .site-button--quiet {
     --button-border: transparent;
     --button-background: transparent;
+}
+
+.site-button--primary {
+    --arrow-color: currentColor;
+    --button-background: var(--link);
+    --button-border: var(--link);
+    --button-hover-background: var(--link-hover);
+    --button-hover-border: var(--link-hover);
+}
+
+a.site-button--primary,
+.site-button--primary:not(:disabled):hover {
+    color: var(--background);
+}
+
+.site-field {
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: var(--control-radius);
+    background-color: var(--background);
+    color: var(--text);
+    font: inherit;
 }
 
 :where(a, button, input, select, textarea, summary):focus-visible {

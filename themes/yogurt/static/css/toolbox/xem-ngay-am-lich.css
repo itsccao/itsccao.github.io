@@ -9,9 +9,6 @@
     align-items: center;
     gap: 0.6rem;
     padding: 0.85rem 1.15rem;
-    background-color: var(--off-background);
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
-    border-radius: 0.75rem;
     font-size: 0.88rem;
     color: var(--text);
     opacity: 0.88;
@@ -35,9 +32,6 @@
     gap: 1rem;
     flex-wrap: wrap;
     padding: 1.25rem 1.5rem;
-    background-color: var(--off-background);
-    border-radius: 1rem;
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
 }
 .amlich-label {
     display: inline-flex;
@@ -55,36 +49,18 @@
     flex-shrink: 0;
     display: inline-block;
 }
-.amlich-input {
-    padding: 0.65rem 1rem;
-    font-size: 1rem;
-    border-radius: 0.65rem;
-    border: 1px solid color-mix(in srgb, var(--text) 16%, transparent);
-    background-color: var(--background);
-    color: var(--text);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    outline: none;
-}
-.amlich-input:focus {
-    border-color: var(--link-hover);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--link-hover) 20%, transparent);
-}
 .amlich-result-card {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     padding: 1.75rem;
-    background-color: var(--off-background);
-    border-radius: 1rem;
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
-    box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.08);
 }
 .amlich-primary-banner {
     text-align: center;
     padding: 1.5rem 1rem;
     background-color: var(--background);
     border-radius: 0.85rem;
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    border: 1px solid var(--border);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,7 +102,7 @@
     padding: 1.15rem 0.75rem;
     background-color: var(--background);
     border-radius: 0.75rem;
-    border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+    border: 1px solid var(--border);
     transition: translate var(--motion-duration) var(--motion-ease), border-color var(--motion-duration);
 }
 .amlich-canchi-card:hover {

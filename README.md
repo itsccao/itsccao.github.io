@@ -1,6 +1,6 @@
 # itsccao.github.io
 
-Personal portfolio, technical notes, and creative experiments.
+A personal site where I write about what I’m learning and share the small web tools I build along the way.
 
 ## Build & Technologies
 
@@ -12,8 +12,8 @@ Personal portfolio, technical notes, and creative experiments.
 
 | Asset Type | Source |
 | :--- | :--- |
-| **Font** | [Be Vietnam Pro](https://github.com/bettergui/BeVietnamPro) — [SIL OFL 1.1](themes/yogurt/static/font/be-vietnam-pro/OFL.txt) |
-| **Font (archived designs)** | [Inter](https://rsms.me/inter/) |
+| **Header and heading font** | [Georgia](https://learn.microsoft.com/en-us/typography/font-list/georgia) |
+| **Writing and interface font** | [Be Vietnam Pro](https://github.com/bettergui/BeVietnamPro) |
 | **SVG** | [Reicon](https://reicon.dev/) |
 | **SVG** | [Developer Icons](https://xandemon.github.io/developer-icons/) |
 | **GitHub SVG** | [GitHub Brand Toolkit](https://brand.github.com/) |
@@ -22,4 +22,4 @@ Personal portfolio, technical notes, and creative experiments.
 ---
 
 > [!NOTE]
-> This project's code is licensed under the [GNU General Public License v3.0](./LICENSE). Third-party fonts and assets retain their own licenses; Be Vietnam Pro is licensed under SIL OFL 1.1.
+> This project's code is licensed under the [GNU General Public License v3.0](./LICENSE). Third-party assets retain their own licenses.

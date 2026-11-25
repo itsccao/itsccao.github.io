@@ -9,9 +9,6 @@
     width: 100%;
     max-width: 18.5rem;
     padding: 0.9rem 1.2rem;
-    background-color: var(--off-background);
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
-    border-radius: 0.85rem;
     text-align: center;
     box-sizing: border-box;
 }
@@ -39,10 +36,6 @@
     max-width: 18.5rem;
     height: 18.5rem;
     padding: 0.75rem;
-    background-color: var(--off-background);
-    border-radius: 1.25rem;
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
 }
 .site-button.ttt-square {
@@ -55,7 +48,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--background);
-    border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+    border: 1px solid var(--border);
     border-radius: 0.75rem;
     color: var(--text);
     font-family: monospace, ui-monospace, sans-serif;

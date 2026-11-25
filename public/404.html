@@ -52,13 +52,14 @@
 <script>
     (() => {
         let saved;
+        const root = document.documentElement;
         try {
             saved = localStorage.getItem("pageTheme");
         } catch {}
         const light = ["light", "sage-light", "catppuccin-latte"];
         const dark = ["dark", "sage-dark", "catppuccin-mocha"];
         const systemTheme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        document.documentElement.dataset.theme = light.includes(saved) ? "light" : dark.includes(saved) ? "dark" : systemTheme;
+        root.dataset.theme = light.includes(saved) ? "light" : dark.includes(saved) ? "dark" : systemTheme;
     })();
 </script>
 
@@ -69,7 +70,7 @@
     <body>
         <div class="page">
             <header class="page-header"><div class="page-header-inner">
-    <a class="site-button site-button--quiet page-brand" href="/">itsccao</a>
+    <a class="page-brand" href="/" aria-label="itsccao"><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 0">i</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 1">t</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 2">s</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 3">c</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 4">c</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 5">a</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 6">o</span></a>
     <nav class="page-nav" aria-label="Main navigation">
         <span class="page-nav-indicator" aria-hidden="true"></span>
         <a class="site-button site-button--quiet" data-home href="/">Home</a>
@@ -95,7 +96,7 @@
                     <h1 class="page-404-title">404</h1>
                     <h2 class="page-404-subtitle">Page Not Found</h2>
                     <p class="page-404-desc">The page you are looking for doesn't exist or has been moved.</p>
-                    <a href="/" class="site-button"><svg class="site-arrow site-arrow--left" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="4 4 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12m-4-4 4 4-4 4" transform="translate(24 0) scale(-1 1)"/></svg>
+                    <a href="/" class="site-button site-button--primary"><svg class="site-arrow site-arrow--left" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="4 4 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h12m-4-4 4 4-4 4" transform="translate(24 0) scale(-1 1)"/></svg>
                         <span class="page-404-return-label">Return Home</span>
                     </a>
                 </main>

@@ -1,4 +1,6 @@
 <div class="page-list-container">
+    {{ $grouped := false }}
+    {{ if reflect.IsMap . }}{{ $grouped = .Grouped }}{{ end }}
     {{ range .Pages }}
     {{ $targetLink := .RelPermalink }}
     {{ $isExternal := false }}
@@ -9,7 +11,11 @@
     {{ $isProjectOrLab := or (eq .Section "project") (eq .Section "lab") (eq .Section "toolbox") (eq .Section "tools") (in .RelPermalink "/project/") (in .RelPermalink "/lab/") (in .RelPermalink "/toolbox/") (in .RelPermalink "/tools/") }}
     <div class="page-list">
         <div class="page-list-header">
+            {{ if $grouped }}
+            <h3 class="page-list-title">{{ .Title | markdownify }}</h3>
+            {{ else }}
             <h2 class="page-list-title">{{ .Title | markdownify }}</h2>
+            {{ end }}
         </div>
         {{ if not .Date.IsZero }}
         <time class="page-list-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
@@ -27,8 +33,6 @@
                     {{ end }}
                 {{ end }}
             </div>
-            {{ else }}
-            <div></div>
             {{ end }}
 
             {{ if $isProjectOrLab }}
@@ -65,7 +69,7 @@
                 {{ end }}
             </div>
             {{ else }}
-            <a class="site-button page-list-readmore" href="{{ $targetLink }}"{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }}>Keep reading {{ partial "arrow.html" (cond $isExternal "up-right" "right") }}</a>
+            <a class="site-button site-button--primary page-list-readmore" href="{{ $targetLink }}"{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }}>Keep reading {{ partial "arrow.html" (cond $isExternal "up-right" "right") }}</a>
             {{ end }}
         </div>
     </div>

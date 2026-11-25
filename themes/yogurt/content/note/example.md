@@ -1,14 +1,7 @@
 +++
-title = "Example"
-description = "An example on how markdown is rendered."
+title = "Formatting Example"
+description = "Examples of how Markdown and rich content are rendered in Notes."
 date = "2023-08-01"
-tags = [
-  
-]
-
-[build]
-  list = "never"
-  render = "always"
 +++
 
 > Credits to [joeroe/risotto](https://github.com/joeroe/risotto/tree/main/exampleSite/content/post).

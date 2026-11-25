@@ -37,7 +37,7 @@
     itsccao
     
         &#124;
-        Example 
+        Formatting Example 
     
 </title>
 
@@ -52,13 +52,14 @@
 <script>
     (() => {
         let saved;
+        const root = document.documentElement;
         try {
             saved = localStorage.getItem("pageTheme");
         } catch {}
         const light = ["light", "sage-light", "catppuccin-latte"];
         const dark = ["dark", "sage-dark", "catppuccin-mocha"];
         const systemTheme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        document.documentElement.dataset.theme = light.includes(saved) ? "light" : dark.includes(saved) ? "dark" : systemTheme;
+        root.dataset.theme = light.includes(saved) ? "light" : dark.includes(saved) ? "dark" : systemTheme;
     })();
 </script>
 
@@ -68,7 +69,7 @@
     <body>
         <div class="page">
             <header class="page-header"><div class="page-header-inner">
-    <a class="site-button site-button--quiet page-brand" href="/">itsccao</a>
+    <a class="page-brand" href="/" aria-label="itsccao"><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 0">i</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 1">t</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 2">s</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 3">c</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 4">c</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 5">a</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 6">o</span></a>
     <nav class="page-nav" aria-label="Main navigation">
         <span class="page-nav-indicator" aria-hidden="true"></span>
         <a class="site-button site-button--quiet" data-home href="/">Home</a>
@@ -93,8 +94,8 @@
     <article class="page-article">
         <header class="page-intro page-article-header">
             <time class="page-list-date" datetime="2023-08-01">1 August 2023</time>
-            <h1>Example</h1>
-            <p>An example on how markdown is rendered.</p>
+            <h1>Formatting Example</h1>
+            <p>Examples of how Markdown and rich content are rendered in Notes.</p>
         </header>
         <div class="page-prose"><blockquote>
 <p>Credits to <a href="https://github.com/joeroe/risotto/tree/main/exampleSite/content/post">joeroe/risotto</a>.</p>

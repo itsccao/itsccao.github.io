@@ -52,13 +52,14 @@
 <script>
     (() => {
         let saved;
+        const root = document.documentElement;
         try {
             saved = localStorage.getItem("pageTheme");
         } catch {}
         const light = ["light", "sage-light", "catppuccin-latte"];
         const dark = ["dark", "sage-dark", "catppuccin-mocha"];
         const systemTheme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        document.documentElement.dataset.theme = light.includes(saved) ? "light" : dark.includes(saved) ? "dark" : systemTheme;
+        root.dataset.theme = light.includes(saved) ? "light" : dark.includes(saved) ? "dark" : systemTheme;
     })();
 </script>
 
@@ -68,7 +69,7 @@
     <body>
         <div class="page">
             <header class="page-header"><div class="page-header-inner">
-    <a class="site-button site-button--quiet page-brand" href="/">itsccao</a>
+    <a class="page-brand" href="/" aria-label="itsccao"><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 0">i</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 1">t</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 2">s</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 3">c</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 4">c</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 5">a</span><span class="page-brand-letter" aria-hidden="true" style="--letter-index: 6">o</span></a>
     <nav class="page-nav" aria-label="Main navigation">
         <span class="page-nav-indicator" aria-hidden="true"></span>
         <a class="site-button site-button--quiet" data-home href="/">Home</a>
@@ -100,13 +101,17 @@
     
     
     
+    
+    
         
         
     
     
     <div class="page-list">
         <div class="page-list-header">
+            
             <h2 class="page-list-title">HCMUS Discord Notifier</h2>
+            
         </div>
         
         <time class="page-list-date" datetime="2026-07-18">18 July 2026</time>

@@ -12,18 +12,38 @@
     align-items: center;
     gap: 0.5rem 1.5rem;
     width: min(100%, 65rem);
-    min-height: 4.25rem;
+    min-height: var(--desktop-header-height);
     margin-inline: auto;
     padding-inline: clamp(1rem, 4vw, 2rem);
 }
 
 .page-header .page-brand {
     justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
     color: var(--text);
-    font-family: var(--font-mono);
+    font-family: var(--font-display);
     font-size: 1.125rem;
     font-weight: 700;
     letter-spacing: -0.05em;
+    text-decoration: none;
+}
+
+.page-brand-letter {
+    pointer-events: none;
+    white-space: pre;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .page-brand:is(:hover, :focus-visible) .page-brand-letter {
+        animation: brand-letter-lift 360ms var(--motion-ease);
+        animation-delay: calc(var(--letter-index) * 48ms);
+    }
+
+    @keyframes brand-letter-lift {
+        45% { translate: 0 -0.24em; }
+    }
 }
 
 .page-nav {
@@ -85,13 +105,42 @@
     }
 }
 
-.page-theme-toggle {
+.site-button.page-theme-toggle {
     justify-self: end;
+    display: grid;
+    place-items: center;
+}
+
+.page-theme-toggle > svg {
+    grid-area: 1 / 1;
+    pointer-events: none;
 }
 
 .page-theme-toggle[aria-pressed="false"] .page-theme-sun,
 .page-theme-toggle[aria-pressed="true"] .page-theme-moon {
-    display: none;
+    opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .theme-motion-ready .page-theme-toggle > svg {
+        transition: opacity 180ms ease, transform 280ms var(--motion-ease), scale 160ms ease;
+    }
+
+    .page-theme-toggle[aria-pressed="false"] .page-theme-sun {
+        transform: rotate(-55deg) scale(0.45);
+    }
+
+    .page-theme-toggle[aria-pressed="true"] .page-theme-moon {
+        transform: rotate(55deg) scale(0.45);
+    }
+
+    .page-theme-toggle:active > svg {
+        scale: 0.82;
+    }
+
+    .theme-motion-ready :is(body, .page-header, .page-footer, .site-panel, .page-list, .site-field) {
+        transition: background-color 260ms ease, color 260ms ease, border-color 260ms ease;
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -103,7 +152,6 @@
         view-transition-name: nav-indicator;
     }
 
-    .home,
     .page-body {
         view-transition-name: page-content;
     }

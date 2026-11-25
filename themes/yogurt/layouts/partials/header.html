@@ -1,5 +1,9 @@
 <div class="page-header-inner">
-    <a class="site-button site-button--quiet page-brand" href="{{ if .IsHome }}#intro{{ else }}{{ "" | relURL }}{{ end }}">{{ site.Params.About.Title }}</a>
+    <a class="page-brand" href="{{ if .IsHome }}#intro{{ else }}{{ "" | relURL }}{{ end }}" aria-label="{{ site.Params.About.Title }}">
+        {{- range $index, $letter := split site.Params.About.Title "" -}}
+            <span class="page-brand-letter" aria-hidden="true" style="--letter-index: {{ $index }}">{{ $letter }}</span>
+        {{- end -}}
+    </a>
     <nav class="page-nav" aria-label="Main navigation">
         <span class="page-nav-indicator" aria-hidden="true"></span>
         <a class="site-button site-button--quiet" data-home href="{{ if .IsHome }}#intro{{ else }}{{ "" | relURL }}{{ end }}"{{ if .IsHome }} aria-current="page"{{ end }}>Home</a>

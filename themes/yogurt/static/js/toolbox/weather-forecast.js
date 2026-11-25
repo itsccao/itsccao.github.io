@@ -92,7 +92,7 @@ if (window.__weatherForecastLoaded) {
             const aqiDesc = getAQIDescription(aqi);
 
             const result = `
-                <div class="weather-card">
+                <div class="site-panel weather-card">
                     <div class="weather-header">
                         <h3>${locationName}</h3>
                         <span class="weather-code">${getWeatherCode(weatherCode)}</span>

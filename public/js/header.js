@@ -11,6 +11,7 @@ function updateThemeButton() {
 
 updateThemeButton();
 themeButton.hidden = false;
+root.classList.add("theme-motion-ready");
 
 themeButton.addEventListener("click", () => {
     const theme = root.dataset.theme === "dark" ? "light" : "dark";

@@ -4,5 +4,14 @@
         {{- .Content -}}
     </header>
 
-    {{ partial "page-list.html" . }}
+    {{ if eq .Section "note" }}
+        {{ range .Pages.GroupByDate "2006" "desc" }}
+        <section class="note-year" aria-labelledby="notes-year-{{ .Key }}">
+            <h2 id="notes-year-{{ .Key }}">{{ if eq .Key "0001" }}Undated{{ else }}{{ .Key }}{{ end }}</h2>
+            {{ partial "page-list.html" (dict "Pages" .Pages "Grouped" true) }}
+        </section>
+        {{ end }}
+    {{ else }}
+        {{ partial "page-list.html" . }}
+    {{ end }}
 {{ end }}

@@ -6,7 +6,7 @@
         <script src="{{ "js/portrait.js" | relURL }}" defer></script>
     </head>
 
-    <body class="page">
+    <body class="page home-page">
         <header class="page-header">
             {{ partial "header.html" . }}
         </header>
@@ -14,16 +14,24 @@
         <main class="page-body home">
             <section class="home-intro" id="intro" aria-labelledby="intro-title">
                 <div>
-                    <h1 id="intro-title">Hello, I'm Cao<span>!</span></h1>
+                    <h1 id="intro-title">Hello, <span>I'm Cao!</span></h1>
                     <p class="home-bio">I'm a third-year Information Systems student at <a href="https://www.fit.hcmus.edu.vn/">fit@hcmus</a>.</p>
+                    <p class="home-summary">I build small web tools and write notes about what I learn.</p>
+                    <div class="home-intro-links">
+                        <a class="site-button site-button--primary" href="{{ "project/" | relURL }}">Explore projects</a>
+                        <a class="site-button site-button--quiet" href="{{ "note/" | relURL }}">Read notes</a>
+                    </div>
                 </div>
-                <div class="home-portrait-wrapper">
-                    <img class="home-portrait" src="{{ "asset/profile-banner.webp" | relURL }}" width="1353" height="1384" alt="Illustrated profile portrait" draggable="false">
-                </div>
+                <figure class="home-portrait-wrapper">
+                    <button class="home-portrait-trigger" type="button" aria-label="Enlarge avatar" aria-haspopup="dialog" aria-controls="portrait-dialog">
+                        <img class="home-portrait" src="{{ "asset/profile-banner.webp" | relURL }}" width="1353" height="1384" alt="Illustrated profile portrait" draggable="false">
+                    </button>
+                    <figcaption>Artwork by H4L</figcaption>
+                </figure>
             </section>
 
             <section class="home-section" id="skills" aria-labelledby="skills-title">
-                <div>
+                <div class="section-heading">
                     <h2 id="skills-title">What I work with</h2>
                     <p>Languages and tools I'm familiar with.</p>
                 </div>
@@ -38,27 +46,34 @@
             </section>
 
             <section class="home-section" id="education" aria-labelledby="education-title">
-                <div>
+                <div class="section-heading">
                     <h2 id="education-title">Education</h2>
                     <p>The schools and subjects that shaped my interests.</p>
                 </div>
-                <ul class="home-education">
+                <ol class="home-education">
                     {{- range hugo.Data.education }}
                     <li class="site-panel">
-                        {{- with .years }}
-                        <p class="site-meta home-education-years">{{ . }}</p>
+                        {{- with .logo }}
+                        <div class="home-education-logo">
+                            <img src="{{ . | relURL }}" width="64" height="64" alt="" loading="lazy">
+                        </div>
                         {{- end }}
-                        <h3>{{ .school }}</h3>
-                        {{- with .program }}
-                        <p class="home-education-program">{{ . }}</p>
-                        {{- end }}
+                        <div>
+                            {{- with .years }}
+                            <p class="site-meta home-education-years">{{ . }}</p>
+                            {{- end }}
+                            <h3>{{ .school }}</h3>
+                            {{- with .program }}
+                            <p class="home-education-program">{{ . }}</p>
+                            {{- end }}
+                        </div>
                     </li>
                     {{- end }}
-                </ul>
+                </ol>
             </section>
 
             <section class="home-section" id="contact" aria-labelledby="contact-title">
-                <div>
+                <div class="section-heading">
                     <h2 id="contact-title">Contact</h2>
                     <p>A project, a question, or a simple hello. I'd love to hear from you.</p>
                 </div>
@@ -74,16 +89,31 @@
                     </li>
                     {{- end }}
                 </ul>
-            </section>
-
-            <section class="home-section" id="versions" aria-labelledby="versions-title">
-                <div>
-                    <h2 id="versions-title">Versions</h2>
-                    <p>See how this little corner of the web has changed.</p>
-                </div>
-                <a class="site-button home-version-link" href="{{ "versions/" | relURL }}">Explore version history {{ partial "arrow.html" "right" }}</a>
+                <a class="site-button home-version-link" id="versions" href="{{ "versions/" | relURL }}">Explore version history {{ partial "arrow.html" "right" }}</a>
             </section>
         </main>
+
+        <nav class="home-section-nav" aria-label="On this page">
+            <a href="#intro" aria-label="Intro" aria-current="location"></a>
+            <a href="#skills" aria-label="Skills"></a>
+            <a href="#education" aria-label="Education"></a>
+            <a href="#contact" aria-label="Contact"></a>
+        </nav>
+
+        <dialog class="home-portrait-dialog" id="portrait-dialog" aria-label="Profile artwork">
+            <form method="dialog">
+                <button class="site-button site-button--icon" aria-label="Close artwork" autofocus>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <g transform="scale(1.33333)">
+                            <line x1="14" y1="4" x2="4" y2="14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></line>
+                            <line x1="4" y1="4" x2="14" y2="14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></line>
+                        </g>
+                    </svg>
+                </button>
+            </form>
+            <img src="{{ "asset/profile-banner.webp" | relURL }}" width="1353" height="1384" alt="Illustrated profile portrait">
+            <a class="site-button" href="https://www.pixiv.net/en/artworks/151217480" target="_blank" rel="noopener noreferrer">View H4L’s artwork on Pixiv {{ partial "arrow.html" "up-right" }}</a>
+        </dialog>
 
         <footer class="page-footer">
             {{- partial "footer.html" . }}

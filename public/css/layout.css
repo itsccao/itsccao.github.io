@@ -2,8 +2,9 @@
 
 html
 {
+    --desktop-header-height: 4.25rem;
     scrollbar-gutter: stable;
-    scroll-padding-top: 5.5rem;
+    scroll-padding-top: calc(var(--desktop-header-height) + 1px);
 }
 
 @media (prefers-reduced-motion: no-preference)
@@ -42,6 +43,11 @@ body
     max-width: 50rem;
     width: 100%;
     flex: 1;
+}
+
+.page-body:has(> .page-list-container, > .note-year, > .page-tag-terms-container, > .page-versions)
+{
+    max-width: 65rem;
 }
 
 .page-scroll-top

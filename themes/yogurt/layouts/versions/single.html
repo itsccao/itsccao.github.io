@@ -9,8 +9,10 @@
     (dict "version" "1" "name" "The Beginning" "date" "2022" "datetime" "2022" "status" "Archived" "url" "/versions/v1/" "notes" (slice "My first steps into front-end development. Simple, a little rough, and where this all started."))
 }}
 <section class="page-versions" aria-labelledby="versions-title">
-    <h1 id="versions-title">{{ .Title | markdownify }}</h1>
-    <p>A little history of this website, one design at a time. Explore the old versions, or see what's changed on <a href="https://github.com/itsccao/itsccao.github.io" target="_blank" rel="noopener noreferrer" class="site-text-link">GitHub{{ partial "arrow.html" "up-right" }}</a>.</p>
+    <header class="page-intro">
+        <h1 id="versions-title">{{ .Title | markdownify }}</h1>
+        <p>A little history of this website, one design at a time. Explore the old versions, or see what's changed on <a href="https://github.com/itsccao/itsccao.github.io" target="_blank" rel="noopener noreferrer" class="site-text-link">GitHub{{ partial "arrow.html" "up-right" }}</a>.</p>
+    </header>
     <ol class="page-list-container page-versions-list" aria-label="Website design history, newest first">
 {{- range $versions -}}
         <li class="page-list">
