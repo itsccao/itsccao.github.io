@@ -1,0 +1,37 @@
+.address-lookup .address-filters {
+    display: grid;
+    justify-items: start;
+    gap: 0.65rem;
+    padding: 1rem;
+}
+
+.address-lookup .site-field {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.address-lookup .address-results {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.address-results > li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding: 0.65rem 0.85rem;
+}
+
+.address-results small {
+    display: block;
+    color: var(--muted);
+}
+.address-lookup .amlich-header-note {
+    margin-bottom: 1rem;
+}
+

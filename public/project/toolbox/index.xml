@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Tue, 09 Dec 2025 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Fri, 27 Nov 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/project/toolbox/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Tra cứu địa chỉ mới</title>
+				<link>http://localhost:1313/project/toolbox/tra-cuu-dia-chi-moi/</link>
+				<pubDate>Fri, 27 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/project/toolbox/tra-cuu-dia-chi-moi/</guid>
+				<description>&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/toolbox/tra-cuu-dia-chi-moi.css&#34;&gt;&#xA;&lt;section class=&#34;address-lookup&#34; lang=&#34;vi&#34; data-directory=&#34;/data/vietnam-address/&#34;&gt;&#xA;    &lt;div class=&#34;site-panel amlich-header-note&#34;&gt;&#xA;        &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; aria-hidden=&#34;true&#34;&gt;&#xA;            &lt;circle cx=&#34;12&#34; cy=&#34;12&#34; r=&#34;10&#34;&gt;&lt;/circle&gt;&#xA;            &lt;path d=&#34;M12 12v4m0-8h.01&#34;&gt;&lt;/path&gt;&#xA;        &lt;/svg&gt;&#xA;        &lt;span&gt;Dữ liệu hiện hành từ &lt;a href=&#34;https://github.com/thanglequoc/vietnamese-provinces-database/tree/v5.2.0&#34;&gt;Vietnamese Provinces Database v5.2.0&lt;/a&gt;. Đối chiếu địa chỉ cũ từ &lt;a href=&#34;https://github.com/mtri-git/vn-local-divisions/tree/242c54055b852595e19d57c148376819a4e4d319&#34;&gt;vn-local-divisions&lt;/a&gt;.&lt;/span&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;form class=&#34;site-panel address-filters&#34;&gt;&#xA;        &lt;label for=&#34;old-address&#34;&gt;Địa chỉ cũ&lt;/label&gt;&#xA;        &lt;input id=&#34;old-address&#34; name=&#34;address&#34; type=&#34;text&#34; class=&#34;site-field&#34; required autocomplete=&#34;off&#34; maxlength=&#34;500&#34; aria-describedby=&#34;address-example&#34;&gt;&#xA;        &lt;small id=&#34;address-example&#34;&gt;Ví dụ 12 Phó Đức Chính, Phường Trúc Bạch, Quận Ba Đình, Hà Nội. Nên ghi quận/huyện nếu biết.&lt;/small&gt;&#xA;        &lt;button type=&#34;submit&#34; class=&#34;site-button site-button--primary&#34;&gt;Tra cứu&lt;/button&gt;&#xA;    &lt;/form&gt;&#xA;    &lt;p role=&#34;status&#34; data-status&gt;&lt;/p&gt;&#xA;    &lt;p data-parsed hidden&gt;&lt;/p&gt;&#xA;    &lt;ul class=&#34;address-results&#34; aria-label=&#34;Địa chỉ mới&#34; data-results&gt;&lt;/ul&gt;&#xA;    &lt;noscript&gt;Bật JavaScript để tra cứu địa chỉ.&lt;/noscript&gt;&#xA;&lt;/section&gt;&#xA;&lt;script defer src=&#34;http://localhost:1313/js/toolbox/tra-cuu-dia-chi-moi.js&#34;&gt;&lt;/script&gt;</description>
+			</item>
 			<item>
 				<title>Xem ngày Âm Lịch</title>
 				<link>http://localhost:1313/project/toolbox/xem-ngay-am-lich/</link>

@@ -5,7 +5,7 @@
     --motion-ease: cubic-bezier(0.2, 0.7, 0.3, 1);
     --hover-lift: 0 -2px;
     --font-mono: ui-monospace, monospace;
-    --font-display: Georgia, serif;
+    --font-display: "Lora", Georgia, serif;
 }
 
 .section-heading::before,
@@ -103,6 +103,7 @@
     --button-hover-border: var(--link-hover);
 }
 
+.site-button--primary,
 a.site-button--primary,
 .site-button--primary:not(:disabled):hover {
     color: var(--background);

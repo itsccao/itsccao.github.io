@@ -12,7 +12,7 @@ A personal site where I write about what I’m learning and share the small web 
 
 | Asset Type | Source |
 | :--- | :--- |
-| **Header and heading font** | [Georgia](https://learn.microsoft.com/en-us/typography/font-list/georgia) |
+| **Header and heading font** | [Lora](https://github.com/cyrealtype/Lora-Cyrillic) |
 | **Writing and interface font** | [Be Vietnam Pro](https://github.com/bettergui/BeVietnamPro) |
 | **SVG** | [Reicon](https://reicon.dev/) |
 | **SVG** | [Developer Icons](https://xandemon.github.io/developer-icons/) |

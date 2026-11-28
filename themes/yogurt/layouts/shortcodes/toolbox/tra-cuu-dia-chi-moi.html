@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="{{ "css/toolbox/tra-cuu-dia-chi-moi.css" | relURL }}">
+<section class="address-lookup" lang="vi" data-directory="{{ "data/vietnam-address/" | relURL }}">
+    <div class="site-panel amlich-header-note">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 12v4m0-8h.01"></path>
+        </svg>
+        <span>Dữ liệu hiện hành từ <a href="https://github.com/thanglequoc/vietnamese-provinces-database/tree/v5.2.0">Vietnamese Provinces Database v5.2.0</a>. Đối chiếu địa chỉ cũ từ <a href="https://github.com/mtri-git/vn-local-divisions/tree/242c54055b852595e19d57c148376819a4e4d319">vn-local-divisions</a>.</span>
+    </div>
+    <form class="site-panel address-filters">
+        <label for="old-address">Địa chỉ cũ</label>
+        <input id="old-address" name="address" type="text" class="site-field" required autocomplete="off" maxlength="500" aria-describedby="address-example">
+        <small id="address-example">Ví dụ 12 Phó Đức Chính, Phường Trúc Bạch, Quận Ba Đình, Hà Nội. Nên ghi quận/huyện nếu biết.</small>
+        <button type="submit" class="site-button site-button--primary">Tra cứu</button>
+    </form>
+    <p role="status" data-status></p>
+    <p data-parsed hidden></p>
+    <ul class="address-results" aria-label="Địa chỉ mới" data-results></ul>
+    <noscript>Bật JavaScript để tra cứu địa chỉ.</noscript>
+</section>
+<script defer src="{{ "js/toolbox/tra-cuu-dia-chi-moi.js" | relURL }}"></script>
